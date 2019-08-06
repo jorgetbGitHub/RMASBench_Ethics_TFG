@@ -1,0 +1,40 @@
+# solver: Greedy
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 8048d1cd-fdf1-48b4-b3a8-84f82b8dbdf4
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: demo_N79.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+24	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9988814601443183	-Infinity	10	false	7
+25	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9988018438233379	-Infinity	10	false	2
+26	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9988018438233379	-Infinity	11	false	2
+27	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9988018438233379	-Infinity	9	false	2
+28	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-185.53652063823682	-185.53652063823682	-Infinity	0.9988018438233379	-Infinity	9	false	4
+29	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-131.9988838766264	-131.9988838766264	-Infinity	0.9988018438233379	-Infinity	9	false	4
+30	7	7	1	0	0	0	0	0	-1079.795325830468	-1079.795325830468	-21.237740200867854	-21.237740200867854	-1079.795325830468	0.9986329607182285	-1079.795325830468	9	false	6
+31	7	7	1	0	0	0	0	0	-1281.8833787413262	-1281.8833787413262	-67.59351543206847	-67.59351543206847	-1281.8833787413262	0.9986329607182285	-1281.8833787413262	9	false	6
+32	7	7	1	0	0	0	0	0	-1031.4822209081801	-1031.4822209081801	-20.552574352030874	-20.552574352030874	-1031.4822209081801	0.9986329607182285	-1031.4822209081801	9	false	5
+33	7	7	1	0	0	0	0	0	-1543.3447985033383	-1543.3447985033383	-74.41639986812443	-74.41639986812443	-1543.3447985033383	0.9986003904051001	-1543.3447985033383	11	false	6
+34	7	7	1	0	0	0	0	0	-940.8122056515992	-940.8122056515992	-73.20053557525448	-73.20053557525448	-940.8122056515992	0.9986003904051001	-940.8122056515992	11	false	6
+35	7	6	1	0	0	0	0	0	-1059.6548135546125	-1059.6548135546125	-31.561889459376438	-31.561889459376438	-1059.6548135546125	0.9984990605420344	-1059.6548135546125	13	false	7
+36	7	6	1	0	0	0	0	0	-1258.0360546842082	-1258.0360546842082	-31.924007867211202	-31.924007867211202	-1258.0360546842082	0.9984990605420344	-1258.0360546842082	13	false	5
+37	7	5	1	0	0	0	0	0	-1640.623895554557	-1640.623895554557	-46.20629768116939	-46.20629768116939	-1640.623895554557	0.9985365657510913	-1640.623895554557	15	false	6

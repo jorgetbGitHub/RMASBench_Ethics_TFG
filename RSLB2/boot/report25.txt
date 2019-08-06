@@ -1,0 +1,560 @@
+Mon Jul 08 23:39:13 CEST 2019
+
+***Buildings & Fire (Refuges included)***
+Total Buildings: 1618
+Total damaged Buildings by fire: 28 (1.7305316%) in respect of total buildgins
+Total calcined Buildings: 0 (0.0%) in respect of total fires
+Total severe damaged Buildings: 10 (35.714287%) in respect of total fires
+Total moderate damaged Buildings: 6 (21.428572%) in respect of total fires
+Total minor damaged Buildings: 12 (42.857143%) in respect of total fires
+Total Buildings water it: 0
+
+***Refuges***
+Total Refuges: 1
+Total calcined Refuges: 0
+Total sereve damaged Refuges: 1
+Total moderate damaged Refuges: 0
+Total minor damaged Refuges: 0
+
+***Area & Fires*** (area based exclusively in Buildings and Refuges)
+Total area: 273692
+Total area burnt: 3878
+Total area calcined: 0
+Total area severely affected: 1719
+Total area moderely affected: 448
+Total area minorly affected: 1711
+
+***Resources***
+Total Fire Brigades: 29
+Total Police Forces: 15
+Total Ambulance Team: 0
+Total Time: 52
+
+***Human losses***
+Total dead people: 0
+Total dead Fire Brigades: 0
+Total dead Police Forces: 0
+Total dead Ambulance Teams: 0
+Total dead Civilians: 0
+Total dead Civilians inside of extinguished buildings: 0
+Total dead Civilians inside of ambulance: 0
+Total dead Civilians inside of Refuge: 0
+
+***Civilian Injuries***
+Total Civilians: 44
+Total Damaged Civilians: 0
+Total Close to die Civilians: 0 (HP < 25%)
+Total Severe Damaged Civilians: 0 (25% < HP <= 50%)
+Total Moderate Damaged Civilians: 0 (50% < HP <= 75%)
+Total Minor Damaged Civilians: 0 (75% < HP < 100%)
+Total No Damaged Civilians: 0 (HP = 100%)
+
+***Fire Brigades statistics***
+Total water consumed: 291500
+Total water refilled: 0
+Time mean per building extintion: 1.8571428 TIMEs per extintion
+Volume of work: 0.9655172 fires per fire agent
+
+***Ambulance Team statistics***
+Total humans hospitalized: 0
+Total Civilians hospitalized: 0
+Total Fire Brigades hospitalized: 0
+Total Police Forces hospitalized: 0
+Total Ambulance Teams hospitalized: 0
+Total Humans buried: 0
+Total Humans rescued: 0 (NaN%)
+Total Civilians rescued: 0 (NaN%)
+Total Fire Brigades rescued: 0 (NaN%)
+Total Police Forces rescued: 0 (NaN%)
+Total Ambulance Teams rescued: 0 (NaN%) 
+Total Humans rescued from destroyed buildings (brokenness >= 75%): 0
+Total Humans rescued from severe damaged buildings (50% =< brokenness < 75%): 0
+Total Humans rescued from moderate damaged buildings (25% =< brokenness < 50%): 0
+Total Humans rescued from minor damaged buildings (brokenness < 25%): 0
+
+***Police Statistics***
+Total Blockades cleared: 131 (100.0%)
+Total Paths cleared: 0
+Total Path distance cleared: 0
+Total Paths with goal destroyed building: 0
+Total Paths with goal severe damaged building: 0
+Total Paths with goal moderate damaged building: 0
+Total Paths with goal minor damaged building: 0
+
+***Temporary Variables***
+Total rescued: 0
+Rescue velocity: NaN rescue/TIME
+TIME: 0
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 1
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 2
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 3
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 4
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 5
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 6
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 7
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 8
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 9
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 10
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 11
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 12
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 13
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 14
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 15
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 16
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 17
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 18
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 19
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 20
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 21
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 22
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 23
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 24
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 25
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 26
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 27
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 28
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 29
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 30
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 31
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 32
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 33
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 34
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 35
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 36
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 37
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 38
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 39
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 40
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 41
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 42
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 43
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 44
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 45
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 46
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 47
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 48
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 49
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 50
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 51
+Total rescued: 0
+Rescue velocity: 0.0 rescue/TIME
+TIME: 52
+
+Total extinguished: 0
+Extintion velocity: NaN extintion/TIME
+TIME: 0
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 1
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 2
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 3
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 4
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 5
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 6
+Total extinguished: 1
+Extintion velocity: 0.14285715 extintion/TIME
+TIME: 7
+Total extinguished: 1
+Extintion velocity: 0.125 extintion/TIME
+TIME: 8
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 9
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 10
+Total extinguished: 1
+Extintion velocity: 0.09090909 extintion/TIME
+TIME: 11
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 12
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 13
+Total extinguished: 1
+Extintion velocity: 0.071428575 extintion/TIME
+TIME: 14
+Total extinguished: 1
+Extintion velocity: 0.06666667 extintion/TIME
+TIME: 15
+Total extinguished: 0
+Extintion velocity: 0.0 extintion/TIME
+TIME: 16
+Total extinguished: 1
+Extintion velocity: 0.05882353 extintion/TIME
+TIME: 17
+Total extinguished: 1
+Extintion velocity: 0.055555556 extintion/TIME
+TIME: 18
+Total extinguished: 4
+Extintion velocity: 0.21052632 extintion/TIME
+TIME: 19
+Total extinguished: 4
+Extintion velocity: 0.2 extintion/TIME
+TIME: 20
+Total extinguished: 5
+Extintion velocity: 0.23809524 extintion/TIME
+TIME: 21
+Total extinguished: 4
+Extintion velocity: 0.18181819 extintion/TIME
+TIME: 22
+Total extinguished: 5
+Extintion velocity: 0.2173913 extintion/TIME
+TIME: 23
+Total extinguished: 6
+Extintion velocity: 0.25 extintion/TIME
+TIME: 24
+Total extinguished: 7
+Extintion velocity: 0.28 extintion/TIME
+TIME: 25
+Total extinguished: 7
+Extintion velocity: 0.26923078 extintion/TIME
+TIME: 26
+Total extinguished: 8
+Extintion velocity: 0.2962963 extintion/TIME
+TIME: 27
+Total extinguished: 10
+Extintion velocity: 0.35714287 extintion/TIME
+TIME: 28
+Total extinguished: 8
+Extintion velocity: 0.27586207 extintion/TIME
+TIME: 29
+Total extinguished: 10
+Extintion velocity: 0.33333334 extintion/TIME
+TIME: 30
+Total extinguished: 12
+Extintion velocity: 0.38709676 extintion/TIME
+TIME: 31
+Total extinguished: 13
+Extintion velocity: 0.40625 extintion/TIME
+TIME: 32
+Total extinguished: 14
+Extintion velocity: 0.42424244 extintion/TIME
+TIME: 33
+Total extinguished: 15
+Extintion velocity: 0.44117647 extintion/TIME
+TIME: 34
+Total extinguished: 14
+Extintion velocity: 0.4 extintion/TIME
+TIME: 35
+Total extinguished: 14
+Extintion velocity: 0.3888889 extintion/TIME
+TIME: 36
+Total extinguished: 15
+Extintion velocity: 0.4054054 extintion/TIME
+TIME: 37
+Total extinguished: 18
+Extintion velocity: 0.47368422 extintion/TIME
+TIME: 38
+Total extinguished: 19
+Extintion velocity: 0.4871795 extintion/TIME
+TIME: 39
+Total extinguished: 19
+Extintion velocity: 0.475 extintion/TIME
+TIME: 40
+Total extinguished: 21
+Extintion velocity: 0.5121951 extintion/TIME
+TIME: 41
+Total extinguished: 21
+Extintion velocity: 0.5 extintion/TIME
+TIME: 42
+Total extinguished: 21
+Extintion velocity: 0.4883721 extintion/TIME
+TIME: 43
+Total extinguished: 21
+Extintion velocity: 0.47727272 extintion/TIME
+TIME: 44
+Total extinguished: 22
+Extintion velocity: 0.4888889 extintion/TIME
+TIME: 45
+Total extinguished: 23
+Extintion velocity: 0.5 extintion/TIME
+TIME: 46
+Total extinguished: 23
+Extintion velocity: 0.4893617 extintion/TIME
+TIME: 47
+Total extinguished: 24
+Extintion velocity: 0.5 extintion/TIME
+TIME: 48
+Total extinguished: 25
+Extintion velocity: 0.5102041 extintion/TIME
+TIME: 49
+Total extinguished: 26
+Extintion velocity: 0.52 extintion/TIME
+TIME: 50
+Total extinguished: 26
+Extintion velocity: 0.50980395 extintion/TIME
+TIME: 51
+Total extinguished: 27
+Extintion velocity: 0.5192308 extintion/TIME
+TIME: 52
+
+Total cleared: 0
+Clear velocity: 0.0 cleared/TIME
+TIME: 1
+Total cleared: 3
+Clear velocity: 1.5 cleared/TIME
+TIME: 2
+Total cleared: 4
+Clear velocity: 1.3333334 cleared/TIME
+TIME: 3
+Total cleared: 8
+Clear velocity: 2.0 cleared/TIME
+TIME: 4
+Total cleared: 19
+Clear velocity: 3.8 cleared/TIME
+TIME: 5
+Total cleared: 19
+Clear velocity: 3.1666667 cleared/TIME
+TIME: 6
+Total cleared: 20
+Clear velocity: 2.857143 cleared/TIME
+TIME: 7
+Total cleared: 21
+Clear velocity: 2.625 cleared/TIME
+TIME: 8
+Total cleared: 21
+Clear velocity: 2.3333333 cleared/TIME
+TIME: 9
+Total cleared: 21
+Clear velocity: 2.1 cleared/TIME
+TIME: 10
+Total cleared: 21
+Clear velocity: 1.9090909 cleared/TIME
+TIME: 11
+Total cleared: 23
+Clear velocity: 1.9166666 cleared/TIME
+TIME: 12
+Total cleared: 25
+Clear velocity: 1.9230769 cleared/TIME
+TIME: 13
+Total cleared: 27
+Clear velocity: 1.9285715 cleared/TIME
+TIME: 14
+Total cleared: 32
+Clear velocity: 2.1333334 cleared/TIME
+TIME: 15
+Total cleared: 32
+Clear velocity: 2.0 cleared/TIME
+TIME: 16
+Total cleared: 32
+Clear velocity: 1.882353 cleared/TIME
+TIME: 17
+Total cleared: 35
+Clear velocity: 1.9444444 cleared/TIME
+TIME: 18
+Total cleared: 37
+Clear velocity: 1.9473684 cleared/TIME
+TIME: 19
+Total cleared: 38
+Clear velocity: 1.9 cleared/TIME
+TIME: 20
+Total cleared: 42
+Clear velocity: 2.0 cleared/TIME
+TIME: 21
+Total cleared: 44
+Clear velocity: 2.0 cleared/TIME
+TIME: 22
+Total cleared: 47
+Clear velocity: 2.0434783 cleared/TIME
+TIME: 23
+Total cleared: 48
+Clear velocity: 2.0 cleared/TIME
+TIME: 24
+Total cleared: 49
+Clear velocity: 1.96 cleared/TIME
+TIME: 25
+Total cleared: 51
+Clear velocity: 1.9615384 cleared/TIME
+TIME: 26
+Total cleared: 55
+Clear velocity: 2.0370371 cleared/TIME
+TIME: 27
+Total cleared: 62
+Clear velocity: 2.2142856 cleared/TIME
+TIME: 28
+Total cleared: 63
+Clear velocity: 2.1724138 cleared/TIME
+TIME: 29
+Total cleared: 64
+Clear velocity: 2.1333334 cleared/TIME
+TIME: 30
+Total cleared: 65
+Clear velocity: 2.096774 cleared/TIME
+TIME: 31
+Total cleared: 66
+Clear velocity: 2.0625 cleared/TIME
+TIME: 32
+Total cleared: 68
+Clear velocity: 2.060606 cleared/TIME
+TIME: 33
+Total cleared: 71
+Clear velocity: 2.0882354 cleared/TIME
+TIME: 34
+Total cleared: 74
+Clear velocity: 2.1142857 cleared/TIME
+TIME: 35
+Total cleared: 79
+Clear velocity: 2.1944444 cleared/TIME
+TIME: 36
+Total cleared: 80
+Clear velocity: 2.162162 cleared/TIME
+TIME: 37
+Total cleared: 85
+Clear velocity: 2.2368422 cleared/TIME
+TIME: 38
+Total cleared: 90
+Clear velocity: 2.3076923 cleared/TIME
+TIME: 39
+Total cleared: 95
+Clear velocity: 2.375 cleared/TIME
+TIME: 40
+Total cleared: 99
+Clear velocity: 2.4146342 cleared/TIME
+TIME: 41
+Total cleared: 103
+Clear velocity: 2.452381 cleared/TIME
+TIME: 42
+Total cleared: 106
+Clear velocity: 2.4651163 cleared/TIME
+TIME: 43
+Total cleared: 108
+Clear velocity: 2.4545455 cleared/TIME
+TIME: 44
+Total cleared: 110
+Clear velocity: 2.4444444 cleared/TIME
+TIME: 45
+Total cleared: 114
+Clear velocity: 2.4782608 cleared/TIME
+TIME: 46
+Total cleared: 118
+Clear velocity: 2.5106382 cleared/TIME
+TIME: 47
+Total cleared: 121
+Clear velocity: 2.5208333 cleared/TIME
+TIME: 48
+Total cleared: 123
+Clear velocity: 2.510204 cleared/TIME
+TIME: 49
+Total cleared: 126
+Clear velocity: 2.52 cleared/TIME
+TIME: 50
+Total cleared: 131
+Clear velocity: 2.5686274 cleared/TIME
+TIME: 51
+Total cleared: 131
+Clear velocity: 2.5192308 cleared/TIME
+TIME: 52

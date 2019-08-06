@@ -1,0 +1,31 @@
+# solver: DSA
+# max_time: 500
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 32b0ba6f-fed5-4d35-996f-47a576d48b78
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: Bomberos_BlockadeLoader_ConySinNormas.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+# dsa.probability: 0.1
+# dsa.initial_target: last
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+24	9	9	20	5424	22440	179520	0	0	-155.04951798757878	-155.04951798757878	-155.04951798757878	-155.04951798757878	-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-161.82577958016128,-161.82577958016128,-158.32224442399524,-158.3181028338916,-157.57151312309796,-157.57151312309796,-157.54470130736217,-157.54470130736217,-156.07364702156366,-156.07364702156366,-156.07364702156366,-156.07364702156366,-156.07364702156366,-155.04951798757878,-155.04951798757878	0.9976279600236874	-155.04951798757878	5	false	103
+25	9	9	19	6675	21318	170544	0	0	-2.846928130340997	-2.846928130340997	-2.846928130340997	-2.846928130340997	-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-6.856012131651175,-6.856012131651175,-5.8788792123549545,-5.8788792123549545,-5.8788792123549545,-5.8788792123549545,-5.8788792123549545,-5.8788792123549545,-2.8628067564378217,-2.846928130340997,-2.846928130340997	0.9975483437027073	-2.846928130340997	5	false	33
+26	9	9	16	5368	17952	143616	0	0	-1.7874433659736937	-1.7874433659736937	-1.7874433659736937	-1.7874433659736937	-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-4.528506728836058,-1.787449036002485,-1.787449036002485,-1.787449036002485,-1.787449036002485,-1.7874433659736937,-1.7874433659736937	0.9975483437027073	-1.7874433659736937	5	false	21

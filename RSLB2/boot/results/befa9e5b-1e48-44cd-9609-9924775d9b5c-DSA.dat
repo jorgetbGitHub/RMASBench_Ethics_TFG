@@ -1,0 +1,30 @@
+# solver: DSA
+# max_time: 500
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: befa9e5b-1e48-44cd-9609-9924775d9b5c
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+# dsa.probability: 0.1
+# dsa.initial_target: last
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+23	12	12	19	9313	32718	261744	0	0	-Infinity	-Infinity	NaN	NaN	-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity	0.9977516614149626	-Infinity	3	false	526
+24	13	13	28	13789	48216	385728	0	0	-40.528161970458065	-40.528161970458065	-40.528161970458065	-40.528161970458065	-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-43.48738202975891,-43.48738202975891,-41.51848148377811,-41.51848148377811,-41.51845647949096,-41.51845647949096,-41.51845647949096,-41.51845647949096,-40.52817379170492,-40.52817379170492,-40.52817379170492,-40.52817379170492,-40.52817379170492,-40.52817379170492,-40.528161970458065,-40.528161970458065	0.9975615034251832	-40.528161970458065	0	true	166

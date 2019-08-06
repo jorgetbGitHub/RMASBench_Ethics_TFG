@@ -1,0 +1,31 @@
+# solver: Closest
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: a7151097-a488-416e-a582-eaba634862a9
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+24	6	6	1	0	0	0	0	0	1.696927831535389	1.696927831535389	1.6969283165757403	1.6969283165757403	1.696927831535389	0.9991239280309399	1.696927831535389	0	true	22
+25	6	6	1	0	0	0	0	0	1.9164682620877687	1.9164682620877687	1.9164682620877687	1.9164682620877687	1.9164682620877687	0.9990443117099597	1.9164682620877687	0	true	6
+26	6	6	1	0	0	0	0	0	2.110713004825294	2.110713004825294	2.110713004825294	2.110713004825294	2.110713004825294	0.9990443117099597	2.110713004825294	0	true	3
+27	6	6	1	0	0	0	0	0	2.2439078341090295	2.2439078341090295	2.2439078341090295	2.2439078341090295	2.2439078341090295	0.9990443117099597	2.2439078341090295	0	true	3
+28	6	6	1	0	0	0	0	0	2.405021444597284	2.405021444597284	2.405021444597284	2.405021444597284	2.405021444597284	0.9990443117099597	2.405021444597284	0	true	5

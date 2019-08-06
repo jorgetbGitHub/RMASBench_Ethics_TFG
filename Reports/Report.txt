@@ -1,0 +1,19 @@
+Total Buildings: 1617.0
+Total Buildings water it: 1.0
+Total Refuges: 0.0
+Total calcined Refuges: 0.0
+Total sereve damaged Refuges: 0.0
+Total moderate damaged Refuges: 0.0
+Total minor damaged Refuges: 0.0
+Total area: 273510.0
+Total area burnt: 49.0
+Total area calcined: 0.0
+Total area severely affected: 0.0
+Total area moderely affected: 49.0
+Total area minorly affected: 0.0
+Total Fire Brigades: 19.0
+Total Police Forces: 0.0
+Total Ambulance Team: 0.0
+Total Time: 31.0
+Total water consumed: 7000.0
+Total water refilled: 0.0

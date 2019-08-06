@@ -1,0 +1,10 @@
+# Log configuration for the kernel/simulators
+
+log4j.rootLogger=info, console
+
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=%p %c %x: %m%n
+log4j.appender.console.threshold=info
+
+log4j.category.com.infomatiq.jsi.rtree=error, console

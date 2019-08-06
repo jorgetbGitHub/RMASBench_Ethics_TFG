@@ -1,0 +1,89 @@
+# solver: Greedy
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 4e571cd7-05e7-4f24-bdf2-7602f7082965
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+23	12	12	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9977516614149626	-Infinity	13	false	4
+24	13	13	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9975615034251832	-Infinity	17	true	3
+25	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9966306358339244	-Infinity	15	true	3
+26	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9960817657423182	-Infinity	14	true	2
+27	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-217.48371734658494	-217.48371734658494	-Infinity	0.9960817657423182	-Infinity	13	true	15
+28	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-141.00255086597218	-141.00255086597218	-Infinity	0.9960817657423182	-Infinity	15	true	13
+29	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9960817657423182	-Infinity	17	true	2
+30	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9959128826372083	-Infinity	16	true	2
+31	15	14	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9957118678763863	-Infinity	14	true	2
+32	16	15	1	0	0	0	0	0	-Infinity	-Infinity	-49.694579502988944	-49.694579502988944	-Infinity	0.99553413851339	-Infinity	15	true	5
+33	16	15	1	0	0	0	0	0	-Infinity	-Infinity	-99.69330947762133	-99.69330947762133	-Infinity	0.9954795256651141	-Infinity	15	true	12
+34	16	15	1	0	0	0	0	0	-Infinity	-Infinity	-106.159773928627	-106.159773928627	-Infinity	0.9954340149582178	-Infinity	16	true	12
+35	17	15	1	0	0	0	0	0	-Infinity	-Infinity	-343.8568379661193	-343.8568379661193	-Infinity	0.9948296912582887	-Infinity	15	true	6
+36	17	15	1	0	0	0	0	0	-2101.3786533652496	-2101.3786533652496	-59.342767798699626	-59.342767798699626	-2101.3786533652496	0.9943966267244718	-2101.3786533652496	17	true	16
+37	18	16	1	0	0	0	0	0	-Infinity	-Infinity	-108.60782094594	-108.60782094594	-Infinity	0.9939305532201108	-Infinity	19	true	7
+38	20	19	1	0	0	0	0	0	-Infinity	-Infinity	-99.51773601982067	-99.51773601982067	-Infinity	0.9934132299076628	-Infinity	17	true	10
+39	20	18	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9934602759155148	-Infinity	20	true	2
+40	20	19	1	0	0	0	0	0	-Infinity	-Infinity	-73.95825357397233	-73.95825357397233	-Infinity	0.9931803028198362	-Infinity	21	true	11
+41	21	19	1	0	0	0	0	0	-Infinity	-Infinity	-73.82601134630515	-73.82601134630515	-Infinity	0.9930723930955323	-Infinity	21	true	11
+42	23	22	1	0	0	0	0	0	-Infinity	-Infinity	-58.01697827437377	-58.01697827437377	-Infinity	0.9929219336018892	-Infinity	18	true	11
+43	25	22	1	0	0	0	0	0	-Infinity	-Infinity	-91.09863706382518	-91.09863706382518	-Infinity	0.9925732740658425	-Infinity	15	true	11
+44	27	23	1	0	0	0	0	0	-Infinity	-Infinity	-51.138000964452	-51.138000964452	-Infinity	0.991913240874098	-Infinity	17	true	11
+45	28	23	1	0	0	0	0	0	-Infinity	-Infinity	-101.17509679981839	-101.17509679981839	-Infinity	0.9916803868958408	-Infinity	17	true	10
+46	28	22	1	0	0	0	0	0	-Infinity	-Infinity	-96.23580821925604	-96.23580821925604	-Infinity	0.9917178921048977	-Infinity	16	true	9
+47	29	21	1	0	0	0	0	0	-1515.679445662077	-1515.679445662077	26.59810568549844	26.59810568549844	-1515.679445662077	0.9916958495697503	-1515.679445662077	18	true	16
+48	30	23	1	0	0	0	0	0	-1946.9113866719906	-1946.9113866719906	32.2257769088133	32.2257769088133	-1946.9113866719906	0.9915843574765503	-1946.9113866719906	15	true	16
+49	30	21	1	0	0	0	0	0	-Infinity	-Infinity	-16.72313476025458	-16.72313476025458	-Infinity	0.9912973658622178	-Infinity	17	true	9
+50	30	21	1	0	0	0	0	0	-Infinity	-Infinity	-1.5242503495736557	-1.5242503495736557	-Infinity	0.9912536097849848	-Infinity	17	true	7
+51	31	22	1	0	0	0	0	0	-Infinity	-Infinity	1.6058584207243527	1.6058584207243527	-Infinity	0.9909473903539235	-Infinity	16	true	8
+52	31	21	1	0	0	0	0	0	-Infinity	-Infinity	-16.37985292615201	-16.37985292615201	-Infinity	0.9908042783719962	-Infinity	19	true	8
+53	32	21	1	0	0	0	0	0	-Infinity	-Infinity	-30.85562784952693	-30.85562784952693	-Infinity	0.9906853291027262	-Infinity	21	true	8
+54	32	21	1	0	0	0	0	0	-Infinity	-Infinity	-20.411302604070933	-20.411302604070933	-Infinity	0.9907392839648781	-Infinity	19	true	7
+55	32	20	1	0	0	0	0	0	-Infinity	-Infinity	-24.477584894353797	-24.477584894353797	-Infinity	0.9907113195546164	-Infinity	21	true	6
+56	32	17	1	0	0	0	0	0	-2067.6551683044563	-2067.6551683044563	-9.351847226943972	-9.351847226943972	-2067.6551683044563	0.9907975157368347	-2067.6551683044563	25	false	13
+57	33	20	1	0	0	0	0	0	-Infinity	-Infinity	-33.50473724072649	-33.50473724072649	-Infinity	0.9906472390171149	-Infinity	20	true	6
+58	33	17	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9907048128029478	-Infinity	23	false	2
+59	33	17	1	0	0	0	0	0	-Infinity	-Infinity	-59.00574932973802	-59.00574932973802	-Infinity	0.990720604469919	-Infinity	23	false	4
+60	33	15	1	0	0	0	0	0	-Infinity	-Infinity	-115.9835942421858	-115.9835942421858	-Infinity	0.9907663345055235	-Infinity	22	false	4
+61	33	15	1	0	0	0	0	0	-1418.674741218193	-1418.674741218193	-11.729145005091844	-11.729145005091844	-1418.674741218193	0.9908674450398812	-1418.674741218193	25	false	10
+62	33	14	1	0	0	0	0	0	-1731.5322414008003	-1731.5322414008003	-27.953574278174674	-27.953574278174674	-1731.5322414008003	0.9906748744343147	-1731.5322414008003	15	false	10
+63	33	15	1	0	0	0	0	0	-397.3393740926158	-397.3393740926158	-3.2940921385172928	-3.2940921385172928	-397.3393740926158	0.9906580957881578	-397.3393740926158	23	false	11
+64	33	15	1	0	0	0	0	0	-1318.8706614998075	-1318.8706614998075	-12.216912143660274	-12.216912143660274	-1318.8706614998075	0.9906541478714149	-1318.8706614998075	25	false	10
+65	33	14	1	0	0	0	0	0	-1236.8098083810542	-1236.8098083810542	-23.11898152275026	-23.11898152275026	-1236.8098083810542	0.9906748744343147	-1236.8098083810542	17	false	10
+66	33	12	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9907169124366688	-Infinity	17	false	1
+67	33	13	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9906748744343147	-Infinity	18	false	0
+68	33	11	1	0	0	0	0	0	-Infinity	-Infinity	-33.52883602640324	-33.52883602640324	-Infinity	0.9908695286626067	-Infinity	16	false	5
+69	33	10	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9909855901038886	-Infinity	22	false	2
+70	33	10	1	0	0	0	0	0	-Infinity	-Infinity	-47.07306506059244	-47.07306506059244	-Infinity	0.9909855901038886	-Infinity	19	false	4
+71	33	10	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9909855901038886	-Infinity	19	false	1
+72	33	11	1	0	0	0	0	0	-Infinity	-Infinity	-94.07671192599301	-94.07671192599301	-Infinity	0.9909435521015346	-Infinity	18	false	3
+73	33	9	1	0	0	0	0	0	-Infinity	-Infinity	-51.49750621757972	-51.49750621757972	-Infinity	0.9909855901038886	-Infinity	20	false	2
+74	33	9	1	0	0	0	0	0	-Infinity	-Infinity	-108.73674811863684	-108.73674811863684	-Infinity	0.9911278247709844	-Infinity	23	false	2
+75	33	8	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9911406189456139	-Infinity	25	false	1
+76	33	6	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9911573975917708	-Infinity	20	false	1
+77	33	5	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9911573975917708	-Infinity	20	false	1
+78	33	5	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9911573975917708	-Infinity	20	false	0
+79	33	3	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9916298681834466	-Infinity	24	false	0
+80	33	3	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9916298681834466	-Infinity	24	false	0
+81	33	2	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9917048054919908	-Infinity	25	false	1
+82	33	2	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9917048054919908	-Infinity	25	false	0
+83	33	2	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9917048054919908	-Infinity	25	false	1
+84	33	2	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9917048054919908	-Infinity	25	false	0
+85	33	1	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9918446275432992	-Infinity	26	false	0

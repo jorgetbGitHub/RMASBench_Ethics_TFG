@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scenario:scenario xmlns:scenario="urn:roborescue:map:scenario">
+
+  <scenario:aftershock scenario:time="15" scenario:intensity="0.2"/>
+
+  <!-- The fire station (do *not* remove this) -->
+  <scenario:firestation scenario:location="64173"/>
+
+  <!-- The refuge -->
+  <scenario:refuge scenario:location="18421"/>
+
+  <!-- ambulance centre -->
+  <!--<scenario:ambulancecentre scenario:location="18421"/>-->
+
+  <!-- The initial fires -->
+  <scenario:fire scenario:location="35014"/>
+  <scenario:fire scenario:location="18421"/>
+
+
+  <!-- The fire brigades -->
+  <scenario:firebrigade scenario:location="35014"/>
+
+  <scenario:firebrigade scenario:location="10345"/>
+  <scenario:firebrigade scenario:location="10345"/>
+  <scenario:firebrigade scenario:location="10345"/>
+
+  <scenario:firebrigade scenario:location="14737"/>
+  <scenario:firebrigade scenario:location="14737"/>
+  <scenario:firebrigade scenario:location="14737"/>
+
+  <scenario:firebrigade scenario:location="18220"/>
+  <scenario:firebrigade scenario:location="18220"/>
+  <scenario:firebrigade scenario:location="18220"/>
+  <scenario:firebrigade scenario:location="18238"/>
+  <scenario:firebrigade scenario:location="18238"/>
+  <scenario:firebrigade scenario:location="8581"/>
+  <scenario:firebrigade scenario:location="12730"/>
+  <scenario:firebrigade scenario:location="12730"/>
+  <scenario:firebrigade scenario:location="8581"/>
+  <scenario:firebrigade scenario:location="8581"/>
+  <scenario:firebrigade scenario:location="18238"/>
+  <scenario:firebrigade scenario:location="18238"/>
+  <scenario:firebrigade scenario:location="8581"/>
+  <scenario:firebrigade scenario:location="12730"/>
+  <scenario:firebrigade scenario:location="12730"/>
+  <scenario:firebrigade scenario:location="8581"/>
+  <scenario:firebrigade scenario:location="8581"/>
+  <scenario:firebrigade scenario:location="18238"/>
+
+  <!--<scenario:firebrigade scenario:location="18238"/>
+  <scenario:firebrigade scenario:location="2053"/>
+  <scenario:firebrigade scenario:location="2053"/>
+  <scenario:firebrigade scenario:location="13666"/>
+  <scenario:firebrigade scenario:location="13666"/>-->
+  <!--<scenario:firebrigade scenario:location="16924"/>
+  <scenario:firebrigade scenario:location="16924"/>
+  <scenario:firebrigade scenario:location="7834"/>
+  <scenario:firebrigade scenario:location="7834"/>
+  <scenario:firebrigade scenario:location="7834"/>-->
+
+  <!-- The police forces -->
+  <scenario:policeforce scenario:location="10345"/>
+  <scenario:policeforce scenario:location="15457"/>
+  <scenario:policeforce scenario:location="18433"/>
+  <scenario:policeforce scenario:location="10345"/>
+  <scenario:policeforce scenario:location="18433"/>
+  <scenario:policeforce scenario:location="18433"/>
+  <scenario:policeforce scenario:location="18433"/>
+  <scenario:policeforce scenario:location="18433"/>
+  <scenario:policeforce scenario:location="18433"/>
+
+  <!--<scenario:policeforce scenario:location="18247"/>
+  <scenario:policeforce scenario:location="18247"/>
+  <scenario:policeforce scenario:location="18247"/>
+  <scenario:policeforce scenario:location="62713"/>
+  <scenario:policeforce scenario:location="62713"/>
+  <scenario:policeforce scenario:location="62713"/>
+  <scenario:policeforce scenario:location="2114"/>
+  <scenario:policeforce scenario:location="2114"/>
+  <scenario:policeforce scenario:location="2114"/>
+  <scenario:policeforce scenario:location="14683"/>
+  <scenario:policeforce scenario:location="14683"/>
+  <scenario:policeforce scenario:location="14647"/>-->
+
+  <!-- the ambulance teams -->
+  <scenario:ambulanceteam scenario:location="10345"/>
+  <scenario:ambulanceteam scenario:location="10345"/>
+  <scenario:ambulanceteam scenario:location="10345"/>
+
+  <scenario:ambulanceteam scenario:location="14737"/>
+  <scenario:ambulanceteam scenario:location="53425"/>
+  <scenario:ambulanceteam scenario:location="28948"/>
+
+  <scenario:ambulanceteam scenario:location="33594"/>
+  <scenario:ambulanceteam scenario:location="45946"/>
+  <scenario:ambulanceteam scenario:location="50065"/>
+
+  <scenario:ambulanceteam scenario:location="29928"/>
+  <scenario:ambulanceteam scenario:location="21790"/>
+  <scenario:ambulanceteam scenario:location="46459"/>
+
+
+
+
+  <!-- The civilians -->
+  <!--<scenario:civilian scenario:location="28983"/>
+  <scenario:civilian scenario:location="19357"/>
+  <scenario:civilian scenario:location="18388"/>
+  <scenario:civilian scenario:location="18343"/>
+  <scenario:civilian scenario:location="18316"/>
+  <scenario:civilian scenario:location="18421"/>
+  <scenario:civilian scenario:location="18458"/>
+  <scenario:civilian scenario:location="18481"/>
+  <scenario:civilian scenario:location="18510"/>
+  <scenario:civilian scenario:location="18560"/>
+  <scenario:civilian scenario:location="18593"/>
+  <scenario:civilian scenario:location="18620"/>
+  <scenario:civilian scenario:location="18651"/>
+  <scenario:civilian scenario:location="18686"/>
+  <scenario:civilian scenario:location="18713"/>
+  <scenario:civilian scenario:location="18753"/>
+  <scenario:civilian scenario:location="18786"/>
+  <scenario:civilian scenario:location="18844"/>
+  <scenario:civilian scenario:location="18881"/>
+  <scenario:civilian scenario:location="18908"/>
+  <scenario:civilian scenario:location="18931"/>
+  <scenario:civilian scenario:location="18960"/>
+  <scenario:civilian scenario:location="18989"/>
+  <scenario:civilian scenario:location="19020"/>
+  <scenario:civilian scenario:location="19047"/>
+  <scenario:civilian scenario:location="19062"/>
+  <scenario:civilian scenario:location="19091"/>
+  <scenario:civilian scenario:location="19108"/>
+  <scenario:civilian scenario:location="19127"/>
+  <scenario:civilian scenario:location="19154"/>
+  <scenario:civilian scenario:location="19177"/>
+  <scenario:civilian scenario:location="19196"/>
+  <scenario:civilian scenario:location="19223"/>
+  <scenario:civilian scenario:location="19274"/>
+  <scenario:civilian scenario:location="19291"/>
+  <scenario:civilian scenario:location="19312"/>
+  <scenario:civilian scenario:location="19424"/>
+  <scenario:civilian scenario:location="19457"/>
+  <scenario:civilian scenario:location="19492"/>
+  <scenario:civilian scenario:location="19560"/>
+  <scenario:civilian scenario:location="19644"/>
+  <scenario:civilian scenario:location="19695"/>
+  <scenario:civilian scenario:location="19731"/>
+  <scenario:civilian scenario:location="19754"/>
+  <scenario:civilian scenario:location="19778"/>
+  <scenario:civilian scenario:location="19809"/>
+  <scenario:civilian scenario:location="19836"/>
+  <scenario:civilian scenario:location="19867"/>-->
+
+
+  <!-- ZONA A -->
+  <!--<scenario:civilian scenario:location="64535"/>
+  <scenario:civilian scenario:location="64534"/> 
+  <scenario:civilian scenario:location="64532"/> 
+  <scenario:civilian scenario:location="64537"/> 
+  <scenario:civilian scenario:location="64538"/> 
+  <scenario:civilian scenario:location="64546"/> 
+  <scenario:civilian scenario:location="64529"/>
+  <scenario:civilian scenario:location="64528"/> 
+  <scenario:civilian scenario:location="64514"/>
+  <scenario:civilian scenario:location="64513"/>-->
+
+  <!-- ZONA B (Grupo de pisos contiguos a la derecha del Refugio) --> 
+  <!--<scenario:civilian scenario:location="64544"/>-->
+  <!--<scenario:civilian scenario:location="64545"/>-->
+
+  <!-- ZONA C (Esquina superior izquierda)-->
+  <!--<scenario:civilian scenario:location="64551"/>-->
+  <!--<scenario:civilian scenario:location="64552"/>-->
+  <!--<scenario:civilian scenario:location="64558"/>-->
+  <!--<scenario:civilian scenario:location="64559"/>-->
+  <!--<scenario:civilian scenario:location="64562"/>-->
+
+  <!-- ZONA D (Justo a la derecha de la Zona B) -->
+  <!--<scenario:civilian scenario:location="64511"/>-->
+  <!--<scenario:civilian scenario:location="64510"/>-->
+
+  <!-- ZONA E (A la derecha del Fire Station) -->
+  <!--<scenario:civilian scenario:location="64508"/>-->
+  <!--<scenario:civilian scenario:location="64507"/>-->
+  <!--<scenario:civilian scenario:location="64503"/>-->
+  
+  <!-- ZONA F (Centro inferior izquierdo) -->
+  <!--<scenario:civilian scenario:location="64500"/>-->
+  <!--<scenario:civilian scenario:location="64499"/>-->
+  <!--<scenario:civilian scenario:location="64492"/>-->
+
+<scenario:civilian scenario:location="49176"/>
+<scenario:civilian scenario:location="36902"/>
+<scenario:civilian scenario:location="24756"/>
+<scenario:civilian scenario:location="28948"/>
+<scenario:civilian scenario:location="24963"/>
+<scenario:civilian scenario:location="49674"/>
+<scenario:civilian scenario:location="37440"/>
+<scenario:civilian scenario:location="33347"/>
+<scenario:civilian scenario:location="33442"/>
+<scenario:civilian scenario:location="41699"/>
+<scenario:civilian scenario:location="41726"/>
+<scenario:civilian scenario:location="21290"/>
+<scenario:civilian scenario:location="33594"/>
+<scenario:civilian scenario:location="45946"/>
+<scenario:civilian scenario:location="50065"/>
+<scenario:civilian scenario:location="62371"/>
+<scenario:civilian scenario:location="46010"/>
+<scenario:civilian scenario:location="58342"/>
+<scenario:civilian scenario:location="29723"/>
+<scenario:civilian scenario:location="42014"/>
+<scenario:civilian scenario:location="25705"/>
+
+<!--<scenario:civilian scenario:location="50296"/>
+<scenario:civilian scenario:location="62621"/>
+<scenario:civilian scenario:location="21695"/>
+<scenario:civilian scenario:location="46346"/>-->
+<!--<scenario:civilian scenario:location="26048"/>
+<scenario:civilian scenario:location="22001"/>
+<scenario:civilian scenario:location="26106"/>
+<scenario:civilian scenario:location="22030"/>
+<scenario:civilian scenario:location="38445"/>
+<scenario:civilian scenario:location="42607"/>
+<scenario:civilian scenario:location="42668"/>
+<scenario:civilian scenario:location="26386"/>-->
+<!--<scenario:civilian scenario:location="59204"/>
+<scenario:civilian scenario:location="30658"/>
+<scenario:civilian scenario:location="47071"/>
+<scenario:civilian scenario:location="18421"/>
+<scenario:civilian scenario:location="26691"/>
+<scenario:civilian scenario:location="51293"/>
+<scenario:civilian scenario:location="55396"/>
+<scenario:civilian scenario:location="63664"/>
+<scenario:civilian scenario:location="63665"/>
+<scenario:civilian scenario:location="63668"/>
+<scenario:civilian scenario:location="63674"/>
+<scenario:civilian scenario:location="63675"/>
+<scenario:civilian scenario:location="63681"/>
+<scenario:civilian scenario:location="55519"/>
+<scenario:civilian scenario:location="35043"/>
+<scenario:civilian scenario:location="43249"/>
+<scenario:civilian scenario:location="39177"/>
+<scenario:civilian scenario:location="35096"/>
+<scenario:civilian scenario:location="22835"/>
+<scenario:civilian scenario:location="47411"/>
+<scenario:civilian scenario:location="39227"/>
+<scenario:civilian scenario:location="63809"/>
+<scenario:civilian scenario:location="63812"/>
+<scenario:civilian scenario:location="63813"/>
+<scenario:civilian scenario:location="63815"/>
+<scenario:civilian scenario:location="63816"/>
+<scenario:civilian scenario:location="59743"/>-->
+
+
+<scenario:civilian scenario:location="57365"/>
+<scenario:civilian scenario:location="28702"/>
+<scenario:civilian scenario:location="28739"/>
+<scenario:civilian scenario:location="36941"/>
+<scenario:civilian scenario:location="36991"/>
+<scenario:civilian scenario:location="53425"/>
+<scenario:civilian scenario:location="41145"/>
+<scenario:civilian scenario:location="53472"/>
+<scenario:civilian scenario:location="24887"/>
+<scenario:civilian scenario:location="41316"/>
+<scenario:civilian scenario:location="61811"/>
+<scenario:civilian scenario:location="33146"/>
+<scenario:civilian scenario:location="33242"/>
+<scenario:civilian scenario:location="53732"/>
+<scenario:civilian scenario:location="21125"/>
+<scenario:civilian scenario:location="45822"/>
+<scenario:civilian scenario:location="33561"/>
+<scenario:civilian scenario:location="29496"/>
+
+<!--<scenario:civilian scenario:location="21321"/>
+<scenario:civilian scenario:location="54105"/>
+<scenario:civilian scenario:location="50038"/>
+<scenario:civilian scenario:location="41874"/>-->
+<!--<scenario:civilian scenario:location="41905"/>
+<scenario:civilian scenario:location="50114"/>
+<scenario:civilian scenario:location="46045"/>
+<scenario:civilian scenario:location="54240"/>
+<scenario:civilian scenario:location="29667"/>
+<scenario:civilian scenario:location="37876"/>-->
+
+<!--<scenario:civilian scenario:location="29928"/>
+<scenario:civilian scenario:location="21790"/>
+<scenario:civilian scenario:location="46459"/>
+<scenario:civilian scenario:location="58759"/>
+<scenario:civilian scenario:location="54682"/>
+<scenario:civilian scenario:location="46589"/>
+<scenario:civilian scenario:location="46602"/>
+<scenario:civilian scenario:location="30260"/>
+<scenario:civilian scenario:location="46680"/>
+<scenario:civilian scenario:location="59015"/>
+<scenario:civilian scenario:location="34446"/>-->
+
+
+<!--<scenario:civilian scenario:location="46749"/>
+<scenario:civilian scenario:location="54964"/>
+<scenario:civilian scenario:location="38595"/>
+<scenario:civilian scenario:location="42712"/>
+<scenario:civilian scenario:location="22280"/>
+<scenario:civilian scenario:location="63247"/>
+<scenario:civilian scenario:location="63249"/>
+<scenario:civilian scenario:location="63250"/>
+<scenario:civilian scenario:location="63251"/>
+<scenario:civilian scenario:location="63252"/>
+<scenario:civilian scenario:location="55082"/>
+<scenario:civilian scenario:location="38728"/>
+<scenario:civilian scenario:location="42847"/>
+<scenario:civilian scenario:location="22381"/>
+<scenario:civilian scenario:location="18316"/>
+<scenario:civilian scenario:location="51106"/>
+<scenario:civilian scenario:location="34768"/>
+<scenario:civilian scenario:location="47060"/>
+<scenario:civilian scenario:location="26619"/>
+<scenario:civilian scenario:location="59399"/>
+<scenario:civilian scenario:location="30735"/>
+<scenario:civilian scenario:location="55343"/>
+<scenario:civilian scenario:location="47197"/>
+<scenario:civilian scenario:location="43130"/>
+<scenario:civilian scenario:location="59537"/>
+<scenario:civilian scenario:location="26778"/>
+<scenario:civilian scenario:location="35014"/>
+<scenario:civilian scenario:location="18651"/>
+<scenario:civilian scenario:location="30953"/>
+<scenario:civilian scenario:location="31049"/>
+<scenario:civilian scenario:location="47436"/>
+<scenario:civilian scenario:location="59807"/>-->
+
+<!--<scenario:civilian scenario:location="51680"/>
+<scenario:civilian scenario:location="31227"/>
+<scenario:civilian scenario:location="51717"/>
+<scenario:civilian scenario:location="23069"/>
+<scenario:civilian scenario:location="31303"/>
+<scenario:civilian scenario:location="43613"/>
+<scenario:civilian scenario:location="60010"/>
+<scenario:civilian scenario:location="39535"/>
+<scenario:civilian scenario:location="55941"/>
+<scenario:civilian scenario:location="39560"/>
+<scenario:civilian scenario:location="19108"/>
+<scenario:civilian scenario:location="27380"/>
+<scenario:civilian scenario:location="31485"/>
+<scenario:civilian scenario:location="19223"/>
+<scenario:civilian scenario:location="31553"/>
+<scenario:civilian scenario:location="64355"/>
+<scenario:civilian scenario:location="64356"/>
+<scenario:civilian scenario:location="64358"/>
+<scenario:civilian scenario:location="64359"/>
+<scenario:civilian scenario:location="64365"/>
+<scenario:civilian scenario:location="64366"/>
+<scenario:civilian scenario:location="64368"/>
+<scenario:civilian scenario:location="64369"/>
+<scenario:civilian scenario:location="35740"/>
+<scenario:civilian scenario:location="35774"/>
+<scenario:civilian scenario:location="27584"/>
+<scenario:civilian scenario:location="64458"/>
+<scenario:civilian scenario:location="35797"/>
+<scenario:civilian scenario:location="64471"/>
+<scenario:civilian scenario:location="64472"/>
+<scenario:civilian scenario:location="64474"/>
+<scenario:civilian scenario:location="23517"/>
+<scenario:civilian scenario:location="64477"/>
+<scenario:civilian scenario:location="64480"/>
+<scenario:civilian scenario:location="64481"/>
+<scenario:civilian scenario:location="23621"/>
+<scenario:civilian scenario:location="44122"/>
+<scenario:civilian scenario:location="60507"/>
+<scenario:civilian scenario:location="23675"/>
+<scenario:civilian scenario:location="56531"/>
+<scenario:civilian scenario:location="36154"/>
+<scenario:civilian scenario:location="23869"/>
+<scenario:civilian scenario:location="23882"/>
+<scenario:civilian scenario:location="19987"/>
+<scenario:civilian scenario:location="28198"/>
+<scenario:civilian scenario:location="65073"/>
+<scenario:civilian scenario:location="65074"/>
+<scenario:civilian scenario:location="65077"/>
+<scenario:civilian scenario:location="20023"/>
+<scenario:civilian scenario:location="65083"/>
+<scenario:civilian scenario:location="65084"/>
+<scenario:civilian scenario:location="65090"/>
+<scenario:civilian scenario:location="65091"/>
+<scenario:civilian scenario:location="65093"/>
+<scenario:civilian scenario:location="65094"/>
+<scenario:civilian scenario:location="65100"/>
+<scenario:civilian scenario:location="65101"/>
+<scenario:civilian scenario:location="44657"/>
+<scenario:civilian scenario:location="20133"/>
+<scenario:civilian scenario:location="20244"/>
+<scenario:civilian scenario:location="40753"/>
+<scenario:civilian scenario:location="28471"/>
+<scenario:civilian scenario:location="53106"/>
+<scenario:civilian scenario:location="57226"/>
+<scenario:civilian scenario:location="53176"/>
+<scenario:civilian scenario:location="57282"/>-->
+
+
+  <!-- The blockades -->
+  <scenario:blockade scenario:location="230" cost="10" />
+  <scenario:blockade scenario:location="356" cost="15" />
+  <scenario:blockade scenario:location="939" cost="14" />
+  <scenario:blockade scenario:location="939" cost="10" />
+  <scenario:blockade scenario:location="10354" cost="10"/>
+
+  <scenario:blockade scenario:location="1629" cost="10" />
+  <scenario:blockade scenario:location="1670" cost="10" />
+  <scenario:blockade scenario:location="1758" cost="10" />
+  <scenario:blockade scenario:location="2576" cost="10" />
+  <scenario:blockade scenario:location="2682" cost="10" />
+  <scenario:blockade scenario:location="2867" cost="10" />
+  <scenario:blockade scenario:location="2957" cost="10" />
+  <scenario:blockade scenario:location="3223" cost="10" />
+  <scenario:blockade scenario:location="3250" cost="10" />
+  <scenario:blockade scenario:location="3702" cost="10" />
+  <scenario:blockade scenario:location="4011" cost="10" />
+  <scenario:blockade scenario:location="4086" cost="10" />
+  <scenario:blockade scenario:location="4093" cost="10" />
+  <scenario:blockade scenario:location="4197" cost="10" />
+  <scenario:blockade scenario:location="4283" cost="10" />
+  <scenario:blockade scenario:location="4505" cost="10" />
+  <scenario:blockade scenario:location="4778" cost="10" />
+  <scenario:blockade scenario:location="4986" cost="10" />
+  <scenario:blockade scenario:location="5105" cost="10" />
+  <scenario:blockade scenario:location="5916" cost="10" />
+  <scenario:blockade scenario:location="5978" cost="10" />
+  <scenario:blockade scenario:location="5992" cost="10" />
+  <scenario:blockade scenario:location="6367" cost="10" />
+  <scenario:blockade scenario:location="6463" cost="10" />
+  <scenario:blockade scenario:location="6649" cost="10" />
+  <scenario:blockade scenario:location="6690" cost="10" />
+  <scenario:blockade scenario:location="6697" cost="10" />
+  <scenario:blockade scenario:location="6942" cost="10" />
+  <scenario:blockade scenario:location="6965" cost="10" />
+  <scenario:blockade scenario:location="7174" cost="10" />
+  <scenario:blockade scenario:location="7708" cost="10" />
+  <scenario:blockade scenario:location="7744" cost="10" />
+  <scenario:blockade scenario:location="7753" cost="10" />
+  <scenario:blockade scenario:location="7789" cost="10" />
+  <scenario:blockade scenario:location="7942" cost="10" />
+  <scenario:blockade scenario:location="8086" cost="10" />
+  <scenario:blockade scenario:location="8464" cost="10" />
+  <scenario:blockade scenario:location="8509" cost="10" />
+  <scenario:blockade scenario:location="8617" cost="10" />
+  <scenario:blockade scenario:location="8977" cost="10" />
+  <scenario:blockade scenario:location="9031" cost="10" />
+  <scenario:blockade scenario:location="9139" cost="10" />
+  <scenario:blockade scenario:location="9274" cost="10" />
+  <scenario:blockade scenario:location="9283" cost="10" />
+  <scenario:blockade scenario:location="9508" cost="10" />
+  <scenario:blockade scenario:location="9580" cost="10" />
+  <scenario:blockade scenario:location="9625" cost="10" />
+  <scenario:blockade scenario:location="9922" cost="10" />
+  <scenario:blockade scenario:location="10048" cost="10" />
+  <scenario:blockade scenario:location="10174" cost="10" />
+  <scenario:blockade scenario:location="10363" cost="10" />
+  <scenario:blockade scenario:location="10417" cost="10" />
+  <scenario:blockade scenario:location="10426" cost="10" />
+  <scenario:blockade scenario:location="10597" cost="10" />
+  <scenario:blockade scenario:location="10849" cost="10" />
+  <scenario:blockade scenario:location="10966" cost="10" />
+  <scenario:blockade scenario:location="11092" cost="10" />
+  <scenario:blockade scenario:location="11236" cost="10" />
+  <scenario:blockade scenario:location="11263" cost="10" />
+  <scenario:blockade scenario:location="11434" cost="10" />
+  <scenario:blockade scenario:location="11920" cost="10" />
+  <scenario:blockade scenario:location="11956" cost="10" />
+  <scenario:blockade scenario:location="12190" cost="10" />
+  <scenario:blockade scenario:location="12352" cost="10" />
+  <scenario:blockade scenario:location="12361" cost="10" />
+  <scenario:blockade scenario:location="12451" cost="10" />
+  <scenario:blockade scenario:location="13378" cost="10" />
+  <scenario:blockade scenario:location="13477" cost="10" />
+  <scenario:blockade scenario:location="13891" cost="10" />
+  <scenario:blockade scenario:location="13954" cost="10" />
+  <scenario:blockade scenario:location="14062" cost="10" />
+  <!--<scenario:blockade scenario:location="14683" cost="10" />
+  <scenario:blockade scenario:location="14710" cost="10" />
+  <scenario:blockade scenario:location="15223" cost="10" />
+  <scenario:blockade scenario:location="15268" cost="10" />
+  <scenario:blockade scenario:location="15979" cost="10" />
+  <scenario:blockade scenario:location="16357" cost="10" />
+  <scenario:blockade scenario:location="16753" cost="10" />
+  <scenario:blockade scenario:location="16843" cost="10" />
+  <scenario:blockade scenario:location="16924" cost="10" />
+  <scenario:blockade scenario:location="16942" cost="10" />
+  <scenario:blockade scenario:location="17086" cost="10" />
+  <scenario:blockade scenario:location="17734" cost="10" />
+  <scenario:blockade scenario:location="17770" cost="10" />
+  <scenario:blockade scenario:location="17914" cost="10" />
+  <scenario:blockade scenario:location="19900" cost="10" />
+  <scenario:blockade scenario:location="20482" cost="10" />
+  <scenario:blockade scenario:location="22676" cost="10" />
+  <scenario:blockade scenario:location="24085" cost="10" />
+  <scenario:blockade scenario:location="24672" cost="10" />
+  <scenario:blockade scenario:location="25293" cost="10" />
+  <scenario:blockade scenario:location="26398" cost="10" />
+  <scenario:blockade scenario:location="26942" cost="10" />
+  <scenario:blockade scenario:location="27721" cost="10" />
+  <scenario:blockade scenario:location="28175" cost="10" />
+  <scenario:blockade scenario:location="28751" cost="10" />
+  <scenario:blockade scenario:location="29800" cost="10" />
+  <scenario:blockade scenario:location="30777" cost="10" />
+  <scenario:blockade scenario:location="31586" cost="10" />
+  <scenario:blockade scenario:location="32289" cost="10" />
+  <scenario:blockade scenario:location="33606" cost="10" />
+  <scenario:blockade scenario:location="33902" cost="10" />
+  <scenario:blockade scenario:location="35809" cost="10" />
+  <scenario:blockade scenario:location="36696" cost="10" />
+  <scenario:blockade scenario:location="38201" cost="10" />
+  <scenario:blockade scenario:location="42580" cost="10" />
+  <scenario:blockade scenario:location="43107" cost="10" />
+  <scenario:blockade scenario:location="43410" cost="10" />
+  <scenario:blockade scenario:location="49022" cost="10" />
+  <scenario:blockade scenario:location="49402" cost="10" />
+  <scenario:blockade scenario:location="51382" cost="10" />
+  <scenario:blockade scenario:location="51424" cost="10" />
+  <scenario:blockade scenario:location="51518" cost="10" />
+  <scenario:blockade scenario:location="51692" cost="10" />
+  <scenario:blockade scenario:location="52119" cost="10" />
+  <scenario:blockade scenario:location="54180" cost="10" />
+  <scenario:blockade scenario:location="55287" cost="10" />
+  <scenario:blockade scenario:location="56358" cost="10" />
+  <scenario:blockade scenario:location="56444" cost="10" />
+  <scenario:blockade scenario:location="56959" cost="10" />
+  <scenario:blockade scenario:location="57919" cost="10" />
+  <scenario:blockade scenario:location="59997" cost="10" />
+  <scenario:blockade scenario:location="60234" cost="10" />
+  <scenario:blockade scenario:location="61554" cost="10" />
+  <scenario:blockade scenario:location="62913" cost="10" />
+  <scenario:blockade scenario:location="63241" cost="10" />
+  <scenario:blockade scenario:location="63262" cost="10" />-->
+
+</scenario:scenario>

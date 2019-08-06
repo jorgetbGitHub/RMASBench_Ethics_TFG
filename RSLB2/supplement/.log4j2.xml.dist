@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Log configuration for the RSLB2 experiment runner -->
+
+<configuration status="WARN">
+
+    <appenders>
+        <Console name="Console_red" target="SYSTEM_OUT">
+            <MarkerFilter marker="RED" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout pattern="%red{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg}%n"/>
+        </Console>
+        <Console name="Console_yellow" target="SYSTEM_OUT">
+            <MarkerFilter marker="YELLOW" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout pattern="%yellow{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg}%n"/>
+        </Console>
+        <Console name="Console_green" target="SYSTEM_OUT">
+            <MarkerFilter marker="GREEN" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout pattern="%green{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg}%n"/>
+        </Console>
+        <Console name="Console_white" target="SYSTEM_OUT">
+            <MarkerFilter marker="WHITE" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout pattern="%style{%n%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg}{BG_White}%n"/>
+        </Console>
+        <Console name="Console_magenta" target="SYSTEM_OUT">
+            <MarkerFilter marker="MAGENTA" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout pattern="%magenta{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg}%n"/>
+        </Console>
+        <Console name="Console_blue" target="SYSTEM_OUT">
+            <MarkerFilter marker="BLUE" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout pattern="%blue{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg}%n"/>
+        </Console>
+        <Console name="Console_light_blue" target="SYSTEM_OUT">
+            <MarkerFilter marker="LIGHT_BLUE" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout pattern="%cyan{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg}%n"/>
+        </Console>
+        <Console name="Console" target="SYSTEM_OUT">
+            <filters>
+                <MarkerFilter marker="RED" onMatch="DENY" onMismatch="NEUTRAL" />
+                <MarkerFilter marker="YELLOW" onMatch="DENY" onMismatch="NEUTRAL" />
+                <MarkerFilter marker="GREEN" onMatch="DENY" onMismatch="NEUTRAL" />
+                <MarkerFilter marker="WHITE" onMatch="DENY" onMismatch="NEUTRAL" />
+                <MarkerFilter marker="MAGENTA" onMatch="DENY" onMismatch="NEUTRAL" />
+                <MarkerFilter marker="BLUE" onMatch="DENY" onMismatch="NEUTRAL" />
+                <MarkerFilter marker="LIGHT_BLUE" onMatch="DENY" onMismatch="NEUTRAL" />
+            </filters>
+            <PatternLayout pattern="%highlight{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg}%n"/>
+        </Console>
+    </appenders>
+
+    <loggers>
+        <logger name="com.infomatiq.jsi.rtree" level="ERROR" />
+        <logger name="RSLBench" level="INFO" />
+        <logger name="RSLBench.Algorithms.BMS" level="INFO" />
+        <logger name="RSLBench.Algorithms.DSA" level="INFO" />
+        <root level="INFO">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="Console_red"/>
+            <appender-ref ref="Console_yellow"/>
+            <appender-ref ref="Console_green"/>
+            <appender-ref ref="Console_white"/>
+            <appender-ref ref="Console_magenta"/>
+            <appender-ref ref="Console_blue"/>
+            <appender-ref ref="Console_light_blue"/>
+        </root>
+    </loggers>
+
+</configuration>

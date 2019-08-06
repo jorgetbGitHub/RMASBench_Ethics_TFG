@@ -1,0 +1,33 @@
+# solver: Closest
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 91df39c0-553d-45e4-929d-ed60ec53fe34
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-nopolice-civil.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+24	1	1	1	0	0	0	0	0	-79.14908415492803	-79.14908415492803	-79.14908415492803	-79.14908415492803	-79.14908415492803	0.9998799906419753	-79.14908415492803	17	false	3
+25	1	1	1	0	0	0	0	0	-78.66630591998316	-78.66630591998316	-78.66630591998316	-78.66630591998316	-78.66630591998316	0.9998799906419753	-78.66630591998316	17	false	21
+26	1	1	1	0	0	0	0	0	-77.47525995789796	-77.47525995789796	-77.47525995789796	-77.47525995789796	-77.47525995789796	0.9998799906419753	-77.47525995789796	17	false	1
+27	2	1	1	0	0	0	0	0	-76.21108524231947	-76.21108524231947	-76.21108524231947	-76.21108524231947	-76.21108524231947	0.9998178475080605	-76.21108524231947	17	false	2
+28	2	1	1	0	0	0	0	0	-74.83388419260046	-74.83388419260046	-74.83388419260046	-74.83388419260046	-74.83388419260046	0.9998178475080605	-74.83388419260046	17	false	1
+29	2	1	1	0	0	0	0	0	-73.72908582040435	-73.72908582040435	-73.72908582040435	-73.72908582040435	-73.72908582040435	0.9998178475080605	-73.72908582040435	17	false	7
+30	2	1	1	0	0	0	0	0	-72.74055323137995	-72.74055323137995	-72.74055323137995	-72.74055323137995	-72.74055323137995	0.9998178475080605	-72.74055323137995	17	false	1

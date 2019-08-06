@@ -1,0 +1,35 @@
+# solver: Greedy
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: c0509fd4-ac69-473f-a466-71782c867466
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+23	12	12	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9977516614149626	-Infinity	13	false	5
+24	13	13	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9975615034251832	-Infinity	17	true	3
+25	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9966306358339244	-Infinity	15	true	3
+26	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-133.52086171448875	-133.52086171448875	-Infinity	0.9960817657423182	-Infinity	15	true	13
+27	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-68.4188330338454	-68.4188330338454	-Infinity	0.9960817657423182	-Infinity	13	true	8
+28	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-19.97370406068208	-19.97370406068208	-Infinity	0.9960817657423182	-Infinity	13	true	11
+29	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-19.402404728621335	-19.402404728621335	-Infinity	0.9960817657423182	-Infinity	13	true	11
+30	15	14	1	0	0	0	0	0	-2242.028971984103	-2242.028971984103	-3.4610188118700442	-3.4610188118700442	-2242.028971984103	0.9959217654498799	-2242.028971984103	16	true	14
+31	15	14	1	0	0	0	0	0	-2236.276626443006	-2236.276626443006	-6.168721628552014	-6.168721628552014	-2236.276626443006	0.9957118678763863	-2236.276626443006	14	true	13

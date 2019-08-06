@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scenario:scenario xmlns:scenario="urn:roborescue:map:scenario">
+
+  <!-- The fire station (do *not* remove this) -->
+  <scenario:firestation scenario:location="64173"/>
+
+  <!-- The initial fires -->
+  <scenario:fire scenario:location="35014"/>
+
+  <!-- The fire brigades -->
+  <scenario:firebrigade scenario:location="10345"/>
+
+  <!-- The police forces -->
+  <scenario:policeforce scenario:location="10345"/>
+
+  <!-- The blockades -->
+  <scenario:blockade scenario:location="230" cost="10" />
+  <scenario:blockade scenario:location="356" cost="15" />
+  <scenario:blockade scenario:location="939" cost="14" />
+  <scenario:blockade scenario:location="10354" cost="10" />
+
+</scenario:scenario>

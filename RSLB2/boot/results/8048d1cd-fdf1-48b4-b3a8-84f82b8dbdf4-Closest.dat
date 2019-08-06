@@ -1,0 +1,40 @@
+# solver: Closest
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 8048d1cd-fdf1-48b4-b3a8-84f82b8dbdf4
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: demo_N79.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+24	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9988814601443183	-Infinity	8	false	17
+25	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9988018438233379	-Infinity	9	false	12
+26	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9988018438233379	-Infinity	9	false	10
+27	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9988018438233379	-Infinity	8	false	9
+28	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9988018438233379	-Infinity	8	false	8
+29	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-183.14712175940215	-183.14712175940215	-Infinity	0.9988018438233379	-Infinity	8	false	10
+30	7	7	1	0	0	0	0	0	-786.6741026049837	-786.6741026049837	-18.739226287966666	-18.739226287966666	-786.6741026049837	0.9986329607182285	-786.6741026049837	9	false	12
+31	7	7	1	0	0	0	0	0	-Infinity	-Infinity	-136.41092961030822	-136.41092961030822	-Infinity	0.9986329607182285	-Infinity	9	false	10
+32	7	7	1	0	0	0	0	0	-836.2616572137518	-836.2616572137518	-17.968070698377183	-17.968070698377183	-836.2616572137518	0.9986329607182285	-836.2616572137518	9	false	12
+33	7	7	1	0	0	0	0	0	-1038.187203714077	-1038.187203714077	30.456966633675208	30.456966633675208	-1038.187203714077	0.9986003904051001	-1038.187203714077	9	false	12
+34	7	7	1	0	0	0	0	0	-738.0708546271196	-738.0708546271196	-19.27000626020946	-19.27000626020946	-738.0708546271196	0.9986003904051001	-738.0708546271196	9	false	12
+35	7	6	1	0	0	0	0	0	-749.089155720011	-749.089155720011	-28.613369358282352	-28.613369358282352	-749.089155720011	0.9984990605420344	-749.089155720011	10	false	14
+36	7	6	1	0	0	0	0	0	-1136.6822489956332	-1136.6822489956332	-30.850298457458194	-30.850298457458194	-1136.6822489956332	0.9984990605420344	-1136.6822489956332	9	false	12
+37	7	5	1	0	0	0	0	0	-1100.888175462033	-1100.888175462033	-41.72797239315187	-41.72797239315187	-1100.888175462033	0.9985365657510913	-1100.888175462033	10	false	12

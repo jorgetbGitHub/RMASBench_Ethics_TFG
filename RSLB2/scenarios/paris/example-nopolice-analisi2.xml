@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scenario:scenario xmlns:scenario="urn:roborescue:map:scenario">
+
+  <scenario:aftershock scenario:time="15" scenario:intensity="0.2"/>
+
+  <!-- The fire station (do *not* remove this) -->
+  <scenario:firestation scenario:location="64173"/>
+
+  <!-- The refuge -->
+  <scenario:refuge scenario:location="18421"/>
+
+  <!-- The initial fires -->
+  <scenario:fire scenario:location="18421"/>	
+  <scenario:fire scenario:location="46778"/>
+  <scenario:fire scenario:location="19357"/>
+  <scenario:fire scenario:location="60857"/>
+  <scenario:fire scenario:location="19987"/>
+  <scenario:fire scenario:location="38562"/>
+  <scenario:fire scenario:location="18651"/>
+
+  <!-- The fire fighters -->
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+
+  <!--<scenario:firebrigade scenario:location="64173"/>
+  <scenario:firebrigade scenario:location="64173"/>
+  <scenario:firebrigade scenario:location="64173"/>
+  <scenario:firebrigade scenario:location="64173"/>
+  <scenario:firebrigade scenario:location="64173"/>
+ with aftershock ProblemDefinition fails cause fire agents are buried-->
+
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="5307"/>
+  <scenario:firebrigade scenario:location="2114"/>
+  <scenario:firebrigade scenario:location="2675"/>
+  <scenario:firebrigade scenario:location="28995"/>
+
+  <scenario:firebrigade scenario:location="5307"/>
+  <scenario:firebrigade scenario:location="5307"/>
+  <scenario:firebrigade scenario:location="5307"/>
+  <scenario:firebrigade scenario:location="5307"/>
+  <scenario:firebrigade scenario:location="5307"/>
+
+  <scenario:firebrigade scenario:location="2114"/>
+  <scenario:firebrigade scenario:location="2114"/>
+  <scenario:firebrigade scenario:location="2114"/>
+  <scenario:firebrigade scenario:location="2114"/>
+  <scenario:firebrigade scenario:location="2114"/>
+
+  <scenario:firebrigade scenario:location="2675"/>
+  <scenario:firebrigade scenario:location="2675"/>
+  <scenario:firebrigade scenario:location="2675"/>
+  <scenario:firebrigade scenario:location="2675"/>
+  <scenario:firebrigade scenario:location="2675"/>
+
+  <scenario:firebrigade scenario:location="28995"/>
+
+  <!-- The ambulance teams -->
+  <scenario:ambulanceteam scenario:location="5307"/>
+  <scenario:ambulanceteam scenario:location="5307"/>
+  <scenario:ambulanceteam scenario:location="5307"/>
+  <scenario:ambulanceteam scenario:location="5307"/>
+  <scenario:ambulanceteam scenario:location="5307"/>
+
+  <scenario:ambulanceteam scenario:location="15160"/>
+  <scenario:ambulanceteam scenario:location="5307"/>
+  <scenario:ambulanceteam scenario:location="2114"/>
+  <scenario:ambulanceteam scenario:location="2675"/>
+  <scenario:ambulanceteam scenario:location="28995"/>
+
+  <!-- The police forces -->
+  <scenario:policeforce scenario:location="15457"/>
+  <scenario:policeforce scenario:location="15457"/>
+  <scenario:policeforce scenario:location="15457"/>
+  <scenario:policeforce scenario:location="15457"/>
+  <scenario:policeforce scenario:location="15457"/>
+
+  <!-- The civilians -->
+  <scenario:civilian scenario:location="28983"/>
+  <scenario:civilian scenario:location="19357"/>
+  <scenario:civilian scenario:location="18388"/>
+  <scenario:civilian scenario:location="18343"/>
+  <scenario:civilian scenario:location="18316"/>
+  <scenario:civilian scenario:location="18421"/>
+  <scenario:civilian scenario:location="18458"/>
+  <scenario:civilian scenario:location="18481"/>
+  <scenario:civilian scenario:location="18510"/>
+  <scenario:civilian scenario:location="18560"/>
+  <scenario:civilian scenario:location="18593"/>
+  <scenario:civilian scenario:location="18620"/>
+  <scenario:civilian scenario:location="18651"/>
+  <scenario:civilian scenario:location="18686"/>
+  <scenario:civilian scenario:location="18713"/>
+  <scenario:civilian scenario:location="18753"/>
+  <scenario:civilian scenario:location="18786"/>
+  <scenario:civilian scenario:location="18844"/>
+  <scenario:civilian scenario:location="18881"/>
+  <scenario:civilian scenario:location="18908"/>
+  <scenario:civilian scenario:location="18931"/>
+  <scenario:civilian scenario:location="18960"/>
+  <scenario:civilian scenario:location="18989"/>
+  <scenario:civilian scenario:location="19020"/>
+  <scenario:civilian scenario:location="19047"/>
+  <scenario:civilian scenario:location="19062"/>
+  <scenario:civilian scenario:location="19091"/>
+  <scenario:civilian scenario:location="19108"/>
+  <scenario:civilian scenario:location="19127"/>
+  <scenario:civilian scenario:location="19154"/>
+  <scenario:civilian scenario:location="19177"/>
+  <scenario:civilian scenario:location="19196"/>
+  <scenario:civilian scenario:location="19223"/>
+  <scenario:civilian scenario:location="19274"/>
+  <scenario:civilian scenario:location="19291"/>
+  <scenario:civilian scenario:location="19312"/>
+  <scenario:civilian scenario:location="19424"/>
+  <scenario:civilian scenario:location="19457"/>
+  <scenario:civilian scenario:location="19492"/>
+  <scenario:civilian scenario:location="19560"/>
+  <scenario:civilian scenario:location="19644"/>
+  <scenario:civilian scenario:location="19695"/>
+  <scenario:civilian scenario:location="19731"/>
+  <scenario:civilian scenario:location="19754"/>
+  <scenario:civilian scenario:location="19778"/>
+  <scenario:civilian scenario:location="19809"/>
+  <scenario:civilian scenario:location="19836"/>
+  <scenario:civilian scenario:location="19867"/>
+
+    <!-- The blockades -->
+  <!--<scenario:blockade scenario:location="230" cost="10" />
+  <scenario:blockade scenario:location="356" cost="10" />-->
+
+</scenario:scenario>
+

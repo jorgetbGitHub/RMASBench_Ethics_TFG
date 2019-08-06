@@ -1,0 +1,39 @@
+# solver: Closest
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: f3e24cd9-5003-4db2-8b62-96fc88d200d2
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+24	12	12	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9977623354120823	-Infinity	6	true	28
+25	14	14	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9968314678208231	-Infinity	6	true	23
+26	14	14	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9962825977292168	-Infinity	6	true	21
+27	14	14	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9962825977292168	-Infinity	6	true	21
+28	14	14	1	0	0	0	0	0	-68.68989526784601	-68.68989526784601	44.328231977001	44.328231977001	-68.68989526784601	0.9962825977292168	-68.68989526784601	6	true	25
+29	14	13	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9962914805418883	-Infinity	7	true	20
+30	14	13	1	0	0	0	0	0	-Infinity	-Infinity	11.446503759955988	11.446503759955988	-Infinity	0.9961225974367784	-Infinity	9	true	25
+31	14	13	1	0	0	0	0	0	11.673064908238842	11.673064908238842	40.15815844128972	40.15815844128972	11.673064908238842	0.9959126998632849	11.673064908238842	9	true	25
+32	14	13	1	0	0	0	0	0	11.84673661296955	11.84673661296955	40.50077727888397	40.50077727888397	11.84673661296955	0.9959126998632849	11.84673661296955	9	true	25
+33	15	13	1	0	0	0	0	0	-6.760319553928131	-6.760319553928131	38.03655173554494	38.03655173554494	-6.760319553928131	0.9956892404646842	-6.760319553928131	9	true	25
+34	15	12	1	0	0	0	0	0	-Infinity	-Infinity	-3.2756737990103204	-3.2756737990103204	-Infinity	0.9957226880926443	-Infinity	9	true	25
+35	16	14	1	0	0	0	0	0	-807.6688088921485	-807.6688088921485	34.969729029365986	34.969729029365986	-807.6688088921485	0.995071976370987	-807.6688088921485	10	true	25
+36	16	14	1	0	0	0	0	0	-792.1047720734641	-792.1047720734641	33.947885311660364	33.947885311660364	-792.1047720734641	0.9946389118371702	-792.1047720734641	10	true	25

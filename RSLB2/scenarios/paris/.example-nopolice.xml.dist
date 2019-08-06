@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scenario:scenario xmlns:scenario="urn:roborescue:map:scenario">
+  <!-- The fire station (do *not* remove this) -->
+  <scenario:firestation scenario:location="64173"/>
+
+  <!-- The initial fires -->
+  <scenario:fire scenario:location="46778"/>
+  <scenario:fire scenario:location="19357"/>
+  <scenario:fire scenario:location="60857"/>
+  <scenario:fire scenario:location="19987"/>
+  <scenario:fire scenario:location="38562"/>
+
+  <!-- The fire fighters -->
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="50038"/>
+  <scenario:firebrigade scenario:location="18620"/>
+  <scenario:firebrigade scenario:location="9121"/>
+  <scenario:firebrigade scenario:location="17563"/>
+  <scenario:firebrigade scenario:location="15061"/>
+  <scenario:firebrigade scenario:location="43646"/>
+  <scenario:firebrigade scenario:location="22420"/>
+  <scenario:firebrigade scenario:location="45471"/>
+  <scenario:firebrigade scenario:location="6463"/>
+  <scenario:firebrigade scenario:location="53392"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  <scenario:firebrigade scenario:location="15160"/>
+  
+</scenario:scenario>

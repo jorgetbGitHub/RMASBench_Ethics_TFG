@@ -1,0 +1,30 @@
+# solver: DSA
+# max_time: 500
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: e2476ad8-a3e3-429e-8fd4-d1b1d6eafab6
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+# dsa.probability: 0.1
+# dsa.initial_target: last
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+23	12	12	23	11125	39606	316848	0	0	-99.84390768245535	-99.84390768245535	NaN	NaN	-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-99.90887836252702,-99.84390768245535,-99.84390768245535,-99.84390768245535	0.9977516614149626	-99.84390768245535	3	false	508
+24	13	13	28	13622	48216	385728	0	0	-92.17555366070044	-92.17555366070044	-92.17555366070044	-92.17555366070044	-1764.6461305134956,-1763.215115110914,-1054.6093775938682,-1054.6093775938682,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-98.03238910256202,-94.74289914263446,-94.7337384672534,-94.7337322829234,-93.78157178518185,-93.72284116136402,-93.72284116136402,-93.72284116136402,-93.72284116136402,-93.72284116136402,-93.72284116136402,-93.72284116136402,-93.72284116136402,-93.71397282978987,-92.17559356793132,-92.17559356793132,-92.17559356793132,-92.17555366070044,-92.17555366070044	0.9975615034251832	-92.17555366070044	0	true	142

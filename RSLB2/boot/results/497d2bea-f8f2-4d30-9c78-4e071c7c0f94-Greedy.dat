@@ -1,0 +1,35 @@
+# solver: Greedy
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 497d2bea-f8f2-4d30-9c78-4e071c7c0f94
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: Ambulancias_Collapse_ConySinNormas.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+24	12	12	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9977623354120823	-Infinity	8	true	7
+25	14	14	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9968314678208231	-Infinity	6	true	5
+26	14	14	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9962825977292168	-Infinity	8	true	3
+27	14	14	1	0	0	0	0	0	-Infinity	-Infinity	-31.27061234097119	-31.27061234097119	-Infinity	0.9962825977292168	-Infinity	9	true	5
+28	14	14	1	0	0	0	0	0	-270.3810554222534	-270.3810554222534	44.20768949345452	44.20768949345452	-270.3810554222534	0.9962825977292168	-270.3810554222534	7	true	8
+29	14	13	1	0	0	0	0	0	-371.04390994832306	-371.04390994832306	43.33845614117109	43.33845614117109	-371.04390994832306	0.9962914805418883	-371.04390994832306	8	true	7
+30	14	13	1	0	0	0	0	0	-Infinity	-Infinity	-74.0753769424782	-74.0753769424782	-Infinity	0.9961225974367784	-Infinity	8	true	7
+31	14	13	1	0	0	0	0	0	-Infinity	-Infinity	-70.54611069536732	-70.54611069536732	-Infinity	0.9959126998632849	-Infinity	8	true	7
+32	14	13	1	0	0	0	0	0	-418.1579901686128	-418.1579901686128	40.51516364082354	40.51516364082354	-418.1579901686128	0.9959126998632849	-418.1579901686128	7	true	13

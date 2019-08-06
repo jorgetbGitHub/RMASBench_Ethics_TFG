@@ -1,0 +1,37 @@
+# solver: Greedy
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 951d7cfb-c7db-490a-8174-cfbb823e00fd
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+23	12	12	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9977516614149626	-Infinity	13	false	4
+24	13	13	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9975615034251832	-Infinity	17	true	3
+25	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9966306358339244	-Infinity	15	true	2
+26	15	15	1	0	0	0	0	0	-1522.067822260893	-1522.067822260893	-50.80715405386884	-50.80715405386884	-1522.067822260893	0.9960817657423182	-1522.067822260893	13	true	16
+27	15	15	1	0	0	0	0	0	-1317.1392106406365	-1317.1392106406365	-1.317580458336419	-1.317580458336419	-1317.1392106406365	0.9960817657423182	-1317.1392106406365	13	true	16
+28	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9960817657423182	-Infinity	13	true	1
+29	15	15	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9960817657423182	-Infinity	15	true	2
+30	15	15	1	0	0	0	0	0	-890.7589009578224	-890.7589009578224	7.2348215067479575	7.2348215067479575	-890.7589009578224	0.9959128826372083	-890.7589009578224	16	true	15
+31	15	13	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9957493730854432	-Infinity	16	true	1
+32	16	14	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9955716437224469	-Infinity	19	true	2
+33	16	14	1	0	0	0	0	0	-2738.7087293634304	-2738.7087293634304	-40.568389239796225	-40.568389239796225	-2738.7087293634304	0.9954884084777856	-2738.7087293634304	21	true	12

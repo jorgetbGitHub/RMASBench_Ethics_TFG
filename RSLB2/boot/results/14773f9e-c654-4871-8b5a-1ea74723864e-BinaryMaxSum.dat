@@ -1,0 +1,29 @@
+# solver: BinaryMaxSum
+# max_time: 1000
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 14773f9e-c654-4871-8b5a-1ea74723864e
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+# maxsum.damping: 0.9
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+23	12	12	11	7568	67560	540480	0	0	-2087.795839103581	-Infinity	NaN	NaN	-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-2087.795839103581	0.9977516614149626	-Infinity	15	false	1297
+24	13	13	41	32062	277600	2220800	0	0	-2111.709774393135	-1811.7095742416964	NaN	NaN	-Infinity,-Infinity,-Infinity,-Infinity,-2111.7095538072012,-2111.7095538072012,-2111.7095544489002,-2111.7095633100225,-2111.7095633100225,-2111.7095633100225,-2111.7095633100225,-2111.7095653655183,-1811.7095742416964,-1811.7095742416964,-1811.7095742416964,-1811.7095856237477,-1811.7096509570392,-1811.7096509570392,-2111.7096581483866,-2111.7096581483866,-2111.7096581483866,-2111.709660630457,-2111.709670805943,-2111.7096840729982,-2111.7096840729982,-2111.7096840729982,-2111.7096840729982,-2111.7097056073903,-2111.7097056073903,-2111.7097056073903,-2111.7097056073903,-2111.7097056073903,-2111.7097284200263,-2111.709734284275,-2111.709734284275,-2111.709734284275,-2111.709734284275,-2111.709734284275,-2111.709774393135,-2111.709774393135,-2111.709774393135	0.9975615034251832	-1811.7095742416964	19	true	2590

@@ -1,0 +1,28 @@
+# solver: Random
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 14773f9e-c654-4871-8b5a-1ea74723864e
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+23	12	12	100	0	0	0	0	0	-2467.0262884793488	-2298.8502797135193	-105.45930799706706	-55.68921064625923	-Infinity,-Infinity,-Infinity,-3175.398454096294,-Infinity,-2669.042515296384,-Infinity,-Infinity,-Infinity,-2674.078692032347,-Infinity,-2777.297360995612,-Infinity,-2879.984007982738,-3228.572389051029,-Infinity,-Infinity,-Infinity,-3382.1260828533154,-2736.7921956844134,-Infinity,-Infinity,-3170.087764913752,-2945.915160348874,-3224.9242809490784,-2874.50349787447,-3169.3357313468878,-2676.615558111659,-Infinity,-Infinity,-2927.029876697191,-2688.3601523835887,-2773.2711689527796,-Infinity,-Infinity,-Infinity,-3280.7812171036617,-2774.0909050713244,-3333.3124912983867,-2298.8502797135193,-Infinity,-3075.885815976287,-3287.2198255197504,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-3389.2056715309204,-Infinity,-2618.999256171141,-Infinity,-Infinity,-Infinity,-3078.802743596969,-3037.2539270683183,-3271.550289463114,-2933.875350060077,-Infinity,-2575.075619597534,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-2327.375625007279,-Infinity,-Infinity,-2637.057730143613,-Infinity,-3290.3416035180594,-Infinity,-2670.7952050261138,-Infinity,-Infinity,-Infinity,-3077.7545067622455,-Infinity,-Infinity,-Infinity,-2927.542574227257,-3233.27078832433,-Infinity,-2666.5290924521937,-3266.914556764134,-Infinity,-Infinity,-Infinity,-Infinity,-2730.642947796242,-2935.1301867422426,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-2773.9943008350574,-3074.3560249557754,-3028.7571994397317,-2467.0262884793488	0.9977516614149626	-2298.8502797135193	9	false	56
+24	13	13	100	0	0	0	0	0	-3214.7870410720125	-2076.4666460827593	-250.80193713126295	-115.80828058522644	-2826.4587457063267,-Infinity,-Infinity,-Infinity,-2827.929199778756,-Infinity,-2767.5873373078816,-Infinity,-Infinity,-2969.5675098526403,-2929.7359460475127,-Infinity,-2076.4666460827593,-Infinity,-Infinity,-2969.035614798139,-3026.1999780541823,-2925.5833817982107,-Infinity,-Infinity,-3161.347705019573,-3027.540060724446,-3073.5966827420734,-Infinity,-Infinity,-3124.7210176007693,-2964.9064903228755,-Infinity,-2867.1718656855,-Infinity,-Infinity,-2218.421318930643,-Infinity,-2819.978609169608,-2927.5725463192966,-3267.3981648320964,-3110.8397810037586,-3083.0304589012603,-2658.0526654227792,-3376.2200279067556,-Infinity,-2868.7955647850185,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-2771.3919063974145,-Infinity,-2425.6856882896386,-2421.9594833250544,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-3118.254602015289,-2988.1008313128286,-3233.2846144818354,-Infinity,-Infinity,-2921.335678573567,-Infinity,-Infinity,-Infinity,-2820.2350219738205,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-3223.9605445379957,-Infinity,-Infinity,-Infinity,-2319.479794372915,-2316.7410949389046,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-2729.2518345863846,-2730.4911025251286,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-3214.7870410720125	0.9975615034251832	-2076.4666460827593	6	true	20

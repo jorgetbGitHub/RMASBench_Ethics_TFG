@@ -1,0 +1,1536 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+ 
+package RSLBench;
+
+import RSLBench.PlatoonFireAgent;
+import RSLBench.PlatoonAmbulanceAgent;
+import RSLBench.PlatoonPoliceAgent;
+import RSLBench.PlatoonAbstractAgent.Norm;
+import RSLBench.DiscoveredFireMessage;
+import RSLBench.Search.SearchResults;
+import RSLBench.ExtinguishedFireMessage;
+import RSLBench.DiscoveredBlockadeMessage;
+import RSLBench.Message;
+import RSLBench.Assignment.Assignment;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Collection;
+import java.util.Map;
+import java.util.Random;
+import java.util.HashMap;
+import java.util.Set;
+import rescuecore2.worldmodel.EntityID;
+import rescuecore2.standard.entities.Area;
+import rescuecore2.standard.entities.Road;
+import rescuecore2.standard.entities.StandardEntity;
+import rescuecore2.standard.entities.FireBrigade;
+import rescuecore2.standard.entities.Human;
+import rescuecore2.standard.entities.Blockade;
+import rescuecore2.standard.entities.PoliceForce;
+import rescuecore2.standard.entities.Civilian;
+import rescuecore2.standard.entities.Building;
+import rescuecore2.standard.entities.AmbulanceTeam;
+import rescuecore2.standard.entities.Refuge;
+import rescuecore2.standard.entities.StandardEntityURN;
+import rescuecore2.standard.entities.StandardPropertyURN;
+import rescuecore2.messages.Command;
+import rescuecore2.standard.messages.AKSpeak;
+import rescuecore2.standard.entities.StandardEntityConstants;
+import rescuecore2.worldmodel.properties.IntProperty;
+import rescuecore2.worldmodel.ChangeSet;
+import rescuecore2.messages.control.KASense;
+
+
+dialect "java"
+
+global EntityID filterID;
+
+/**
+ *
+ * @author jorgetb
+ */
+ 
+ 
+ //If an unburnt building with people is next to one with fire the fire brigade is OBLIGED to water it.
+/*rule "Rule N37"
+ 
+ when
+    fireAgent : PlatoonFireAgent ( targetAssignedInRange() )
+ then
+    Area target = (Area)fireAgent.getGraph().getWorld().getEntity(fireAgent.getAssignedTarget());
+    
+    List<EntityID> neighboursID = target.getNeighbours();
+    ArrayList<Building> neighboursOnFire = new ArrayList<Building>();
+    ArrayList<Building> neighboursUnburnt = new ArrayList<Building>();
+    
+    
+    for (EntityID neighbourID: neighboursID) {
+        Area neighbour = (Area)fireAgent.getGraph().getWorld().getEntity(neighbourID);
+        if (neighbour instanceof Building && ((Building)neighbour).isOnFire() == false) {
+            neighboursUnburnt.add((Building)neighbour);
+        }
+        
+        if (neighbour instanceof Building && ((Building)neighbour).isOnFire() == true) {
+            neighboursOnFire.add((Building)neighbour);
+        }
+    }
+    
+    
+    // Get unburnt buildings neighbours of burn buildings neighbours of the target
+    ArrayList<Building> unburntBuildingsToCheck = new ArrayList<Building>();
+    for (Building onFire: neighboursOnFire) {
+        List<EntityID> neighboursID2 = onFire.getNeighbours();
+        for (EntityID neighbourID2: neighboursID2) {
+            Area neighbour2 = (Area)fireAgent.getGraph().getWorld().getEntity(neighbourID2);
+            if (neighbour2 instanceof Building && ((Building)neighbour2).isOnFire() == false) {
+                unburntBuildingsToCheck.add((Building)neighbour2);
+            }
+        }
+    }
+    
+    //Check if among unburnt neighbours buildings is some civilian
+    ArrayList<Building> candidateTargets = new ArrayList<Building>();
+    Collection<StandardEntity> civilians = fireAgent.getGraph().getWorld().getEntitiesOfType(StandardEntityURN.CIVILIAN);
+    Iterator<StandardEntity> iter = civilians.iterator();
+    boolean done = false;
+    while(iter.hasNext() && !done) {
+        Civilian civil = (Civilian)iter.next();
+        for (Building unburnt: neighboursUnburnt) {
+            if (unburnt.getID().equals(civil.getPosition())) {
+                done = true;
+                break;
+            }
+        }
+        
+        if (!done) {
+            //Exist the possibility that other building on fire must prioritized cause has unburnt building with civilians as neighbours
+            for (Building toCheck: unburntBuildingsToCheck) {
+                if (toCheck.getID().equals(civil.getPosition())) {
+                    candidateTargets.add(toCheck);
+                    unburntBuildingsToCheck.remove(toCheck);
+                }
+            }
+        }
+    }
+    
+    
+    if (!done) {
+        //Set a new target among candidateTargets, will be better if the candidate is in range... if none is in range... don't change the assgined target
+        EntityID newTarget = null;
+        for (Building candidate: candidateTargets) {
+            if (fireAgent.isInRange(candidate.getID())) {
+                newTarget = candidate.getID();
+            }
+        }
+        
+        if (newTarget != null) {
+            fireAgent.setNewTarget(newTarget);
+        }
+    }
+
+ end*/
+ 
+//If an unburnt building is next to one with fire the fire brigade is OBLIGUED to water it.
+/*rule "Rule N31"
+
+salience 1
+
+when
+   fireAgent : PlatoonFireAgent ( targetAssignedInRange() && ((FireBrigade)me()).isWaterDefined() && ((FireBrigade)me()).getWater() > 0 )
+then
+   EntityID targetID = fireAgent.getAssignedTarget();
+   Building target = (Building)fireAgent.getGraph().getWorld().getEntity(targetID);
+   Building neighbour;
+   int waterIt = 500;
+
+   if (target.isOnFire() == true) {
+       //Check if some neighbour is unburnt and in range
+       List<EntityID> neighboursID = target.getNeighbours();
+       for (EntityID neighbourID :neighboursID) {
+           Area neighbourArea = (Area)fireAgent.getGraph().getWorld().getEntity(neighbourID);
+           if (neighbourArea instanceof Building) {
+               neighbour = (Building)neighbourArea;
+               if (neighbour.isOnFire() == false && fireAgent.isInRange(neighbourID)) {
+                   //Check if it's already water it
+                   if (neighbour.getWaterQuantity() < waterIt) {
+                       //If not then target it
+                       fireAgent.setNewTarget(neighbourID);
+                       System.out.println("[Rule-N31] [" + fireAgent.getID() + "] Setted new unburnt target->" + neighbourID);
+                       break;
+                   }
+               }
+           }
+       }
+   }
+end*/
+ 
+//If an unburnt building with people is next to one with fire the fire brigade is OBLIGUED to water it.
+/*rule "Rule N37"
+
+salience 1
+
+when
+   fireAgent : PlatoonFireAgent ( ((FireBrigade)me()).isWaterDefined() && ((FireBrigade)me()).getWater() > 0 )
+then
+   EntityID targetID = fireAgent.getAssignedTarget();
+   Building target = (Building)fireAgent.getGraph().getWorld().getEntity(targetID);
+   Building neighbour;
+   List<EntityID> neighboursID;
+   Area neighbourArea;
+   int waterIt = 500;
+
+    
+   if (fireAgent.targetAssignedInRange()) { 
+        if (target != null && target.isOnFire() == true) {
+            //Check if some neighbour is unburnt and in range
+            neighboursID = target.getNeighbours();
+            for (EntityID neighbourID :neighboursID) {
+                neighbourArea = (Area)fireAgent.getGraph().getWorld().getEntity(neighbourID);
+                if (neighbourArea instanceof Building) {
+                    neighbour = (Building)neighbourArea;
+                    if (neighbour.isOnFire() == false && fireAgent.isInRange(neighbourID) && fireAgent.isBuildingEmpty(neighbour) == false) {
+                        //Check if it's already water it
+                        if (neighbour.getWaterQuantity() < waterIt) {
+                            //If not then target it
+                            fireAgent.setNewTarget(neighbourID);
+                            System.out.println("[Rule-N37] [" + fireAgent.getID() + "] Setted new unburnt target->" + neighbourID);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+   }else {
+       //Fire Agent is moving to target assigned by Solver
+        Map<Integer,Collection<EntityID>> map = fireAgent.nearBurningBuildings(fireAgent.getID(), fireAgent.getMaxDistance());
+        for (int i = 1; i < 4; i++) {
+            Collection<EntityID> candidates = (Collection<EntityID>)map.get(i);
+            if (candidates != null && candidates.isEmpty() == false) {
+                for (EntityID candidate :candidates) {
+                    Building burningBuilding = (Building)fireAgent.getGraph().getWorld().getEntity(candidate);
+                    if (fireAgent.isBuildingEmpty(burningBuilding)) {
+                        //Check if there is some neigbour building with civilians and unburnt
+                        neighboursID = burningBuilding.getNeighbours();
+                        for (EntityID neighbourID :neighboursID) {
+                            neighbourArea = (Area)fireAgent.getGraph().getWorld().getEntity(neighbourID);
+                            if (neighbourArea instanceof Building) {
+                                neighbour = (Building)neighbourArea;
+                                if (neighbour.isOnFire() == false && fireAgent.isInRange(neighbourID) && fireAgent.isBuildingEmpty(neighbour) == false) {
+                                    //Check if it's already water it
+                                    if (neighbour.getWaterQuantity() < waterIt) {
+                                        //If not then target it
+                                        fireAgent.setNewTarget(neighbourID);
+                                        System.out.println("[Rule-N37] [" + fireAgent.getID() + "] Setted new unburnt target->" + neighbourID);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+   }
+end*/
+ 
+ //If the refuge is in fire, the fire brigade is OBLIGED to extinguish it.
+/*rule "Rule N40"
+ 
+salience 3
+
+when
+   fireAgent : PlatoonFireAgent ( getBurningRefuges().size() > 0 )
+then
+   System.out.println("[Rule-N40] " + "[" + fireAgent.getID() + "]" + "Some refuge is on fire and will be priorized");
+   EntityID currentPosition = fireAgent.me().getPosition();
+   
+   //Implementación soportada por el solver
+   EntityID assignedTarget = fireAgent.getAssignedTarget();
+   EntityID newTarget = null;
+   int refugeZoneDistance = 100000;
+   
+   
+   List<EntityID> pathToRefuge = fireAgent.getSearch().search(currentPosition, fireAgent.getRefugesIDs(),
+   fireAgent.getGraph(), fireAgent.getDistanceMatrix()).getPathIds();
+   if (pathToRefuge != null) {
+        EntityID refugeChosed = pathToRefuge.get(pathToRefuge.size()-1);
+        Building refuge = (Building)fireAgent.getGraph().getWorld().getEntity(refugeChosed);
+        //If target is out of Refuge zone reassign target
+        if (refugeZoneDistance < fireAgent.getGraph().getWorld().getDistance(fireAgent.getAssignedTarget(), refugeChosed)) {
+            Map<Integer,Collection<EntityID>> map = fireAgent.nearBurningBuildings(refugeChosed, refugeZoneDistance);
+            for (int level=1; level<7; level++) {
+                Collection<EntityID> candidates = (Collection<EntityID>)map.get(level);
+                System.out.println("[Rule-N40] [" + fireAgent.getID() + "] candidates level " + level + " " + candidates);
+                if (candidates != null && candidates.isEmpty() == false) {
+                    //Generate a new path to the new Target
+                    List<EntityID> pathToNewTarget = fireAgent.getSearch().search(currentPosition, candidates,
+                    fireAgent.getGraph(), fireAgent.getDistanceMatrix()).getPathIds();
+                    if (pathToNewTarget != null) {
+                        newTarget = pathToNewTarget.get(pathToNewTarget.size()-1);
+                        System.out.println("[Rule-N40] [" + fireAgent.getID() + "] " + "newTarget is " + newTarget);
+                        fireAgent.setNewTarget(newTarget);
+                        if (fireAgent.isInRange(newTarget) == false) {
+                            fireAgent.path = pathToNewTarget;
+                        }
+                        break;
+                    }
+                }
+            }
+        } 
+        
+        if (newTarget != null) {
+            assignedTarget = newTarget;
+        }
+        
+        if (refuge.isOnFire() == false) {
+            System.out.println("[Rule-N40] [" + fireAgent.getID() + "] " + "refuge fire is extinguished");
+        }
+        //If target is inside of Refuge zone priorize refuge's extintion if it's possible
+        //Check if assignedTarget & refuge are not the same
+        if (assignedTarget.equals(refugeChosed) == false) {
+            if (fireAgent.targetAssignedInRange() == true && fireAgent.isInRange(refugeChosed) == true) {
+                //Then priorize refuge's extintion
+                Building target = (Building)fireAgent.getGraph().getWorld().getEntity(assignedTarget);
+                System.out.println("[Rule-N40] " + "[" + fireAgent.getID() + "] " + " can choose between near building and refuge");
+                System.out.println("[Rule-N40] " + "[" + fireAgent.getID() + "]" + " level of Fieryness of target->" + target.getFieryness() + " and the level of Fieryness of refuge->" + refuge.getFieryness());
+                System.out.println("[Rule-N40] " + "[" + fireAgent.getID() + "]" + " level of Importance of target->" + target.getImportance() + " and the level of Fieryness of refuge->" + refuge.getImportance());
+                if (target.getFieryness() == refuge.getFieryness()) {
+                    //Time to priorize refuge
+                    fireAgent.setNewTarget(refuge.getID());
+                }
+                
+
+            }else {
+                System.out.println("[Rule-N40] " + "[" + fireAgent.getID() + "] ");
+            }
+            
+        }else {
+            System.out.println("[Rule-N40] " + "[" + fireAgent.getID() + "] ");
+        }
+    }
+end*/
+
+//If the refuge is in fire, the fire brigade is PERMITTED to extinguish it. (OLD IMPLEMENTATION)
+/*rule "Rule N41"
+ 
+salience 3
+
+when
+   fireAgent : PlatoonFireAgent ( getBurningRefuges().size() > 0 )
+then
+   System.out.println("[Rule-N41] " + "[" + fireAgent.getID() + "]" + "Some refuge is on fire and is permitted prioritize it");
+   EntityID currentPosition = fireAgent.me().getPosition();
+   
+   //Implementación soportada por el solver
+   EntityID assignedTarget = fireAgent.getAssignedTarget();
+   EntityID newTarget = null;
+   int refugeZoneDistance = 100000;
+   List<EntityID> pathToRefuge = fireAgent.getSearch().search(currentPosition, fireAgent.getRefugesIDs(),
+   fireAgent.getGraph(), fireAgent.getDistanceMatrix()).getPathIds();
+   
+   if (pathToRefuge != null) {
+     
+        EntityID refugeChosed = pathToRefuge.get(pathToRefuge.size()-1);
+        Building refuge = (Building)fireAgent.getGraph().getWorld().getEntity(refugeChosed);
+        double distanceFromRefuge = fireAgent.getGraph().getWorld().getDistance(fireAgent.getAssignedTarget(), refugeChosed);
+        double maxDistanceFromRefuge = fireAgent.getGraph().getWorld().getMaxDistanceFromEntity(refuge);
+        double probability;
+        
+        if (distanceFromRefuge <= refugeZoneDistance || assignedTarget.equals(Assignment.UNKNOWN_TARGET_ID)) {
+            probability = 1;
+        }else {
+            probability = (maxDistanceFromRefuge - distanceFromRefuge)/maxDistanceFromRefuge;
+        }
+        
+        System.out.println("[Rule-N41] [" + fireAgent.getID() + "] " + " probability = " + probability + "maxDistanceFromRefuge = " + maxDistanceFromRefuge + " distanceFromRefuge = " + distanceFromRefuge);
+        //probability = 1;
+        
+        Random rand = new Random();
+        if (probability > rand.nextDouble()) {
+            //If target is out of Refuge zone reassign target or target is UNKNOWN
+            if (refugeZoneDistance < distanceFromRefuge || assignedTarget.equals(Assignment.UNKNOWN_TARGET_ID)) {
+                Map<Integer,Collection<EntityID>> map = fireAgent.nearBurningBuildings(refugeChosed, refugeZoneDistance);
+                System.out.println("1");
+                for (int level=1; level<7; level++) {
+                    Collection<EntityID> candidates = (Collection<EntityID>)map.get(level);
+                    System.out.println("[Rule-N41] [" + fireAgent.getID() + "] candidates level " + level + " " + candidates);
+                    if (candidates != null && candidates.isEmpty() == false) {
+                        //Generate a new path to the new Target
+                        List<EntityID> pathToNewTarget = fireAgent.getSearch().search(currentPosition, candidates,
+                        fireAgent.getGraph(), fireAgent.getDistanceMatrix()).getPathIds();
+                        if (pathToNewTarget != null) {
+                            newTarget = pathToNewTarget.get(pathToNewTarget.size()-1);
+                            System.out.println("[Rule-N41] [" + fireAgent.getID() + "] " + "newTarget is " + newTarget);
+                            fireAgent.setNewTarget(newTarget);
+                            if (fireAgent.isInRange(newTarget) == false) {
+                                fireAgent.path = pathToNewTarget;
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            if (assignedTarget.equals(Assignment.UNKNOWN_TARGET_ID)) {
+                System.out.println("[Rule-N41] " + "[" + fireAgent.getID() + "] unknown target id" );
+            }
+            
+            System.out.println("[Rule-N41] " + "[" + fireAgent.getID() + "] assignedTarget is " + assignedTarget + " and newTarget is " + newTarget);
+            if (newTarget != null) {
+                assignedTarget = newTarget;
+            }else {
+                if (refuge.isOnFire() && assignedTarget.equals(Assignment.UNKNOWN_TARGET_ID)) {
+                    fireAgent.setNewTarget(refuge.getID());
+                }
+            }
+            
+
+            //If target is inside of Refuge zone priorize refuge's extintion if it's possible
+            //Check if assignedTarget & refuge are not the same
+            if (assignedTarget.equals(refugeChosed) == false) {
+                if (fireAgent.targetAssignedInRange() == true && fireAgent.isInRange(refugeChosed) == true) {
+                    //Then priorize refuge's extintion
+                    Building target = (Building)fireAgent.getGraph().getWorld().getEntity(assignedTarget);
+                    System.out.println("[Rule-N41] " + "[" + fireAgent.getID() + "] " + " can choose between near building->" + target + "  and refuge");
+                    System.out.println("[Rule-N41] " + "[" + fireAgent.getID() + "]" + " level of Fieryness of target->" + target.getFieryness() + " and the level of Fieryness of refuge->" + refuge.getFieryness());
+                    System.out.println("[Rule-N41] " + "[" + fireAgent.getID() + "]" + " level of Importance of target->" + target.getImportance() + " and the level of Fieryness of refuge->" + refuge.getImportance());
+                    if (target.getFieryness() == refuge.getFieryness() && rand.nextDouble() < 0.2) {
+                        //Time to priorize refuge
+                        fireAgent.setNewTarget(refuge.getID());
+                    }
+                }
+                
+                if (fireAgent.targetAssignedInRange() == false && fireAgent.isInRange(refugeChosed) == true) {
+                    fireAgent.setNewTarget(refuge.getID());
+                }
+            }
+        }
+    }
+end*/
+
+/*rule "Rule N41"
+salience 1
+when
+    fireAgent : PlatoonFireAgent( N41 == true && getRefugesInDanger().isEmpty() == false );
+then
+    System.out.println("[Rule-N41] " + "[" + fireAgent.getID() + "] " + "following norm 41");
+    
+    EntityID currentPosition = fireAgent.me().getPosition();
+    EntityID assignedTarget = fireAgent.getAssignedTarget();
+    EntityID newTarget = null;
+    int refugeZoneDistance = 100000;
+    List<EntityID> pathToRefuge = fireAgent.getSearch().search(currentPosition, fireAgent.getRefugesIDs(),
+    fireAgent.getGraph(), fireAgent.getDistanceMatrix()).getPathIds();
+    
+    String s = "";
+    
+    if (pathToRefuge != null) {
+        EntityID refugeChosed = pathToRefuge.get(pathToRefuge.size()-1);
+        Building refuge = (Building)fireAgent.getGraph().getWorld().getEntity(refugeChosed);
+        double distanceFromRefuge = fireAgent.getGraph().getWorld().getDistance(fireAgent.getAssignedTarget(), refugeChosed);
+        double maxDistanceFromRefuge = fireAgent.getGraph().getWorld().getMaxDistanceFromEntity(refuge);
+        Random rand = new Random();
+    
+        Map<Integer,Collection<EntityID>> map = fireAgent.nearBurningBuildings(refugeChosed, refugeZoneDistance);
+        for (int level=1; level<4; level++) {
+            Collection<EntityID> candidates = (Collection<EntityID>)map.get(level);
+            System.out.println("[Rule-N41] [" + fireAgent.getID() + "] candidates level " + level + " " + candidates);
+            if (candidates != null && candidates.isEmpty() == false) {
+                //Generate a new path to the new Target
+                List<EntityID> pathToNewTarget = fireAgent.getSearch().search(currentPosition, candidates,
+                fireAgent.getGraph(), fireAgent.getDistanceMatrix()).getPathIds();
+                if (pathToNewTarget != null) {
+                    newTarget = pathToNewTarget.get(pathToNewTarget.size()-1);
+                    System.out.println("[Rule-N41] [" + fireAgent.getID() + "] " + "newTarget is " + newTarget);
+                    fireAgent.setNewTarget(newTarget);
+                    assignedTarget = fireAgent.getAssignedTarget();
+                    if (fireAgent.isInRange(newTarget) == false) {
+                        fireAgent.path = pathToNewTarget;
+                    }
+                    break;
+                }
+            }
+        }
+       
+       if (refuge.isOnFire() == false && newTarget != null) {
+            fireAgent.setNewTarget(newTarget);
+       }else {
+            //If target is inside of Refuge zone priorize refuge's extintion if it's possible
+            //Check if assignedTarget & refuge are not the same
+            if (assignedTarget.equals(refugeChosed) == false) {
+                if (fireAgent.targetAssignedInRange() == true && fireAgent.isInRange(refugeChosed) == true) {
+                    //Then priorize refuge's extintion
+                    Building target = (Building)fireAgent.getGraph().getWorld().getEntity(assignedTarget);
+                    if (target.getFieryness() == refuge.getFieryness() && rand.nextDouble() < 0.2) {
+                        //Time to priorize refuge
+                        fireAgent.setNewTarget(refuge.getID());
+                    }
+                }
+                if (fireAgent.targetAssignedInRange() == false && fireAgent.isInRange(refugeChosed) == true) {
+
+                    fireAgent.setNewTarget(refuge.getID());
+                }
+
+            }
+       }
+    }
+end*/
+
+//If the fire brigade has no water, the fire brigade is OBLIGED to move to the refuge
+/*rule "Rule N70"
+
+salience 2
+
+when
+    fireAgent : PlatoonFireAgent (((FireBrigade)me()).isWaterDefined() && ((FireBrigade)me()).getWater() == 0)
+then
+    System.out.println("[Rule-N70] Im " + fireAgent.getID() + " and have no water");
+    System.out.println("[Rule-N70] Inputs: position->" + fireAgent.me().getPosition() 
+    + " refuges->" + fireAgent.getRefugesIDs() 
+    + " graph->" + fireAgent.getGraph() 
+    + " distanceMatrix->" + fireAgent.getDistanceMatrix());
+    
+    List<EntityID> newPath = fireAgent.getSearch().search(fireAgent.me().getPosition(), fireAgent.getRefugesIDs(),
+                    fireAgent.getGraph(), fireAgent.getDistanceMatrix()).getPathIds();
+    System.out.println("[Rule-N70] Path = " + newPath);
+    if (newPath != null) {
+        //Refuge will be the new target
+        fireAgent.setNewTarget(newPath.get(newPath.size()-1));
+        //Then set the new path
+        fireAgent.path = newPath;
+        System.out.println("[Rule-N70]" + "[" + fireAgent.getID() + "]" + " This is my new path -> " + fireAgent.path);
+    }
+end*/
+    
+
+//If the fire brigade reaches a blockaded road in its path, it is OBLIGED to change the path
+/*rule "Rule N79"
+
+salience 1
+
+when
+    fireAgent : PlatoonFireAgent ( getID().equals(filterID) 
+    , area: getGraph().getWorld().getEntity( ((Human)me()).getPosition()) != null && (getGraph().getWorld().getEntity( ((Human)me()).getPosition()) instanceof Road) )
+then
+    boolean inBlockade = false;
+    boolean nextBlockade = false;
+    
+    Area currentPosition = (Area)area;
+    Area nextPosition = null;
+    
+    if (fireAgent.path != null && fireAgent.path.size() > 0) {
+        EntityID nextPositionID = fireAgent.path.get(0);
+        nextPosition = (Area)fireAgent.getGraph().getWorld().getEntity(nextPositionID);
+        
+        if (nextPosition.getBlockadesProperty().getValue() != null 
+            && nextPosition.getBlockadesProperty().getValue().isEmpty() == false) {
+                nextBlockade = true;
+            }
+    }
+    
+    if (currentPosition.getBlockadesProperty().getValue() != null
+        && currentPosition.getBlockadesProperty().getValue().isEmpty() == false) {
+        inBlockade = true;
+        
+    }
+            
+    if (nextBlockade) {
+        System.out.println("[Rule-N79] next position has blockade");
+        Area target = (Area) fireAgent.getGraph().getWorld().getEntity(fireAgent.getAssignedTarget());
+        Collection<Area> targets = new ArrayList<>();
+        targets.add(target);
+        if (fireAgent.excludedAreas.contains(fireAgent.path.get(0)) == false) {
+            fireAgent.excludedAreas.add(fireAgent.path.get(0));
+        }
+        SearchResults alternativeResults = fireAgent.getSearch().search(currentPosition, targets, fireAgent.getGraph(),
+        fireAgent.getDistanceMatrix(), fireAgent.excludedAreas);
+        if (alternativeResults != null) {
+            System.out.println("[Rule-N79] [" + fireAgent.getID() + "] Alternative path was found");
+            fireAgent.alternativePath = alternativeResults.getPathIds();
+        }else {
+            System.out.println("[Rule-N79] [" + fireAgent.getID() + "] Alternative path was not found");
+            fireAgent.alternativePath = null;
+        }
+
+    }
+end*/
+
+/*N82-If a police, ambulance or fire brigade discovers a new fire and
+the communication channel is overused, it is OBLIGUED
+to tell the fire fighters and ambulances about it.*/
+
+/*N85-If a police, ambulance or fire brigade discovers a new fire and
+the communication channel is not overused, it is OBLIGUED
+to tell the fire fighters and ambulances about it.*/
+rule "Rules N82 & N85"
+
+salience 1
+
+when
+    abstractAgent : PlatoonAbstractAgent ()
+then
+    if (abstractAgent.getCurrentSense() != null) {
+        KASense sense = abstractAgent.getCurrentSense();
+        abstractAgent.sendEnquedDiscoveredFireMessage(sense.getTime(), 1);
+    } 
+end
+
+/*N90-If a fire brigade extinguishes a fire and the communication
+channel is overused, it is FORBIDDEN to tell the fire
+fighters and ambulances about it.
+*/
+
+/*N91-If a fire brigade extinguishes a fire and the communication
+channel is not overused, it is OBLIGUED to tell the fire
+fighters and ambulances about it.*/
+rule "Rules N90 & N91"
+
+salience 1
+
+when
+    fireAgent : PlatoonFireAgent ()
+then
+    if (fireAgent.getCurrentSense() != null) {
+    
+        KASense sense = fireAgent.getCurrentSense();
+        
+        if (fireAgent.anyOverusedMessage(sense.getHearing(), 1) == false) {
+            fireAgent.sendEnquedExtinguishedFireMessage(sense.getTime(), 1);
+        }
+    }
+end
+
+//If the street with highest number of trapped people is unnattended the ambulance is obligued to attend it first.
+/*rule "Rule N94"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ( roadMostTrapped != null && mainTarget == null )
+then
+    List<EntityID> allTrapped = new ArrayList<>();
+    Road road = (Road) ambulanceAgent.getWorld().getEntity(ambulanceAgent.roadMostTrapped);
+    List<EntityID> neighboursIDs = road.getNeighbours();
+    
+    for (EntityID neighbourID :neighboursIDs) {
+        Area area = (Area) ambulanceAgent.getWorld().getEntity(neighbourID);
+        if (area instanceof Building) {
+            allTrapped.addAll(ambulanceAgent.getTrappedHumans(neighbourID));
+        }
+    }
+    
+    if (allTrapped.isEmpty() == false) {
+        Random rand = new Random();
+        ambulanceAgent.setNewTarget(allTrapped.get(rand.nextInt(allTrapped.size())));
+        System.out.println("[Rule-N94] [" + ambulanceAgent.getID() + "] target -> " + ambulanceAgent.getTarget());
+        ambulanceAgent.updateRulesCounter(PlatoonAbstractAgent.Norm.N94);
+    }
+end*/
+
+//If the block with highest number trapped people is unnattended the ambulance is OBLIGUED to attend it first.
+/*rule "Rule N97"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ( mainTarget == null )
+then
+    List<Building> bMostTrapped = ambulanceAgent.getBuildingsMostTrapped();
+    //System.out.println("[Rule-N97] [" + ambulanceAgent.getID() + "]  buildings where are highest number of trapped people are: " + bMostTrapped);
+    if (bMostTrapped.isEmpty() == false) {
+        Random rand = new Random();
+        Building randBuilding = bMostTrapped.get(rand.nextInt(bMostTrapped.size()));
+        List<EntityID> trappedPeople = ambulanceAgent.getTrappedHumans(randBuilding.getID());
+        if (trappedPeople.isEmpty() == false) {
+            ambulanceAgent.setNewTarget(trappedPeople.get(rand.nextInt(trappedPeople.size())));
+            System.out.println("[Rule-N97] [" + ambulanceAgent.getID() + "] target -> " + ambulanceAgent.getTarget());
+            ambulanceAgent.updateRulesCounter(PlatoonAbstractAgent.Norm.N97);
+        }
+    }
+end*/
+
+//If the most damaged building with people inside is unattended, the ambulance is PERMITTED to attend it first.
+/*rule "Rule N110"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ( N110 == true && mainTarget == null )
+then
+    List<Building> mostDamaged = (List<Building>) ambulanceAgent.getMostDamagedInhabitedBuildings();
+    if (mostDamaged.isEmpty() == false) {
+        Random rand = new Random();
+        Building randBuilding = mostDamaged.get(rand.nextInt(mostDamaged.size()));
+        
+        //Then look for one human inside that is setted as true into injuriesWarned
+        Collection<StandardEntity> humans =  ambulanceAgent.getAllHumans();
+        for (StandardEntity se :humans) {
+            Human human = (Human) se;
+            if (human.getPosition().equals(randBuilding.getID())
+            && ambulanceAgent.isInjured(human.getID())) {
+                ambulanceAgent.setNewTarget(human.getID());
+                System.out.println("[Rule-N110] [" + ambulanceAgent.getID() + "] target -> " + ambulanceAgent.getTarget());
+                ambulanceAgent.updateRulesCounter(PlatoonAbstractAgent.Norm.N110);
+                break;
+            }
+        }
+    }
+end*/
+
+//If people are trapped in a heavely broken building (brokenness > 0.5), the ambulance is OBLIGUED to attend them.
+/*rule "Rule N115"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ( mainTarget == null )
+then
+    Collection<StandardEntity> humans = ambulanceAgent.getAllHumans();
+    List<Human> targets = new ArrayList<>();
+    for (StandardEntity se :humans) {
+        Human h = (Human) se;
+        if (h.isBuriednessDefined() && h.getBuriedness() > 0) {
+            Building b = (Building) ambulanceAgent.getWorld().getEntity(h.getPosition());
+            if (b.isBrokennessDefined() && b.getBrokenness() > 50) {
+                targets.add(h);
+            }
+        }
+    }
+    
+    if (targets.isEmpty() == false) {
+        Random rand = new Random();
+        Human randHuman = targets.get(rand.nextInt(targets.size()));
+        ambulanceAgent.setNewTarget(randHuman.getID());
+        System.out.println("[Rule-N115] [" + ambulanceAgent.getID() + "] target -> " + ambulanceAgent.getTarget());
+        ambulanceAgent.updateRulesCounter(PlatoonAbstractAgent.Norm.N115);
+    }
+end*/
+
+//If people are trapped in a heavely broken building (brokenness > 0.5), the ambulance is PERMITTED to attend them.
+rule "Rule N116"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ( N116 == true && mainTarget == null )
+then
+    Collection<StandardEntity> humans = ambulanceAgent.getAllHumans();
+    List<Human> targets = new ArrayList<>();
+    for (StandardEntity se :humans) {
+        Human h = (Human) se;
+        if (h.isBuriednessDefined() && h.getBuriedness() > 0) {
+            Building b = (Building) ambulanceAgent.getWorld().getEntity(h.getPosition());
+            if (b.isBrokennessDefined() && b.getBrokenness() > 50) {
+                targets.add(h);
+            }
+        }
+    }
+    
+    if (targets.isEmpty() == false) {
+        Random rand = new Random();
+        Human randHuman = targets.get(rand.nextInt(targets.size()));
+        ambulanceAgent.setNewTarget(randHuman.getID());
+        System.out.println("[Rule-N116] [" + ambulanceAgent.getID() + "] target -> " + ambulanceAgent.getTarget());
+        ambulanceAgent.updateRulesCounter(PlatoonAbstractAgent.Norm.N116);
+    }
+end
+
+//If an ambulance agent is buried, another ambulance is OBLIGUED to attend them.
+rule "Rule N142"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ( mainTarget == null )
+then
+    List<AmbulanceTeam> buriedAmbulances = ambulanceAgent.getBuriedAmbulances();
+    if (buriedAmbulances.isEmpty() == false) {
+        Random rand = new Random();
+        AmbulanceTeam randAmbulance = buriedAmbulances.get(rand.nextInt(buriedAmbulances.size()));
+        ambulanceAgent.setNewTarget(randAmbulance.getID());
+        System.out.println("[Rule-N142] [" + ambulanceAgent.getID() + "] target -> " + ambulanceAgent.getTarget());
+        ambulanceAgent.updateRulesCounter(PlatoonAbstractAgent.Norm.N142);
+    }
+end
+
+//If an ambulance agent is damaged, the ambulance is OBLIGUED to attend him
+/*rule "Rule N151"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ( mainTarget == null )
+then
+    List<AmbulanceTeam> damagedAmbulances = ambulanceAgent.getDamagedAmbulances(2000);
+    if (damagedAmbulances.isEmpty() == false) {
+        Random rand = new Random();
+        AmbulanceTeam randAmbulance = damagedAmbulances.get(rand.nextInt(damagedAmbulances.size()));
+        ambulanceAgent.setNewTarget(randAmbulance.getID());
+        System.out.println("[Rule-N151] [" + ambulanceAgent.getID() + "] target -> " + ambulanceAgent.getTarget());
+        ambulanceAgent.updateRulesCounter(PlatoonAbstractAgent.Norm.N151);
+    }
+end*/
+
+//If a civilian is being attended, the ambulance is FORBIDDEN to attend him.
+/*rule "Rule N162"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ( mainTarget != null )
+then
+    try {
+        Human target = (Human) ambulanceAgent.getWorld().getEntity(ambulanceAgent.mainTarget);
+        if (target != null) {
+            if (target.getPosition().equals(ambulanceAgent.getID()) == false) {
+                Area area = (Area) ambulanceAgent.getWorld().getEntity(target.getPosition());
+            }
+        }
+    }catch (Exception ex) {
+        //Target is not in area so target is inside an ambulance and then already is attend it.
+        ambulanceAgent.mainTarget = null;
+        ambulanceAgent.updateRulesCounter(PlatoonAbstractAgent.Norm.N162);
+    }
+end*/
+
+//If the ambulance reaches a blockaded road in its path, it is OBLIGUED to change the path.
+/*rule "Rule N169"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ( isActiveN169 == false )
+then
+    ambulanceAgent.isActiveN169 = true;
+    ambulanceAgent.updateRulesCounter(PlatoonAbstractAgent.Norm.N169);
+end*/
+
+/*N174-If a police, ambulance or fire brigade discovers a new injured
+person and the communication channel is overused, it is FORBIDDEN to
+tell the ambulance about it.*/
+
+/*N175-If a police, ambulance or fire brigade discovers a new in-
+jured person and the communication channel is not overused, it is OBLIGUED
+to tell the ambulance about it.*/
+rule "Rule N174 & N175"
+
+salience 1
+
+when
+    abstractAgent : PlatoonAbstractAgent()
+then
+    if (abstractAgent.getCurrentSense() != null) {
+    
+        KASense sense = abstractAgent.getCurrentSense();
+        
+        if (abstractAgent.anyOverusedMessage(sense.getHearing(), 1) == false) {
+            abstractAgent.sendEnquedDiscoveredInjuredMessage(sense.getTime(), 1);
+        }
+    }   
+end
+
+/*N180-If an ambulance attends an injured person and the com-
+munication channel is overused, it is FORBIDDEN to tell
+other ambulances about it.*/
+
+/*N181-If an ambulance attends an injured person and the commu-
+nication channel is not overused, it is OBLIGUED to tell
+other ambulances about it.*/
+rule "Rule N180 & N181"
+
+salience 1
+
+when
+    ambulanceAgent : PlatoonAmbulanceAgent ()
+then
+    if (ambulanceAgent.getCurrentSense() != null) {
+    
+        KASense sense = ambulanceAgent.getCurrentSense();
+        
+        if (ambulanceAgent.anyOverusedMessage(sense.getHearing(), 1) == false) {
+            ambulanceAgent.sendEnquedAttendedInjuredMessage(sense.getTime(), 1);
+        }
+    }  
+end
+
+//If the street with highest number of trapped people is unreachable, the police is PERMITTED to clear a path to it.
+/*rule "Rule N185"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent( N185 == true && roadToFocus_N185 != null && (currentNorm == null || currentNorm == Norm.N185))
+then
+
+    if (policeAgent.blockadesToPrioritize_N185.isEmpty() == false) {
+        //Check if remove entity is required
+        Iterator<EntityID> itr = policeAgent.blockadesToPrioritize_N185.iterator();
+        while (itr.hasNext()) {
+            EntityID entityID = itr.next();
+            
+            if (policeAgent.getWorld().getEntity(entityID) == null) {
+                itr.remove();
+            }else {
+                policeAgent.setNewTarget(entityID, PlatoonPoliceAgent.Norm.N185);
+                break;
+            }
+        }
+    }
+
+    
+    if (policeAgent.blockadesToPrioritize_N185.isEmpty()) {
+    
+        List<EntityID> path = policeAgent.getSearch().search(((PoliceForce)policeAgent.me()).getPosition(),
+        policeAgent.roadToFocus_N185, policeAgent.getGraph(), policeAgent.getDistanceMatrix()).getPathIds();
+
+        List<EntityID> blockadesToPrioritize = new ArrayList<>();
+
+        if (policeAgent.blockadesToPrioritize_N185.isEmpty()) {
+
+            if (path != null) {
+                for (EntityID entityID :path) {
+                    StandardEntity se = policeAgent.getWorld().getEntity(entityID);
+                    if (se instanceof Road) {
+                        Road road = (Road) se;
+                        if (road.isBlockadesDefined() && road.getBlockades().isEmpty() == false) {
+                            List<EntityID> blockades = road.getBlockades();
+                            for (EntityID blockId :blockades) {
+                                blockadesToPrioritize.add(blockId);
+                            }
+                        }
+                    }
+                }
+
+                if (blockadesToPrioritize.isEmpty() == false) {
+                    policeAgent.blockadesToPrioritize_N185 = blockadesToPrioritize;
+                }
+            }
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+
+//If the street with highest number of blockades is unnattended the police is PERMITTED to attend it first.
+/*rule "Rule N194"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent ( N194 == true && roadToFocus_N194 != null && (currentNorm == null || currentNorm == Norm.N194))
+then
+    System.out.println("[Rule-N194] [" + policeAgent.getID() + "] attempting to clear the street with highest number of blockades");
+    
+    Road road = (Road)policeAgent.getWorld().getEntity(policeAgent.roadToFocus_N194);
+    
+    if (policeAgent.blockadesToPrioritize_N194.isEmpty() == false) {
+        //Check if remove entity is required
+        Iterator<EntityID> itr = policeAgent.blockadesToPrioritize_N194.iterator();
+        while (itr.hasNext()) {
+            EntityID entityID = itr.next();
+            
+            if (policeAgent.getWorld().getEntity(entityID) == null) {
+                itr.remove();
+            }else {
+                policeAgent.setNewTarget(entityID, PlatoonPoliceAgent.Norm.N194);
+                break;
+            }
+        }
+    }
+    
+    if (road != null && policeAgent.blockadesToPrioritize_N194.isEmpty()) {
+        if (road.isBlockadesDefined()) {
+            List<EntityID> blockades = road.getBlockades();
+            for (EntityID block :blockades) {
+                policeAgent.blockadesToPrioritize_N194.add(block);
+            }
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+//If the most damaged building with people inside is unreachable, the police is PERMITTED to clear a path to it.
+/*rule "Rule N206"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent ( N206 == true && (currentNorm == null || currentNorm == Norm.N206))
+then
+    System.out.println("[Rule-N206]" + "[" + policeAgent.getID() + "] attempting to clean a path to most damaged inhabited building");
+    EntityID newTarget = null;
+    
+    if ( policeAgent.mostDamagedBuilding_N206 != null) {
+        List<EntityID> path = policeAgent.getSearch().search(((PoliceForce)policeAgent.me()).getPosition(),
+        policeAgent.mostDamagedBuilding_N206, policeAgent.getGraph(), policeAgent.getDistanceMatrix()).getPathIds();
+        
+        System.out.println("[Rule-N206] path -> " + path);
+        
+        if (path != null) {
+            for (EntityID entityID :path) {
+                StandardEntity se = policeAgent.getWorld().getEntity(entityID);
+                if (se instanceof Road) {
+                    Road road = (Road) se;
+                    if (road.isBlockadesDefined() && road.getBlockades().isEmpty() == false) {
+                        newTarget = road.getBlockades().get(0);
+                        break;
+                    }
+                }
+            }
+
+            if (newTarget == null) {
+                policeAgent.mostDamagedBuilding_N206 = null;
+            }else {
+                policeAgent.setNewTarget(newTarget, PlatoonPoliceAgent.Norm.N206);
+            }
+        }else {
+            policeAgent.mostDamagedBuilding_N206 = null;
+        }
+    }
+    
+    if ( policeAgent.mostDamagedBuilding_N206 == null ) {
+        //Is necessary select a new most damaged building as aim
+        List<Building> mostDamagedBuildings = (List<Building>) policeAgent.getMostDamagedInhabitedBuildings();
+        System.out.println("[Rule-N206] Getting random building from most damaged buildings inhabited: " + mostDamagedBuildings);
+        if (mostDamagedBuildings.isEmpty() == false) {
+            Random rand = new Random();
+            Building randBuilding = mostDamagedBuildings.get(rand.nextInt(mostDamagedBuildings.size()));
+            policeAgent.mostDamagedBuilding_N206 = randBuilding.getID();
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+//If a not heavely broken building (brockenness <= 0.5) is unreachable, the police is PERMITTED to clean a path to it.
+/*rule "Rule N218"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent ( N218 == true && (currentNorm == null || currentNorm == Norm.N218))
+then
+    System.out.println("[Rule-N218]" + "[" + policeAgent.getID() + "] attempting to clean a path to not heavely broken building");
+
+    EntityID newTarget = null;
+    
+    if (policeAgent.buildingToFocus_N218 != null) {
+        List<EntityID> path = policeAgent.getSearch().search(((PoliceForce)policeAgent.me()).getPosition(),
+        policeAgent.buildingToFocus_N218, policeAgent.getGraph(), policeAgent.getDistanceMatrix()).getPathIds();
+        
+        if (path != null) {
+        
+            System.out.println("[Rule-N218] [" + policeAgent.getID() + "] path ->" + path);
+            for (EntityID entityID :path) {
+                StandardEntity se = policeAgent.getWorld().getEntity(entityID);
+                if (se instanceof Road) {
+                    Road road = (Road) se;
+                    if (road.isBlockadesDefined() && road.getBlockades().isEmpty() == false) {
+                        newTarget = road.getBlockades().get(0);
+                        break;
+                    }
+                }
+            }
+
+            if (newTarget == null) {
+                policeAgent.buildingToFocus_N218 = null;
+            }else {
+                policeAgent.setNewTarget(newTarget, PlatoonPoliceAgent.Norm.N218);
+            }
+            
+        }else {
+            policeAgent.buildingToFocus_N218 = null;
+        }
+    }
+    
+    if (policeAgent.buildingToFocus_N218 == null) {
+        List<Building> notHeavelyDamagedBuildings = (List<Building>) policeAgent.getDamagedBuildingsByRange(50, 0);
+        
+        if (notHeavelyDamagedBuildings.isEmpty() == false) {
+            Random rand = new Random();
+            Building randBuilding = notHeavelyDamagedBuildings.get(rand.nextInt(notHeavelyDamagedBuildings.size()));
+            if (randBuilding != null) {
+                System.out.println("[Rule-N218] [" + policeAgent.getID() + "] buildingToFocus_N218 will be " + randBuilding.getFullDescription());
+                policeAgent.buildingToFocus_N218 = randBuilding.getID();
+            }
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+//If a heavely broken building (brockennness > 0.5) is unreachable, the police is PERMITTED to clear a path to it.
+/*rule "Rule N221"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent( N221 == true && (currentNorm == null || currentNorm == Norm.N221))
+then
+    System.out.println("[Rule-N221]" + "[" + policeAgent.getID() + "] attempting to clean a path to heavely broken building");
+    EntityID newTarget = null;
+    
+    if (policeAgent.buildingToFocus_N221 != null) {
+        List<EntityID> path = policeAgent.getSearch().search(((PoliceForce)policeAgent.me()).getPosition(),
+        policeAgent.buildingToFocus_N221, policeAgent.getGraph(), policeAgent.getDistanceMatrix()).getPathIds();
+        
+        if (path != null) {
+        
+            System.out.println("[Rule-N221] [" + policeAgent.getID() + "] path ->" + path);
+        
+            for (EntityID entityID :path) {
+                StandardEntity se = policeAgent.getWorld().getEntity(entityID);
+                if (se instanceof Road) {
+                    Road road = (Road) se;
+                    if (road.isBlockadesDefined() && road.getBlockades().isEmpty() == false) {
+                        newTarget = road.getBlockades().get(0);
+                        break;
+                    }
+                }
+            }
+
+            if (newTarget == null) {
+                policeAgent.buildingToFocus_N221 = null;
+            }else {
+                policeAgent.setNewTarget(newTarget, PlatoonPoliceAgent.Norm.N221);
+            }
+            
+        }else {
+            policeAgent.buildingToFocus_N221 = null;
+        }
+    }
+    
+    if (policeAgent.buildingToFocus_N221 == null) {
+        List<Building> heavelyDamagedBuildings = (List<Building>) policeAgent.getDamagedBuildingsByRange(100, 51);
+        
+        if (heavelyDamagedBuildings.isEmpty() == false) {
+            Random rand = new Random();
+            Building randBuilding = heavelyDamagedBuildings.get(rand.nextInt(heavelyDamagedBuildings.size()));
+            System.out.println("[Rule-N221] [" + policeAgent.getID() + "] buildingToFocus_N221 will be " + randBuilding.getFullDescription());
+            policeAgent.buildingToFocus_N221 = randBuilding.getID();
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+//If the blockade blocking most streets is unattended, the police is PERMITTED to clear it.
+/*rule "Rule N233"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent( N233 == true && (currentNorm == null || currentNorm == Norm.N233))
+then
+    System.out.println("[Rule-N233]" + "[" + policeAgent + "] attempting to clear the most blocking blockade");
+    
+    if (policeAgent.blockadeToFocus_N233 != null ){
+        if (policeAgent.getWorld().getEntity(policeAgent.blockadeToFocus_N233) == null) {
+            policeAgent.blockadeToFocus_N233 = null;
+        }else{
+            policeAgent.setNewTarget(policeAgent.blockadeToFocus_N233, PlatoonPoliceAgent.Norm.N233);
+        }
+    }
+    
+    if (policeAgent.blockadeToFocus_N233 == null) {
+        List<Blockade> mostBlockingBlockades = (List<Blockade>) policeAgent.mostBlockingBlockades();
+        for (Blockade blockade :mostBlockingBlockades) {
+            if (blockade != null) {
+                if (policeAgent.isBlockadeUnnattended(blockade)) {
+                    policeAgent.blockadeToFocus_N233 = blockade.getID();
+                    break;
+                }
+            }
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+
+//If a blockade in the area of the police is unnattended, the police is OBLIGUED to clear it.
+/*rule "Rule N241"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent( anyBlockadeInRange() == true && (currentNorm == null || currentNorm == Norm.N241))
+then
+    System.out.println("[Rule-N241] [" + policeAgent.getID() + "] attempting to clear a blockade in the area that is unnattended.");
+    
+    EntityID newTarget = null;
+    if (policeAgent.blockadeToFocus_N241 != null) {
+        Blockade blockade = (Blockade) policeAgent.getWorld().getEntity(policeAgent.blockadeToFocus_N241);
+        //Check if some blockade is between police agent's position and blockade to focus
+        if (blockade != null) {
+            //Update blockades to prioritize list
+            Iterator<EntityID> itr = policeAgent.blockadesToPrioritize_N241.iterator();
+            while(itr.hasNext()) {
+                EntityID next = itr.next();
+                Blockade b = (Blockade) policeAgent.getWorld().getEntity(next);
+                if (b == null) {
+                    itr.remove();
+                }else {
+                    newTarget = next;
+                    break;
+                }
+            }
+        }
+    }
+        
+    //Check if continue existing or was removed
+    if (newTarget == null) {
+        policeAgent.blockadeToFocus_N241 = null;
+        policeAgent.blockadesToPrioritize_N241 = new ArrayList<>();
+    }else {
+        policeAgent.setNewTarget(policeAgent.blockadeToFocus_N241, PlatoonPoliceAgent.Norm.N241);
+    }
+    
+    
+    if (policeAgent.blockadeToFocus_N241 == null) {
+        List<Blockade> blockadesInRange = (List<Blockade>) policeAgent.getBlockadesInRange();
+        for (Blockade block :blockadesInRange) {
+            if (policeAgent.isBlockadeUnnattended(block)) {
+                policeAgent.blockadeToFocus_N241 = block.getID();
+                
+                List<EntityID> path = policeAgent.getSearch().search(((PoliceForce)policeAgent.me()).getPosition(),
+                block.getPosition(), policeAgent.getGraph(), policeAgent.getDistanceMatrix()).getPathIds();
+                if (path != null) {
+                    System.out.println("[Rule-N241] path ->" + path);
+                    for (EntityID entityID :path) {
+                        StandardEntity se = policeAgent.getWorld().getEntity(entityID);
+                        if (se instanceof Road) {
+                            Road road = (Road) se;
+                            if (road.isBlockadesDefined() && road.getBlockades().isEmpty() == false) {
+                                policeAgent.blockadesToPrioritize_N241.add(road.getBlockades().get(0));
+                            }
+                        }
+                    }
+                }
+                break;
+            }
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+//If a blockade in the area of the police is unnattended, the police is PERMITTED to clear it.
+/*rule "Rule N242"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent( N242 == true && anyBlockadeInRange() == true && (currentNorm == null || currentNorm == Norm.N242))
+then
+    System.out.println("[Rule-N242] [" + policeAgent.getID() + "] attempting to clear a blockade in the area that is unnattended.");
+    
+    EntityID newTarget = null;
+    if (policeAgent.blockadeToFocus_N241 != null) {
+        Blockade blockade = (Blockade) policeAgent.getWorld().getEntity(policeAgent.blockadeToFocus_N241);
+        //Check if some blockade is between police agent's position and blockade to focus
+        if (blockade != null) {
+            //Update blockades to prioritize list
+            Iterator<EntityID> itr = policeAgent.blockadesToPrioritize_N241.iterator();
+            while(itr.hasNext()) {
+                EntityID next = itr.next();
+                Blockade b = (Blockade) policeAgent.getWorld().getEntity(next);
+                if (b == null) {
+                    itr.remove();
+                }else {
+                    newTarget = next;
+                    break;
+                }
+            }
+        }
+    }
+        
+    //Check if continue existing or was removed
+    if (newTarget == null) {
+        policeAgent.blockadeToFocus_N241 = null;
+        policeAgent.blockadesToPrioritize_N241 = new ArrayList<>();
+    }else {
+        policeAgent.setNewTarget(policeAgent.blockadeToFocus_N241, PlatoonPoliceAgent.Norm.N242);
+    }
+    
+    
+    if (policeAgent.blockadeToFocus_N241 == null) {
+        List<Blockade> blockadesInRange = (List<Blockade>) policeAgent.getBlockadesInRange();
+        for (Blockade block :blockadesInRange) {
+            if (policeAgent.isBlockadeUnnattended(block)) {
+                policeAgent.blockadeToFocus_N241 = block.getID();
+                
+                List<EntityID> path = policeAgent.getSearch().search(((PoliceForce)policeAgent.me()).getPosition(),
+                block.getPosition(), policeAgent.getGraph(), policeAgent.getDistanceMatrix()).getPathIds();
+                if (path != null) {
+                    System.out.println("[Rule-N242] path ->" + path);
+                    for (EntityID entityID :path) {
+                        StandardEntity se = policeAgent.getWorld().getEntity(entityID);
+                        if (se instanceof Road) {
+                            Road road = (Road) se;
+                            if (road.isBlockadesDefined() && road.getBlockades().isEmpty() == false) {
+                                policeAgent.blockadesToPrioritize_N241.add(road.getBlockades().get(0));
+                            }
+                        }
+                    }
+                }
+                break;
+            }
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+//If a police finds a blockaded road, it is OBLIGUED to clear it.
+/*rule "Rule N244"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent ( getAllDiscoveredBlockadeMessage().isEmpty() == false && (currentNorm == null || currentNorm == Norm.N244))
+then
+    System.out.println("[Rule-N244] [" + policeAgent.getID() + "] attempting to clear blockade discovered recently");
+    
+    EntityID newTarget = null;
+    Blockade blockade;
+    if (policeAgent.blockadeToFocus_N244 != null) {
+        //Check if some blockade is between police agent's position and blockade to focus
+        blockade = (Blockade) policeAgent.getWorld().getEntity(policeAgent.blockadeToFocus_N244);
+        
+        if (blockade != null) {
+            //Update blockades to prioritize list
+            Iterator<EntityID> itr = policeAgent.blockadesToPrioritize_N244.iterator();
+            while(itr.hasNext()) {
+                EntityID next = itr.next();
+                Blockade b = (Blockade) policeAgent.getWorld().getEntity(next);
+                if (b == null) {
+                    itr.remove();
+                }else {
+                    newTarget = next;
+                    break;
+                }
+            }
+        }
+    }
+   
+    //Check if continue existing or was removed
+    if (newTarget == null) {
+        policeAgent.blockadeToFocus_N244 = null;
+        policeAgent.blockadesToPrioritize_N244 = new ArrayList<>();
+    }else {
+        policeAgent.setNewTarget(newTarget, PlatoonPoliceAgent.Norm.N244);
+    }
+    
+    
+    if (policeAgent.blockadeToFocus_N244 == null) {
+        List<DiscoveredBlockadeMessage> discoveredMessages = (List<DiscoveredBlockadeMessage>) policeAgent.getAllDiscoveredBlockadeMessage();
+        if (discoveredMessages.isEmpty() == false) {
+            Random rand = new Random();
+            DiscoveredBlockadeMessage randMsg = discoveredMessages.get(rand.nextInt(discoveredMessages.size()));
+            policeAgent.blockadeToFocus_N244 = randMsg.getBlockadeID();
+            
+            blockade = (Blockade) policeAgent.getWorld().getEntity(policeAgent.blockadeToFocus_N244);
+            if (blockade != null) {
+                List<EntityID> path = policeAgent.getSearch().search(((PoliceForce)policeAgent.me()).getPosition(),
+                blockade.getPosition(), policeAgent.getGraph(), policeAgent.getDistanceMatrix()).getPathIds();
+                if (path != null) {
+                    System.out.println("[Rule-N244] path ->" + path);
+                    for (EntityID entityID :path) {
+                        StandardEntity se = policeAgent.getWorld().getEntity(entityID);
+                        if (se instanceof Road) {
+                            Road road = (Road) se;
+                            if (road.isBlockadesDefined() && road.getBlockades().isEmpty() == false) {
+                                policeAgent.blockadesToPrioritize_N244.add(road.getBlockades().get(0));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+//If a police finds a blockaded road, it is PERMITTED to clear it.
+/*rule "Rule N245"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent ( N245 == true && getAllDiscoveredBlockadeMessage().isEmpty() == false && (currentNorm == null || currentNorm == Norm.N244))
+then
+    System.out.println("[Rule-N245] [" + policeAgent.getID() + "] attempting to clear blockade discovered recently");
+    
+    EntityID newTarget = null;
+    Blockade blockade;
+    if (policeAgent.blockadeToFocus_N244 != null) {
+        //Check if some blockade is between police agent's position and blockade to focus
+        blockade = (Blockade) policeAgent.getWorld().getEntity(policeAgent.blockadeToFocus_N244);
+        
+        if (blockade != null) {
+            //Update blockades to prioritize list
+            Iterator<EntityID> itr = policeAgent.blockadesToPrioritize_N244.iterator();
+            while(itr.hasNext()) {
+                EntityID next = itr.next();
+                Blockade b = (Blockade) policeAgent.getWorld().getEntity(next);
+                if (b == null) {
+                    itr.remove();
+                }else {
+                    newTarget = next;
+                    break;
+                }
+            }
+        }
+    }
+   
+    //Check if continue existing or was removed
+    if (newTarget == null) {
+        policeAgent.blockadeToFocus_N244 = null;
+        policeAgent.blockadesToPrioritize_N244 = new ArrayList<>();
+    }else {
+        policeAgent.setNewTarget(newTarget, PlatoonPoliceAgent.Norm.N245);
+    }
+    
+    
+    if (policeAgent.blockadeToFocus_N244 == null) {
+        List<DiscoveredBlockadeMessage> discoveredMessages = (List<DiscoveredBlockadeMessage>) policeAgent.getAllDiscoveredBlockadeMessage();
+        if (discoveredMessages.isEmpty() == false) {
+            Random rand = new Random();
+            DiscoveredBlockadeMessage randMsg = discoveredMessages.get(rand.nextInt(discoveredMessages.size()));
+            policeAgent.blockadeToFocus_N244 = randMsg.getBlockadeID();
+            
+            blockade = (Blockade) policeAgent.getWorld().getEntity(policeAgent.blockadeToFocus_N244);
+            if (blockade != null) {
+                List<EntityID> path = policeAgent.getSearch().search(((PoliceForce)policeAgent.me()).getPosition(),
+                blockade.getPosition(), policeAgent.getGraph(), policeAgent.getDistanceMatrix()).getPathIds();
+                if (path != null) {
+                    System.out.println("[Rule-N245] path ->" + path);
+                    for (EntityID entityID :path) {
+                        StandardEntity se = policeAgent.getWorld().getEntity(entityID);
+                        if (se instanceof Road) {
+                            Road road = (Road) se;
+                            if (road.isBlockadesDefined() && road.getBlockades().isEmpty() == false) {
+                                policeAgent.blockadesToPrioritize_N244.add(road.getBlockades().get(0));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        policeAgent.setNewTarget(null, null);
+    }
+end*/
+
+/*N261-If a police, ambulance or fire brigade discovers a new block-
+ade and the communication channel is overused, it is 
+FORBIDDEN to tell all agents about it.*/
+
+/*N262-If a police, ambulance or fire brigade discovers a new block-
+ade and the communication channel is not overused, it is OBLIGUED
+to tell all agents about it.*/
+rule "Rule N261 & N262"
+
+salience 1
+
+when
+    abstractAgent : PlatoonAbstractAgent()
+then
+    if (abstractAgent.getCurrentSense() != null) {
+    
+        KASense sense = abstractAgent.getCurrentSense();
+        
+        if (abstractAgent.anyOverusedMessage(sense.getHearing(), 1) == false) {
+            abstractAgent.sendEnquedDiscoveredBlockadeMessage(sense.getTime(), 1);
+        }
+    }   
+end
+
+/*N267-If a police clears a blockade and the communication channel
+is overused, it is FORBIDDEN to tell other agents about
+it.*/
+
+/*N268-If a police clears a blockade and the communication chan-
+nel is not overused, it is OBLIGUED to tell other agents
+about it.*/
+rule "Rule N267 & N268"
+
+salience 1
+
+when
+    policeAgent : PlatoonPoliceAgent()
+then
+    if (policeAgent.getCurrentSense() != null) {
+    
+        KASense sense = policeAgent.getCurrentSense();
+        
+        if (policeAgent.anyOverusedMessage(sense.getHearing(), 1) == false) {
+            policeAgent.sendEnquedClearedBlockadeMessage(sense.getTime(), 1);
+        }
+    }   
+end
+
+//If a building with people in it is on fire, the fire brigade is OBLIGUED to extinguish it.
+/*rule "Rule N283"
+
+salience 1
+
+when
+   fireAgent : PlatoonFireAgent ( ((FireBrigade)me()).isWaterDefined() && ((FireBrigade)me()).getWater() > 0 )
+then
+   EntityID targetID = fireAgent.getAssignedTarget();
+   Building target = (Building)fireAgent.getGraph().getWorld().getEntity(targetID);
+   List<Building> priorities = new ArrayList<>();
+   
+   if (fireAgent.targetAssignedInRange()) {
+
+        //Check if the current on fire building focused is or not empty
+        if (target != null && target.isOnFire() == true && fireAgent.isBuildingEmpty(target) == true) {
+            //Then if it's empty check if among neighbours one is on fire and not empty
+            Collection<Building> neighboursOnFire = fireAgent.getOnFireNeighbours(target);
+            for (Building neighbour :neighboursOnFire) {
+                 if (fireAgent.isBuildingEmpty(target)) {
+                     //We cannot prirotize severe fires in favour of moderate/minor fires cause it won't work
+                     if (target.getFieryness() >= neighbour.getFieryness()) {
+                         priorities.add(neighbour);
+                     }
+                 }
+            }
+        }
+
+        System.out.println("[Rule-N283] [" + fireAgent.getID() + "]  priorities->" + priorities);
+
+        //Check if there's any building to be prirotized
+        if (priorities.isEmpty() == false) {
+             Random rand = new Random();
+             int randIdx = rand.nextInt(priorities.size());
+             System.out.println("[Rule-N283] [" + fireAgent.getID() + "]  priorities->" + priorities);
+             Building p = priorities.get(randIdx);
+             fireAgent.setNewTarget(p.getID());
+        }
+        
+   }else {
+        //Fire Agent is moving to target assigned by Solver
+        Map<Integer,Collection<EntityID>> map = fireAgent.nearBurningBuildings(fireAgent.getID(), fireAgent.getMaxDistance());
+        for (int i = 1; i < 4; i++) {
+            Collection<EntityID> candidates = (Collection<EntityID>)map.get(i);
+            if (candidates != null && candidates.isEmpty() == false) {
+                for (EntityID candidate :candidates) {
+                    Building burningBuilding = (Building)fireAgent.getGraph().getWorld().getEntity(candidate);
+                    if (fireAgent.isBuildingEmpty(burningBuilding) == false) {
+                        fireAgent.setNewTarget(burningBuilding.getID());
+                    }
+                }
+            }
+        }
+   }
+end*/

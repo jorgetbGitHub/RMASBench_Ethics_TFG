@@ -1,0 +1,32 @@
+***Fire Brigades statistics***
+Total Buildings: 1617.0 
+Total damaged Buildings by fire: 75.0 (3.2158318%) 
+Total calcined Buildings: 29.0 (1.9230769%) 
+Total severe damaged Buildings: 16.5 (48.076923%) 
+Total moderate damaged Buildings: 4.5 (7.6923075%) 
+Total minor damaged Buildings: 25.0 (42.307693%) 
+Total Buildings water it: 1.0 
+Total Refuges: 1.0 
+Total calcined Refuges: 0.0 
+Total sereve damaged Refuges: 1.0 
+Total moderate damaged Refuges: 0.0 
+Total minor damaged Refuges: 0.0 
+Total area: 273510.0 
+Total area burnt: 9300.5 
+Total area calcined: 3858.0 
+Total area severely affected: 2163.0 
+Total area moderely affected: 321.5 
+Total area minorly affected: 2958.0 
+Total Fire Brigades: 26.0 
+Total Police Forces: 0.0 
+Total Ambulance Team: 0.0 
+Total Time: 145.0 
+Total dead people: 0.0 
+Total dead Fire Brigades: 0.0 
+Total dead Police Forces: 0.0 
+Total dead Ambulance Teams: 0.0 
+Total dead Civilians: 0.0 
+Total water consumed: 573250.0 
+Total water refilled: 0.0 
+Velocity mean per building extintion: 1.86773935 
+Volume of work: 2.8846154 

@@ -1,0 +1,38 @@
+# solver: Closest
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 488595ca-4532-44bf-9762-6b1ff9605a5f
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: Ambulancias_Collapse_ConySinNormas.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+24	12	12	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9977623354120823	-Infinity	7	true	25
+25	14	14	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9968314678208231	-Infinity	6	true	22
+26	14	14	1	0	0	0	0	0	-Infinity	-Infinity	-Infinity	-Infinity	-Infinity	0.9962825977292168	-Infinity	7	true	21
+27	14	14	1	0	0	0	0	0	-Infinity	-Infinity	-18.511041655193566	-18.511041655193566	-Infinity	0.9962825977292168	-Infinity	6	true	25
+28	14	14	1	0	0	0	0	0	-23.796063652488343	-23.796063652488343	44.244175466217236	44.244175466217236	-23.796063652488343	0.9962825977292168	-23.796063652488343	7	true	27
+29	14	13	1	0	0	0	0	0	18.808507015664844	18.808507015664844	43.30602129016739	43.30602129016739	18.808507015664844	0.9962914805418883	18.808507015664844	7	true	26
+30	14	13	1	0	0	0	0	0	-37.2745764265759	-37.2745764265759	41.5126623392975	41.5126623392975	-37.2745764265759	0.9961225974367784	-37.2745764265759	8	true	26
+31	14	13	1	0	0	0	0	0	-Infinity	-Infinity	8.918769309515504	8.918769309515504	-Infinity	0.9959126998632849	-Infinity	9	true	26
+32	14	13	1	0	0	0	0	0	-Infinity	-Infinity	-14.9568446164532	-14.9568446164532	-Infinity	0.9959413222596706	-Infinity	10	true	25
+33	15	14	1	0	0	0	0	0	-531.657597927503	-531.657597927503	42.32742389991698	42.32742389991698	-531.657597927503	0.995680357652013	-531.657597927503	7	true	25
+34	15	13	1	0	0	0	0	0	-432.95844357537084	-432.95844357537084	38.22932933657307	38.22932933657307	-432.95844357537084	0.9957138052799732	-432.95844357537084	7	true	25
+35	16	14	1	0	0	0	0	0	-463.32338200181374	-463.32338200181374	34.75720092167118	34.75720092167118	-463.32338200181374	0.9950433539746016	-463.32338200181374	10	true	25

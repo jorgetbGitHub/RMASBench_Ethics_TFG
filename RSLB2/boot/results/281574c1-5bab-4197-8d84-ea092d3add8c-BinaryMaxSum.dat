@@ -1,0 +1,28 @@
+# solver: BinaryMaxSum
+# max_time: 1000
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 281574c1-5bab-4197-8d84-ea092d3add8c
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+# maxsum.damping: 0.9
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+23	12	12	58	39904	385092	3080736	0	0	-1787.796057655276	-1787.7960508544015	NaN	NaN	-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-2087.795839103581,-2087.795839103581,-2087.795839103581,-2087.7958418303306,-2087.79584245088,-2087.79584245088,-2087.79584245088,-2087.79584245088,-2087.7958445056515,-2087.7958445056515,-2087.7958445056515,-2087.7958445056515,-2087.7958480813836,-2087.7958539793635,-2087.7958539793635,-2087.7958539793635,-2087.795884051759,-2087.795884051759,-2087.795895655514,-2087.795895655514,-2087.795906184567,-2087.79591019819,-2087.795951011787,-2087.795951011787,-2087.795951011787,-1787.7960508544015,-1787.7960508544015,-1787.7960508544015,-1787.7960567230198,-1787.7960567230198,-1787.7960567230198,-1787.7960567230198,-1787.7960567230198,-1787.7960567230198,-1787.7960567230198,-1787.7960567230198,-1787.7960567230198,-1787.7960567230198,-1787.7960567230198,-1787.7960561024697,-1787.7960561024697,-1787.7960561024697,-1787.7960561024697,-1787.7960561024697,-1787.7960561024697,-1787.796057655276,-1787.796057655276,-1787.796057655276	0.9977516614149626	-1787.7960508544015	15	false	1006

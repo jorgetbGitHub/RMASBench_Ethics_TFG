@@ -1,0 +1,1613 @@
+Using config /home/jorgetb/RMASBench/RSLB2/boot/config/roborescue/kernel.cfg
+Waiting for '/home/jorgetb/RMASBench/RSLB2/boot/logs/062ccabc-dcf0-4e52-b233-c66e040fb350/kernel.log' to exist...
+Waiting for 'Listening for connections'...
+Waiting for '/home/jorgetb/RMASBench/RSLB2/boot/logs/062ccabc-dcf0-4e52-b233-c66e040fb350/blockade.log' to exist...
+Waiting for 'connected'...
+Waiting for '/home/jorgetb/RMASBench/RSLB2/boot/logs/062ccabc-dcf0-4e52-b233-c66e040fb350/clear.log' to exist...
+Waiting for 'connected'...
+Waiting for '/home/jorgetb/RMASBench/RSLB2/boot/logs/062ccabc-dcf0-4e52-b233-c66e040fb350/misc.log' to exist...
+Waiting for 'connected'...
+Waiting for '/home/jorgetb/RMASBench/RSLB2/boot/logs/062ccabc-dcf0-4e52-b233-c66e040fb350/traffic.log' to exist...
+Waiting for 'connected'...
+Waiting for '/home/jorgetb/RMASBench/RSLB2/boot/logs/062ccabc-dcf0-4e52-b233-c66e040fb350/fire.log' to exist...
+Waiting for 'connected'...
+Launching viewer...
+Waiting for '/home/jorgetb/RMASBench/RSLB2/boot/logs/062ccabc-dcf0-4e52-b233-c66e040fb350/viewer.log' to exist...
+Waiting for 'connected'...
+[32m20:02:41.149 [main] INFO  RSLBench.Launcher - RSLB2 Started![m
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-beliefs-7.17.0.Final-sources.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service +org.drools.beliefs.bayes.assembler.BayesAssemblerService
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service +org.drools.beliefs.bayes.runtime.BayesRuntimeService
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service +org.drools.beliefs.bayes.weaver.BayesWeaverService
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-compiler-7.17.0.Final-sources.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.compiler.kie.builder.impl.KieServicesImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.compiler.builder.impl.KnowledgeBuilderFactoryServiceImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-decisiontables-7.17.0.Final-sources.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.decisiontable.DecisionTableProviderImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-persistence-jpa-7.17.0.Final-sources.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.persistence.jpa.KnowledgeStoreServiceImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Cannot load service: org.kie.internal.process.CorrelationKeyFactory
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.jbpm.persistence.correlation.JPACorrelationKeyFactory
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-scorecards-7.17.0.Final-sources.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.scorecards.ScoreCardProviderImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-core-7.17.0.Final-sources.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.core.io.impl.ResourceFactoryServiceImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.core.marshalling.impl.MarshallerProviderImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.core.concurrent.ExecutorProviderImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/kie-ci-7.17.0.Final-sources.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.scanner.KieScannerFactoryServiceImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.scanner.MavenClassLoaderResolver
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/kie-internal-7.17.0.Final-sources.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.internal.services.KieAssemblersImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.internal.services.KieRuntimesImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.internal.services.KieWeaversImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.internal.services.KieBeliefsImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/kie-pmml-7.17.0.Final-sources.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service +org.kie.pmml.assembler.PMMLAssemblerService
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-beliefs-7.17.0.Final.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service +org.drools.beliefs.bayes.assembler.BayesAssemblerService
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service +org.drools.beliefs.bayes.runtime.BayesRuntimeService
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service +org.drools.beliefs.bayes.weaver.BayesWeaverService
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-compiler-7.17.0.Final.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.compiler.kie.builder.impl.KieServicesImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.compiler.builder.impl.KnowledgeBuilderFactoryServiceImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-core-7.17.0.Final.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.core.io.impl.ResourceFactoryServiceImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.core.marshalling.impl.MarshallerProviderImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.core.concurrent.ExecutorProviderImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-decisiontables-7.17.0.Final.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.decisiontable.DecisionTableProviderImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-persistence-jpa-7.17.0.Final.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.persistence.jpa.KnowledgeStoreServiceImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Cannot load service: org.kie.internal.process.CorrelationKeyFactory
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.jbpm.persistence.correlation.JPACorrelationKeyFactory
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/drools-scorecards-7.17.0.Final.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.drools.scorecards.ScoreCardProviderImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/kie-ci-7.17.0.Final.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.scanner.KieScannerFactoryServiceImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.scanner.MavenClassLoaderResolver
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/kie-internal-7.17.0.Final.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.internal.services.KieAssemblersImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.internal.services.KieRuntimesImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.internal.services.KieWeaversImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service org.kie.internal.services.KieBeliefsImpl
+
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Loading kie.conf from  jar:file:/home/jorgetb/RMASBench/RSLB2/dist/lib/kie-pmml-7.17.0.Final.jar!/META-INF/kie.conf in classloader sun.misc.Launcher$AppClassLoader@6d06d69c
+[main] INFO org.kie.api.internal.utils.ServiceDiscoveryImpl - Adding Service +org.kie.pmml.assembler.PMMLAssemblerService
+
+KBuilder initialized SUCCESSFULLY
+[32m20:02:42.873 [main] INFO  RSLBench.Launcher - Connecting fire brigade 0...[m
+[34m20:02:42.914 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:42.921 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:43.003 [Thread-2] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:43.003 [Thread-2] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:43.005 [Thread-2] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:43.006 [Thread-2] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:43.051 [Thread-2] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 45ms[m
+[36m20:02:43.053 [Thread-2] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:43.059 [Thread-2] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:43.060 [Thread-2] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:43.061 [Thread-2] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:43.162 [main] INFO  RSLBench.Launcher - Connecting fire brigade 1...[m
+[34m20:02:43.163 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:43.163 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:43.219 [Thread-6] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:43.219 [Thread-6] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:43.219 [Thread-6] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:43.219 [Thread-6] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:43.228 [Thread-6] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 9ms[m
+[36m20:02:43.228 [Thread-6] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:43.233 [Thread-6] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:43.233 [Thread-6] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:43.234 [Thread-6] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:43.335 [main] INFO  RSLBench.Launcher - Connecting fire brigade 2...[m
+[34m20:02:43.335 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:43.336 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:43.375 [Thread-10] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:43.375 [Thread-10] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:43.375 [Thread-10] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:43.375 [Thread-10] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:43.383 [Thread-10] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 8ms[m
+[36m20:02:43.384 [Thread-10] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:43.388 [Thread-10] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:43.389 [Thread-10] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:43.390 [Thread-10] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:43.494 [main] INFO  RSLBench.Launcher - Connecting fire brigade 3...[m
+[34m20:02:43.494 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:43.494 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:43.529 [Thread-14] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:43.529 [Thread-14] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:43.530 [Thread-14] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:43.530 [Thread-14] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:43.537 [Thread-14] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 7ms[m
+[36m20:02:43.538 [Thread-14] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:43.542 [Thread-14] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:43.542 [Thread-14] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:43.543 [Thread-14] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:43.644 [main] INFO  RSLBench.Launcher - Connecting fire brigade 4...[m
+[34m20:02:43.644 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:43.645 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:43.698 [Thread-18] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:43.698 [Thread-18] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:43.699 [Thread-18] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:43.699 [Thread-18] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:43.705 [Thread-18] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 6ms[m
+[36m20:02:43.706 [Thread-18] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:43.710 [Thread-18] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:43.710 [Thread-18] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:43.711 [Thread-18] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:43.812 [main] INFO  RSLBench.Launcher - Connecting fire brigade 5...[m
+[34m20:02:43.812 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:43.812 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:43.842 [Thread-22] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:43.842 [Thread-22] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:43.843 [Thread-22] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:43.843 [Thread-22] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:43.849 [Thread-22] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 6ms[m
+[36m20:02:43.850 [Thread-22] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:43.854 [Thread-22] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:43.854 [Thread-22] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:43.855 [Thread-22] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:43.956 [main] INFO  RSLBench.Launcher - Connecting fire brigade 6...[m
+[34m20:02:43.956 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:43.957 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:44.004 [Thread-26] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:44.005 [Thread-26] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:44.005 [Thread-26] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:44.005 [Thread-26] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:44.013 [Thread-26] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 8ms[m
+[36m20:02:44.014 [Thread-26] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:44.017 [Thread-26] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:44.017 [Thread-26] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:44.018 [Thread-26] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:44.119 [main] INFO  RSLBench.Launcher - Connecting fire brigade 7...[m
+[34m20:02:44.119 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:44.120 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:44.185 [Thread-30] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:44.185 [Thread-30] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:44.185 [Thread-30] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:44.185 [Thread-30] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:44.190 [Thread-30] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 5ms[m
+[36m20:02:44.191 [Thread-30] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:44.193 [Thread-30] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:44.194 [Thread-30] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:44.194 [Thread-30] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:44.295 [main] INFO  RSLBench.Launcher - Connecting fire brigade 8...[m
+[34m20:02:44.295 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:44.296 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:44.323 [Thread-34] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:44.323 [Thread-34] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:44.323 [Thread-34] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:44.323 [Thread-34] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:44.330 [Thread-34] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 6ms[m
+[36m20:02:44.330 [Thread-34] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:44.333 [Thread-34] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:44.333 [Thread-34] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:44.334 [Thread-34] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:44.435 [main] INFO  RSLBench.Launcher - Connecting fire brigade 9...[m
+[34m20:02:44.435 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:44.436 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:44.471 [Thread-38] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:44.471 [Thread-38] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:44.472 [Thread-38] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:44.472 [Thread-38] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:44.479 [Thread-38] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 7ms[m
+[36m20:02:44.480 [Thread-38] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:44.483 [Thread-38] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:44.483 [Thread-38] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:44.484 [Thread-38] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:44.585 [main] INFO  RSLBench.Launcher - Connecting fire brigade 10...[m
+[34m20:02:44.585 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:44.586 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:44.623 [Thread-42] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:44.623 [Thread-42] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:44.623 [Thread-42] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:44.623 [Thread-42] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:44.631 [Thread-42] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 8ms[m
+[36m20:02:44.632 [Thread-42] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:44.635 [Thread-42] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:44.635 [Thread-42] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:44.637 [Thread-42] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:44.738 [main] INFO  RSLBench.Launcher - Connecting fire brigade 11...[m
+[34m20:02:44.738 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:44.739 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:44.979 [Thread-46] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:44.979 [Thread-46] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:44.979 [Thread-46] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:44.979 [Thread-46] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:44.985 [Thread-46] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 6ms[m
+[36m20:02:44.986 [Thread-46] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:44.988 [Thread-46] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:44.989 [Thread-46] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:44.990 [Thread-46] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:45.090 [main] INFO  RSLBench.Launcher - Connecting fire brigade 12...[m
+[34m20:02:45.091 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:45.091 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:45.125 [Thread-50] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:45.125 [Thread-50] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:45.125 [Thread-50] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:45.125 [Thread-50] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:45.135 [Thread-50] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 10ms[m
+[36m20:02:45.136 [Thread-50] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:45.139 [Thread-50] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:45.139 [Thread-50] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:45.140 [Thread-50] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:45.241 [main] INFO  RSLBench.Launcher - Connecting fire brigade 13...[m
+[34m20:02:45.241 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:45.242 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:45.283 [Thread-54] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:45.283 [Thread-54] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:45.283 [Thread-54] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:45.283 [Thread-54] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:45.290 [Thread-54] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 7ms[m
+[36m20:02:45.291 [Thread-54] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:45.293 [Thread-54] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:45.294 [Thread-54] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:45.294 [Thread-54] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:45.395 [main] INFO  RSLBench.Launcher - Connecting fire brigade 14...[m
+[34m20:02:45.395 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:45.396 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:45.428 [Thread-58] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:45.428 [Thread-58] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:45.428 [Thread-58] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:45.428 [Thread-58] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:45.435 [Thread-58] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 7ms[m
+[36m20:02:45.436 [Thread-58] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:45.439 [Thread-58] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:45.439 [Thread-58] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:45.439 [Thread-58] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:45.540 [main] INFO  RSLBench.Launcher - Connecting fire brigade 15...[m
+[34m20:02:45.540 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:45.541 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:45.574 [Thread-62] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:45.574 [Thread-62] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:45.575 [Thread-62] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:45.575 [Thread-62] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:45.582 [Thread-62] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 7ms[m
+[36m20:02:45.583 [Thread-62] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:45.585 [Thread-62] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:45.585 [Thread-62] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:45.586 [Thread-62] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:45.687 [main] INFO  RSLBench.Launcher - Connecting fire brigade 16...[m
+[34m20:02:45.687 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:45.688 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:45.754 [Thread-66] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:45.754 [Thread-66] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:45.754 [Thread-66] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:45.754 [Thread-66] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:45.760 [Thread-66] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 6ms[m
+[36m20:02:45.761 [Thread-66] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:45.763 [Thread-66] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:45.763 [Thread-66] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:45.763 [Thread-66] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:45.864 [main] INFO  RSLBench.Launcher - Connecting fire brigade 17...[m
+[34m20:02:45.864 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:45.865 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:45.898 [Thread-70] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:45.898 [Thread-70] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:45.898 [Thread-70] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:45.899 [Thread-70] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:45.905 [Thread-70] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 6ms[m
+[36m20:02:45.906 [Thread-70] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:45.908 [Thread-70] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:45.908 [Thread-70] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:45.909 [Thread-70] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:46.010 [main] INFO  RSLBench.Launcher - Connecting fire brigade 18...[m
+[34m20:02:46.010 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:46.011 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:46.047 [Thread-74] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:46.048 [Thread-74] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:46.048 [Thread-74] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:46.048 [Thread-74] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:46.054 [Thread-74] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 6ms[m
+[36m20:02:46.055 [Thread-74] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:46.057 [Thread-74] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:46.057 [Thread-74] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:46.057 [Thread-74] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:46.158 [main] INFO  RSLBench.Launcher - Connecting fire brigade 19...[m
+[34m20:02:46.158 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:46.159 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:46.195 [Thread-78] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:46.195 [Thread-78] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:46.196 [Thread-78] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:46.196 [Thread-78] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:46.205 [Thread-78] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 9ms[m
+[36m20:02:46.206 [Thread-78] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:46.208 [Thread-78] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:46.208 [Thread-78] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:46.209 [Thread-78] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:46.309 [main] INFO  RSLBench.Launcher - Connecting fire brigade 20...[m
+[34m20:02:46.309 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:46.310 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[36m20:02:46.347 [Thread-82] DEBUG RSLBench.PlatoonFireAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:46.347 [Thread-82] DEBUG RSLBench.PlatoonFireAgent - Using seed 1[m
+[32m20:02:46.347 [Thread-82] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected[m
+[36m20:02:46.347 [Thread-82] DEBUG RSLBench.PlatoonFireAgent - Re-indexing world model[m
+[36m20:02:46.354 [Thread-82] DEBUG RSLBench.PlatoonFireAgent - Finished re-index. Took 7ms[m
+[36m20:02:46.355 [Thread-82] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:46.358 [Thread-82] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:46.358 [Thread-82] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:46.358 [Thread-82] INFO  RSLBench.PlatoonFireAgent - Sample fire brigade connected: max extinguish distance = 50000, max power = 500, max tank = 7500000[m
+[32m20:02:46.459 [main] INFO  RSLBench.Launcher - Connecting fire brigade 21...[m
+[34m20:02:46.459 [main] DEBUG RSLBench.PlatoonFireAgent - Platoon Fire Agent CREATED[m
+[36m20:02:46.460 [main] DEBUG RSLBench.PlatoonFireAgent - Starting Connection from RSLBench.PlatoonFireAgent. Registry: System[m
+[32m20:02:46.466 [main] INFO  RSLBench.Launcher - failed: No more agents[m
+[32m20:02:46.466 [main] INFO  RSLBench.Launcher - Connecting police force 22...[m
+[34m20:02:46.467 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:46.468 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:46.545 [Thread-89] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:46.545 [Thread-89] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:46.546 [Thread-89] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:46.546 [Thread-89] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:46.550 [Thread-89] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 4ms[m
+[36m20:02:46.551 [Thread-89] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:46.552 [Thread-89] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:46.553 [Thread-89] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:46.553 [Thread-89] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:46.653 [main] INFO  RSLBench.Launcher - Connecting police force 23...[m
+[34m20:02:46.654 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:46.654 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:46.690 [Thread-93] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:46.690 [Thread-93] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:46.691 [Thread-93] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:46.691 [Thread-93] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:46.699 [Thread-93] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 8ms[m
+[36m20:02:46.700 [Thread-93] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:46.702 [Thread-93] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:46.702 [Thread-93] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:46.702 [Thread-93] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:46.802 [main] INFO  RSLBench.Launcher - Connecting police force 24...[m
+[34m20:02:46.803 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:46.803 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:46.849 [Thread-97] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:46.849 [Thread-97] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:46.850 [Thread-97] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:46.850 [Thread-97] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:46.857 [Thread-97] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 7ms[m
+[36m20:02:46.858 [Thread-97] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:46.861 [Thread-97] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:46.861 [Thread-97] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:46.861 [Thread-97] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:46.962 [main] INFO  RSLBench.Launcher - Connecting police force 25...[m
+[34m20:02:46.962 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:46.963 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:47.002 [Thread-101] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:47.002 [Thread-101] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:47.002 [Thread-101] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:47.003 [Thread-101] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:47.010 [Thread-101] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 7ms[m
+[36m20:02:47.011 [Thread-101] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:47.013 [Thread-101] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:47.013 [Thread-101] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:47.014 [Thread-101] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:47.115 [main] INFO  RSLBench.Launcher - Connecting police force 26...[m
+[34m20:02:47.115 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:47.116 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:47.155 [Thread-105] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:47.155 [Thread-105] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:47.156 [Thread-105] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:47.156 [Thread-105] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:47.164 [Thread-105] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 8ms[m
+[36m20:02:47.165 [Thread-105] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:47.168 [Thread-105] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:47.168 [Thread-105] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:47.168 [Thread-105] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:47.269 [main] INFO  RSLBench.Launcher - Connecting police force 27...[m
+[34m20:02:47.269 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:47.270 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:47.310 [Thread-109] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:47.310 [Thread-109] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:47.310 [Thread-109] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:47.310 [Thread-109] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:47.318 [Thread-109] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 7ms[m
+[36m20:02:47.318 [Thread-109] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:47.320 [Thread-109] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:47.320 [Thread-109] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:47.321 [Thread-109] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:47.421 [main] INFO  RSLBench.Launcher - Connecting police force 28...[m
+[34m20:02:47.421 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:47.422 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:48.234 [Thread-113] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:48.234 [Thread-113] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:48.235 [Thread-113] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:48.235 [Thread-113] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:48.239 [Thread-113] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 4ms[m
+[36m20:02:48.239 [Thread-113] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:48.241 [Thread-113] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:48.241 [Thread-113] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:48.241 [Thread-113] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:48.342 [main] INFO  RSLBench.Launcher - Connecting police force 29...[m
+[34m20:02:48.342 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:48.343 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:48.376 [Thread-117] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:48.376 [Thread-117] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:48.376 [Thread-117] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:48.376 [Thread-117] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:48.382 [Thread-117] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 6ms[m
+[36m20:02:48.382 [Thread-117] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:48.384 [Thread-117] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:48.384 [Thread-117] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:48.384 [Thread-117] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:48.485 [main] INFO  RSLBench.Launcher - Connecting police force 30...[m
+[34m20:02:48.485 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:48.486 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:48.523 [Thread-121] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:48.523 [Thread-121] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:48.523 [Thread-121] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:48.523 [Thread-121] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:48.529 [Thread-121] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 6ms[m
+[36m20:02:48.530 [Thread-121] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:48.532 [Thread-121] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:48.532 [Thread-121] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:48.532 [Thread-121] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:48.632 [main] INFO  RSLBench.Launcher - Connecting police force 31...[m
+[34m20:02:48.632 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:48.633 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:48.670 [Thread-125] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:48.671 [Thread-125] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:48.671 [Thread-125] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:48.671 [Thread-125] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:48.678 [Thread-125] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 7ms[m
+[36m20:02:48.679 [Thread-125] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:48.681 [Thread-125] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:48.681 [Thread-125] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:48.682 [Thread-125] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:48.782 [main] INFO  RSLBench.Launcher - Connecting police force 32...[m
+[34m20:02:48.782 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:48.783 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:48.818 [Thread-129] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:48.818 [Thread-129] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:48.818 [Thread-129] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:48.819 [Thread-129] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:48.825 [Thread-129] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 6ms[m
+[36m20:02:48.826 [Thread-129] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:48.828 [Thread-129] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:48.828 [Thread-129] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:48.829 [Thread-129] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:48.929 [main] INFO  RSLBench.Launcher - Connecting police force 33...[m
+[34m20:02:48.929 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:48.930 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:48.962 [Thread-133] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:48.962 [Thread-133] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:48.962 [Thread-133] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:48.962 [Thread-133] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:48.969 [Thread-133] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 7ms[m
+[36m20:02:48.970 [Thread-133] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:48.972 [Thread-133] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:48.973 [Thread-133] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:48.973 [Thread-133] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:49.073 [main] INFO  RSLBench.Launcher - Connecting police force 34...[m
+[34m20:02:49.074 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:49.074 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:49.164 [Thread-137] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:49.164 [Thread-137] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:49.164 [Thread-137] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:49.164 [Thread-137] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:49.168 [Thread-137] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 4ms[m
+[36m20:02:49.169 [Thread-137] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:49.170 [Thread-137] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:49.170 [Thread-137] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:49.170 [Thread-137] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:49.271 [main] INFO  RSLBench.Launcher - Connecting police force 35...[m
+[34m20:02:49.271 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:49.272 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:49.306 [Thread-141] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:49.306 [Thread-141] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:49.306 [Thread-141] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:49.306 [Thread-141] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:49.312 [Thread-141] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 6ms[m
+[36m20:02:49.312 [Thread-141] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:49.315 [Thread-141] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:49.315 [Thread-141] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:49.315 [Thread-141] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:49.415 [main] INFO  RSLBench.Launcher - Connecting police force 36...[m
+[34m20:02:49.416 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:49.416 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:49.451 [Thread-145] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:49.451 [Thread-145] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:49.451 [Thread-145] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:49.451 [Thread-145] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:49.456 [Thread-145] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 5ms[m
+[36m20:02:49.456 [Thread-145] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:49.458 [Thread-145] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:49.458 [Thread-145] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:49.458 [Thread-145] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:49.559 [main] INFO  RSLBench.Launcher - Connecting police force 37...[m
+[34m20:02:49.559 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:49.560 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:49.592 [Thread-149] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:49.592 [Thread-149] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:49.592 [Thread-149] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:49.592 [Thread-149] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:49.597 [Thread-149] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 5ms[m
+[36m20:02:49.597 [Thread-149] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:49.599 [Thread-149] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:49.600 [Thread-149] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:49.600 [Thread-149] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:49.700 [main] INFO  RSLBench.Launcher - Connecting police force 38...[m
+[34m20:02:49.700 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:49.701 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:49.733 [Thread-153] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:49.734 [Thread-153] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:49.734 [Thread-153] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:49.734 [Thread-153] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:49.739 [Thread-153] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 5ms[m
+[36m20:02:49.740 [Thread-153] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:49.741 [Thread-153] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:49.742 [Thread-153] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:49.742 [Thread-153] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:49.842 [main] INFO  RSLBench.Launcher - Connecting police force 39...[m
+[34m20:02:49.842 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:49.843 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[36m20:02:49.882 [Thread-157] DEBUG RSLBench.PlatoonPoliceAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:49.883 [Thread-157] DEBUG RSLBench.PlatoonPoliceAgent - Using seed 1[m
+[32m20:02:49.883 [Thread-157] INFO  RSLBench.PlatoonPoliceAgent - Police force connected[m
+[36m20:02:49.883 [Thread-157] DEBUG RSLBench.PlatoonPoliceAgent - Re-indexing world model[m
+[36m20:02:49.891 [Thread-157] DEBUG RSLBench.PlatoonPoliceAgent - Finished re-index. Took 8ms[m
+[36m20:02:49.891 [Thread-157] DEBUG RSLBench.Search.SearchFactory - Using search class: RSLBench.Search.BreadthFirstSearch[m
+[36m20:02:49.894 [Thread-157] DEBUG RSLBench.PlatoonAbstractAgent - Communcation model: rescuecore2.standard.kernel.comms.ChannelCommunicationModel[m
+[36m20:02:49.894 [Thread-157] DEBUG RSLBench.PlatoonAbstractAgent - Using speak model[m
+[32m20:02:49.894 [Thread-157] INFO  RSLBench.PlatoonPoliceAgent - Police force connected: clearing distance = 10000[m
+[32m20:02:49.994 [main] INFO  RSLBench.Launcher - Connecting police force 40...[m
+[34m20:02:49.995 [main] DEBUG RSLBench.PlatoonPoliceAgent - Platoon Police Agent CREATED[m
+[36m20:02:49.995 [main] DEBUG RSLBench.PlatoonPoliceAgent - Starting Connection from RSLBench.PlatoonPoliceAgent. Registry: System[m
+[32m20:02:49.998 [main] INFO  RSLBench.Launcher - failed: No more agents[m
+[32m20:02:49.998 [main] INFO  RSLBench.Launcher - Connecting center 41...[m
+[34m20:02:50.000 [main] INFO  RSLBench.CenterAgent - Center Agent CREATED[m
+[36m20:02:50.001 [main] DEBUG RSLBench.CenterAgent - Starting Connection from RSLBench.CenterAgent. Registry: System[m
+[36m20:02:50.029 [Thread-164] DEBUG RSLBench.CenterAgent - Instantiating random number generator: org.uncommons.maths.random.MersenneTwisterRNG[m
+[36m20:02:50.029 [Thread-164] DEBUG RSLBench.CenterAgent - Using seed 1[m
+[32m20:02:50.029 [Thread-164] INFO  RSLBench.CenterAgent - Center Agent connected[m
+[36m20:02:50.029 [Thread-164] DEBUG RSLBench.CenterAgent - Re-indexing world model[m
+[36m20:02:50.034 [Thread-164] DEBUG RSLBench.CenterAgent - Finished re-index. Took 5ms[m
+[32m20:02:50.038 [Thread-164] INFO  RSLBench.Helpers.PathCache.PathDB - Using precomputed paths database: cache/kobe-BreadthFirstSearch.paths[m
+[32m20:02:50.065 [Thread-164] INFO  RSLBench.CenterAgent - Using main solver: BinaryMaxSum[m
+[32m20:02:50.066 [Thread-164] INFO  RSLBench.CenterAgent - Also testing solver: DSA[m
+[32m20:02:50.066 [Thread-164] INFO  RSLBench.CenterAgent - Also testing solver: Random[m
+[32m20:02:50.067 [Thread-164] INFO  RSLBench.CenterAgent - Also testing solver: Greedy[m
+[32m20:02:50.067 [Thread-164] INFO  RSLBench.CenterAgent - Also testing solver: Closest[m
+[32m20:02:50.068 [Thread-164] INFO  RSLBench.Assignment.AbstractSolver - Solver BinaryMaxSum initialized. Results file: results/062ccabc-dcf0-4e52-b233-c66e040fb350-BinaryMaxSum.dat.[m
+[32m20:02:50.068 [Thread-164] INFO  RSLBench.Assignment.AbstractSolver - Solver DSA initialized. Results file: results/062ccabc-dcf0-4e52-b233-c66e040fb350-DSA.dat.[m
+[32m20:02:50.068 [Thread-164] INFO  RSLBench.Assignment.AbstractSolver - Solver Random initialized. Results file: results/062ccabc-dcf0-4e52-b233-c66e040fb350-Random.dat.[m
+[32m20:02:50.068 [Thread-164] INFO  RSLBench.Assignment.AbstractSolver - Solver Greedy initialized. Results file: results/062ccabc-dcf0-4e52-b233-c66e040fb350-Greedy.dat.[m
+[32m20:02:50.068 [Thread-164] INFO  RSLBench.Assignment.AbstractSolver - Solver Closest initialized. Results file: results/062ccabc-dcf0-4e52-b233-c66e040fb350-Closest.dat.[m
+[32m20:02:50.069 [main] INFO  RSLBench.Launcher - success[m
+[32m20:02:50.069 [main] INFO  RSLBench.Launcher - Connecting dummy agent 42...[m
+[36m20:02:50.071 [main] DEBUG RSLBench.DummyAgent - Starting Connection from RSLBench.DummyAgent. Registry: System[m
+[32m20:02:50.072 [main] INFO  RSLBench.Launcher - failed: No more agents[m
+[35m20:02:50.254 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.260 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.285 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.290 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.292 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.296 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.308 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.311 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.313 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.331 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.347 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.370 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:50.397 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:51.032 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:51.041 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 1 | 0 burning buildings | 0 blockades[m
+[36m20:02:51.041 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:51.039 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.044 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.044 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.050 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.056 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.059 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.060 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.061 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.696 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.705 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.715 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.727 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.871 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.888 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.910 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.930 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:51.969 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.004 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.045 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.060 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.533 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.639 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.656 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.657 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.660 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.677 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.690 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.698 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:52.709 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:52.753 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578971)[m
+[36m20:02:52.753 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578970)[m
+[36m20:02:52.753 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578969)[m
+[36m20:02:52.753 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578968)[m
+[36m20:02:52.753 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578975)[m
+[36m20:02:52.753 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578974)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578973)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578972)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578963)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578962)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578961)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578960)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578967)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578966)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578965)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578964)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578955)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578954)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578953)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578952)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578959)[m
+[36m20:02:52.754 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578958)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578957)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578956)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578947)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578946)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578945)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578944)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578951)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578950)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578949)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578948)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578987)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578986)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578985)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578984)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578990)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578989)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578988)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578979)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578978)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578977)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578976)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578983)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578982)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578981)[m
+[36m20:02:52.755 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578980)[m
+[36m20:02:52.757 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578651)[m
+[36m20:02:52.758 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578650)[m
+[36m20:02:52.758 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578649)[m
+[36m20:02:52.758 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578648)[m
+[36m20:02:52.758 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578655)[m
+[36m20:02:52.758 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578654)[m
+[36m20:02:52.758 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578653)[m
+[36m20:02:52.758 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578652)[m
+[36m20:02:52.759 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578643)[m
+[36m20:02:52.759 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578642)[m
+[36m20:02:52.759 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578641)[m
+[36m20:02:52.759 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578640)[m
+[36m20:02:52.759 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578647)[m
+[36m20:02:52.759 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578646)[m
+[36m20:02:52.759 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578645)[m
+[36m20:02:52.759 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578644)[m
+[36m20:02:52.760 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578639)[m
+[36m20:02:52.760 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578683)[m
+[36m20:02:52.760 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578682)[m
+[36m20:02:52.760 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578681)[m
+[36m20:02:52.760 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578680)[m
+[36m20:02:52.760 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578687)[m
+[36m20:02:52.761 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578686)[m
+[36m20:02:52.761 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578685)[m
+[36m20:02:52.761 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578684)[m
+[36m20:02:52.761 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578675)[m
+[36m20:02:52.761 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578674)[m
+[36m20:02:52.762 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578673)[m
+[36m20:02:52.762 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578672)[m
+[36m20:02:52.762 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578679)[m
+[36m20:02:52.762 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578678)[m
+[36m20:02:52.762 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578677)[m
+[36m20:02:52.762 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578676)[m
+[36m20:02:52.762 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578667)[m
+[36m20:02:52.762 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578666)[m
+[36m20:02:52.763 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578665)[m
+[36m20:02:52.763 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578664)[m
+[36m20:02:52.763 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578671)[m
+[36m20:02:52.763 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578670)[m
+[36m20:02:52.763 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578669)[m
+[36m20:02:52.763 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578668)[m
+[36m20:02:52.764 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578659)[m
+[36m20:02:52.764 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578658)[m
+[36m20:02:52.764 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578657)[m
+[36m20:02:52.764 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578656)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578663)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578662)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578661)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578660)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578843)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578842)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578841)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578840)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578847)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578846)[m
+[36m20:02:52.765 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578845)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578844)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578835)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578834)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578833)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578832)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578839)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578838)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578837)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578836)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578827)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578826)[m
+[36m20:02:52.766 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578825)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578824)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578831)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578830)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578829)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578828)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578819)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578818)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578817)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578816)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578823)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578822)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578821)[m
+[36m20:02:52.767 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578820)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578875)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578874)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578873)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578872)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578879)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578878)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578877)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578876)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578867)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578866)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578865)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578864)[m
+[36m20:02:52.768 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578871)[m
+[36m20:02:52.769 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578870)[m
+[36m20:02:52.769 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578869)[m
+[36m20:02:52.769 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578868)[m
+[36m20:02:52.769 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578859)[m
+[36m20:02:52.769 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578858)[m
+[36m20:02:52.769 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578857)[m
+[36m20:02:52.769 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578856)[m
+[36m20:02:52.769 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578863)[m
+[36m20:02:52.770 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578862)[m
+[36m20:02:52.770 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578861)[m
+[36m20:02:52.770 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578860)[m
+[36m20:02:52.770 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578851)[m
+[36m20:02:52.770 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578850)[m
+[36m20:02:52.770 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578849)[m
+[36m20:02:52.770 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578848)[m
+[36m20:02:52.771 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578855)[m
+[36m20:02:52.771 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578854)[m
+[36m20:02:52.772 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578853)[m
+[36m20:02:52.772 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578852)[m
+[36m20:02:52.773 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578907)[m
+[36m20:02:52.773 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578906)[m
+[36m20:02:52.773 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578905)[m
+[36m20:02:52.774 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578904)[m
+[36m20:02:52.775 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578911)[m
+[36m20:02:52.776 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578910)[m
+[36m20:02:52.777 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578909)[m
+[36m20:02:52.777 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578908)[m
+[36m20:02:52.778 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578899)[m
+[36m20:02:52.778 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578898)[m
+[36m20:02:52.778 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578897)[m
+[36m20:02:52.778 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578896)[m
+[36m20:02:52.780 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578903)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578902)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578901)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578900)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578891)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578890)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578889)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578888)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578895)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578894)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578893)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578892)[m
+[36m20:02:52.781 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578883)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578882)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578881)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578880)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578887)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578886)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578885)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578884)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578939)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578938)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578937)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578936)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578943)[m
+[36m20:02:52.782 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578942)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578941)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578940)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578931)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578930)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578929)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578928)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578935)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578934)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578933)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578932)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578923)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578922)[m
+[36m20:02:52.783 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578921)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578920)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578927)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578926)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578925)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578924)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578915)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578914)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578913)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578912)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578919)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578918)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578917)[m
+[36m20:02:52.784 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578916)[m
+[36m20:02:52.785 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578715)[m
+[36m20:02:52.785 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578714)[m
+[36m20:02:52.785 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578713)[m
+[36m20:02:52.785 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578712)[m
+[36m20:02:52.785 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578719)[m
+[36m20:02:52.785 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578718)[m
+[36m20:02:52.785 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578717)[m
+[36m20:02:52.785 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578716)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578707)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578706)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578705)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578704)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578711)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578710)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578709)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578708)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578699)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578698)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578697)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578696)[m
+[36m20:02:52.786 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578703)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578702)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578701)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578700)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578691)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578690)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578689)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578688)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578695)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578694)[m
+[36m20:02:52.787 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578693)[m
+[36m20:02:52.788 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578692)[m
+[36m20:02:52.788 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578747)[m
+[36m20:02:52.788 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578746)[m
+[36m20:02:52.788 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578745)[m
+[36m20:02:52.788 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578744)[m
+[36m20:02:52.788 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578751)[m
+[36m20:02:52.788 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578750)[m
+[36m20:02:52.788 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578749)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578748)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578739)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578738)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578737)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578736)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578743)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578742)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578741)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578740)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578731)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578730)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578729)[m
+[36m20:02:52.789 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578728)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578735)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578734)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578733)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578732)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578723)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578722)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578721)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578720)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578727)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578726)[m
+[36m20:02:52.790 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578725)[m
+[36m20:02:52.791 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578724)[m
+[36m20:02:52.791 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578779)[m
+[36m20:02:52.791 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578778)[m
+[36m20:02:52.791 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578777)[m
+[36m20:02:52.791 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578776)[m
+[36m20:02:52.792 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578783)[m
+[36m20:02:52.793 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578782)[m
+[36m20:02:52.793 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578781)[m
+[36m20:02:52.793 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578780)[m
+[36m20:02:52.793 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578771)[m
+[36m20:02:52.793 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578770)[m
+[36m20:02:52.794 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578769)[m
+[36m20:02:52.794 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578768)[m
+[36m20:02:52.794 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578775)[m
+[36m20:02:52.794 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578774)[m
+[36m20:02:52.795 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578773)[m
+[36m20:02:52.795 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578772)[m
+[36m20:02:52.795 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578763)[m
+[36m20:02:52.796 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578762)[m
+[36m20:02:52.796 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578761)[m
+[36m20:02:52.797 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578760)[m
+[36m20:02:52.797 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578767)[m
+[36m20:02:52.798 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578766)[m
+[36m20:02:52.798 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578765)[m
+[36m20:02:52.799 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578764)[m
+[36m20:02:52.799 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578755)[m
+[36m20:02:52.799 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578754)[m
+[36m20:02:52.800 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578753)[m
+[36m20:02:52.800 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578752)[m
+[36m20:02:52.800 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578759)[m
+[36m20:02:52.800 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578758)[m
+[36m20:02:52.801 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578757)[m
+[36m20:02:52.801 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578756)[m
+[36m20:02:52.801 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578811)[m
+[36m20:02:52.802 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578810)[m
+[36m20:02:52.802 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578809)[m
+[36m20:02:52.802 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578808)[m
+[36m20:02:52.802 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578815)[m
+[36m20:02:52.802 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578814)[m
+[36m20:02:52.802 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578813)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578812)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578803)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578802)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578801)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578800)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578807)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578806)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578805)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578804)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578795)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578794)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578793)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578792)[m
+[36m20:02:52.803 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578799)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578798)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578797)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578796)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578787)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578786)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578785)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578784)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578791)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578790)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578789)[m
+[36m20:02:52.804 [Thread-167] DEBUG RSLBench.CenterAgent - New blockade introduced: urn:rescuecore2.standard:entity:blockade (2090578788)[m
+[36m20:02:52.808 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 2 millis[m
+[47m
+20:02:52.808 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 2 | 7 burning buildings | 352 blockades[m
+[36m20:02:52.808 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:53.015 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.064 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.072 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.073 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.221 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.224 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.225 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.229 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.244 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.277 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.308 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.321 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.389 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.422 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.439 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.447 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.458 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.473 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.507 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.523 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.523 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:53.538 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:53.539 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 3 | 7 burning buildings | 352 blockades[m
+[36m20:02:53.539 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:53.832 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.856 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.867 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.877 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.932 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.939 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.948 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.955 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.976 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:53.987 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.002 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.009 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.096 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.326 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.340 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.349 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.360 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.375 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.382 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.389 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.403 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:54.422 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:54.423 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 4 | 7 burning buildings | 352 blockades[m
+[36m20:02:54.423 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:54.678 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.706 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.720 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.738 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.784 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.834 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.839 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.840 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.843 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.844 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.870 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.877 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.900 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.934 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.946 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.953 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.960 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.975 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.982 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:54.991 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.004 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:55.043 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:55.043 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 5 | 7 burning buildings | 352 blockades[m
+[36m20:02:55.043 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:55.295 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.340 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.356 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.450 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.494 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.502 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.509 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.519 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.540 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.561 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.568 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.576 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.598 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.631 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.657 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.657 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.661 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.676 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.687 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.690 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.698 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:55.739 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:55.739 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 6 | 7 burning buildings | 352 blockades[m
+[36m20:02:55.740 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:55.957 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.973 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.981 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:55.989 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.066 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.071 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.075 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.085 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.105 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.115 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.129 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.137 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.160 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.190 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.205 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.214 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.227 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.300 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.309 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.346 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.347 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:56.352 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:56.353 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 7 | 7 burning buildings | 352 blockades[m
+[36m20:02:56.353 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:56.571 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.597 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.597 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.598 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.653 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.660 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.667 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.675 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.693 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.708 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.722 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.730 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.754 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.783 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.798 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.805 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.813 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.828 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.864 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.871 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:56.875 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:56.886 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:56.887 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 8 | 7 burning buildings | 352 blockades[m
+[36m20:02:56.887 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:57.112 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.130 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.147 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.147 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.202 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.209 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.218 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.224 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.243 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.257 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.272 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.280 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.311 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.358 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.383 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.400 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.412 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.812 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.829 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.872 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:57.875 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:57.879 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:57.880 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 9 | 7 burning buildings | 352 blockades[m
+[36m20:02:57.880 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:58.082 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.096 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.117 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.136 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.187 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.195 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.204 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.211 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.226 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.241 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.258 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.264 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.302 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.324 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.339 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.349 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.357 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.378 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.385 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.392 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.400 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:58.439 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 1 millis[m
+[47m
+20:02:58.439 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 10 | 7 burning buildings | 352 blockades[m
+[36m20:02:58.439 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:58.645 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.664 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.672 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.680 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.734 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.749 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.751 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.756 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.773 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.787 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.804 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.811 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.834 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.864 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.879 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.889 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.896 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.965 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.980 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.987 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:58.994 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:59.018 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:59.019 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 11 | 7 burning buildings | 352 blockades[m
+[36m20:02:59.019 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:59.248 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.271 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.273 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.346 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.370 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.378 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.387 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.394 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.413 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.428 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.444 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.451 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.475 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.505 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.521 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.528 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.539 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.565 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.565 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.572 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.583 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:02:59.605 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:02:59.605 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 12 | 7 burning buildings | 352 blockades[m
+[36m20:02:59.605 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:02:59.839 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.861 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.867 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.888 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.933 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.975 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.981 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.984 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:02:59.988 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.004 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.019 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.026 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.051 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.083 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.101 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.111 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.125 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.142 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.198 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.206 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.214 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:00.239 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:03:00.239 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 13 | 7 burning buildings | 352 blockades[m
+[36m20:03:00.239 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:00.460 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.475 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.483 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.489 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.545 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.552 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.562 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.569 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.588 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.601 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.614 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.661 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.684 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.695 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.710 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.725 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.727 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.741 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.748 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.757 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:00.766 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:00.793 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:03:00.793 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 14 | 7 burning buildings | 352 blockades[m
+[36m20:03:00.793 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:01.020 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.041 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.048 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.065 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.115 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.116 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.124 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.144 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.155 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.165 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.183 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.190 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.212 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.242 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.258 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.302 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.303 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.316 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.322 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.330 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.338 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:01.425 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 1 millis[m
+[47m
+20:03:01.425 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 15 | 8 burning buildings | 352 blockades[m
+[36m20:03:01.425 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:01.649 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.668 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.675 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.685 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.737 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.744 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.754 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.761 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.776 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.795 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.808 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.816 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.840 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.871 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.888 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.899 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.904 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.918 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.926 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.935 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:01.941 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:01.964 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:03:01.965 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 16 | 9 burning buildings | 352 blockades[m
+[36m20:03:01.965 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:02.206 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.224 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.243 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.276 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.314 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.327 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.332 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.339 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.357 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.373 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.391 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.406 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.421 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.451 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.473 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.477 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.486 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.507 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.512 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.531 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.532 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:02.617 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 1 millis[m
+[47m
+20:03:02.617 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 17 | 9 burning buildings | 352 blockades[m
+[36m20:03:02.617 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:02.840 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.860 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.865 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.872 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.926 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.934 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.939 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.946 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.964 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:02.979 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.014 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.019 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.028 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.059 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.075 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.082 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.088 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.105 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.112 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.120 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.128 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:03.150 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:03:03.150 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 18 | 10 burning buildings | 352 blockades[m
+[36m20:03:03.150 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:03.370 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.384 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.396 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.418 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.469 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.483 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.493 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.500 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.532 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.534 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.548 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.568 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.590 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.615 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.630 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.641 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.652 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.679 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.682 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.689 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:03.702 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:03.777 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:03:03.777 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 19 | 10 burning buildings | 352 blockades[m
+[36m20:03:03.778 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:04.010 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.017 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.027 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.046 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.087 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.094 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.102 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.110 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.124 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.139 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.157 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.164 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.186 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.215 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.230 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.244 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.247 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.263 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.273 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.281 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.290 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:04.312 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:03:04.312 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 20 | 10 burning buildings | 352 blockades[m
+[36m20:03:04.312 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:04.532 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.551 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.554 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.565 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.613 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.642 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.645 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.645 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.659 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.677 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.691 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.708 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.743 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.754 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.777 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.784 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.796 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.811 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.888 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.896 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:04.897 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:04.918 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:03:04.919 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 21 | 12 burning buildings | 352 blockades[m
+[36m20:03:04.919 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:05.140 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.158 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.166 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.173 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.219 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.227 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.235 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.243 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.263 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.275 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.289 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.300 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.324 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.358 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.401 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.401 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.402 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.417 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.424 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.433 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[35m20:03:05.439 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.462 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:03:05.462 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 22 | 12 burning buildings | 352 blockades[m
+[36m20:03:05.462 [Thread-167] DEBUG RSLBench.CenterAgent - Waiting until experiment starts.[m
+[35m20:03:05.693 [Thread-85] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.693 [Thread-85] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1910693483 waiting for command.[m
+[36m20:03:05.705 [Thread-128] DEBUG RSLBench.PlatoonPoliceAgent - Agent 2028138756 waiting for command.[m
+[35m20:03:05.712 [Thread-65] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.713 [Thread-65] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1807005134 waiting for command.[m
+[36m20:03:05.708 [Thread-128] DEBUG RSLBench.PlatoonAbstractAgent - Agent 2028138756 waiting for command.[m
+[35m20:03:05.717 [Thread-69] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.726 [Thread-69] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1240147797 waiting for command.[m
+[35m20:03:05.742 [Thread-73] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.743 [Thread-92] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1133364019 waiting for command.[m
+[36m20:03:05.743 [Thread-92] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1133364019 waiting for command.[m
+[36m20:03:05.743 [Thread-73] DEBUG RSLBench.PlatoonAbstractAgent - Agent 2006689958 waiting for command.[m
+[36m20:03:05.751 [Thread-100] DEBUG RSLBench.PlatoonPoliceAgent - Agent 595906635 waiting for command.[m
+[36m20:03:05.751 [Thread-100] DEBUG RSLBench.PlatoonAbstractAgent - Agent 595906635 waiting for command.[m
+[36m20:03:05.759 [Thread-116] DEBUG RSLBench.PlatoonPoliceAgent - Agent 926748575 waiting for command.[m
+[36m20:03:05.759 [Thread-116] DEBUG RSLBench.PlatoonAbstractAgent - Agent 926748575 waiting for command.[m
+[36m20:03:05.771 [Thread-160] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1427389141 waiting for command.[m
+[36m20:03:05.771 [Thread-160] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1427389141 waiting for command.[m
+[35m20:03:05.788 [Thread-81] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.788 [Thread-81] DEBUG RSLBench.PlatoonAbstractAgent - Agent 362699507 waiting for command.[m
+[36m20:03:05.795 [Thread-124] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1436789976 waiting for command.[m
+[36m20:03:05.796 [Thread-124] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1436789976 waiting for command.[m
+[35m20:03:05.796 [Thread-17] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.796 [Thread-17] DEBUG RSLBench.PlatoonAbstractAgent - Agent 539472694 waiting for command.[m
+[35m20:03:05.804 [Thread-53] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.804 [Thread-53] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1852822112 waiting for command.[m
+[35m20:03:05.816 [Thread-25] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.816 [Thread-25] DEBUG RSLBench.PlatoonAbstractAgent - Agent 423381703 waiting for command.[m
+[36m20:03:05.823 [Thread-152] DEBUG RSLBench.PlatoonPoliceAgent - Agent 396966044 waiting for command.[m
+[36m20:03:05.823 [Thread-152] DEBUG RSLBench.PlatoonAbstractAgent - Agent 396966044 waiting for command.[m
+[35m20:03:05.831 [Thread-57] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.831 [Thread-57] DEBUG RSLBench.PlatoonAbstractAgent - Agent 313728818 waiting for command.[m
+[36m20:03:05.839 [Thread-156] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1857716509 waiting for command.[m
+[36m20:03:05.839 [Thread-156] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1857716509 waiting for command.[m
+[35m20:03:05.846 [Thread-49] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.846 [Thread-49] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1292367086 waiting for command.[m
+[36m20:03:05.853 [Thread-144] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1869570387 waiting for command.[m
+[36m20:03:05.853 [Thread-144] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1869570387 waiting for command.[m
+[35m20:03:05.860 [Thread-41] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.860 [Thread-41] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1214631632 waiting for command.[m
+[35m20:03:05.872 [Thread-37] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.872 [Thread-37] DEBUG RSLBench.PlatoonAbstractAgent - Agent 148012703 waiting for command.[m
+[36m20:03:05.907 [Thread-120] DEBUG RSLBench.PlatoonPoliceAgent - Agent 564189431 waiting for command.[m
+[36m20:03:05.907 [Thread-120] DEBUG RSLBench.PlatoonAbstractAgent - Agent 564189431 waiting for command.[m
+[36m20:03:05.909 [Thread-132] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1279787252 waiting for command.[m
+[36m20:03:05.909 [Thread-132] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1279787252 waiting for command.[m
+[36m20:03:05.911 [Thread-96] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1849122510 waiting for command.[m
+[36m20:03:05.911 [Thread-96] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1849122510 waiting for command.[m
+[35m20:03:05.917 [Thread-33] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.917 [Thread-33] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1096910304 waiting for command.[m
+[35m20:03:05.935 [Thread-45] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.935 [Thread-45] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1893500446 waiting for command.[m
+[36m20:03:05.943 [Thread-136] DEBUG RSLBench.PlatoonPoliceAgent - Agent 701768844 waiting for command.[m
+[36m20:03:05.943 [Thread-136] DEBUG RSLBench.PlatoonAbstractAgent - Agent 701768844 waiting for command.[m
+[36m20:03:05.952 [Thread-108] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1978835736 waiting for command.[m
+[36m20:03:05.952 [Thread-108] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1978835736 waiting for command.[m
+[36m20:03:05.956 [Thread-104] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1057262420 waiting for command.[m
+[36m20:03:05.956 [Thread-104] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1057262420 waiting for command.[m
+[35m20:03:05.959 [Thread-21] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.959 [Thread-21] DEBUG RSLBench.PlatoonAbstractAgent - Agent 30753447 waiting for command.[m
+[35m20:03:05.967 [Thread-61] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.967 [Thread-61] DEBUG RSLBench.PlatoonAbstractAgent - Agent 469778860 waiting for command.[m
+[35m20:03:05.975 [Thread-29] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:05.975 [Thread-29] DEBUG RSLBench.PlatoonAbstractAgent - Agent 2009998289 waiting for command.[m
+[35m20:03:06.042 [Thread-5] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:06.042 [Thread-140] DEBUG RSLBench.PlatoonPoliceAgent - Agent 941331988 waiting for command.[m
+[36m20:03:06.042 [Thread-140] DEBUG RSLBench.PlatoonAbstractAgent - Agent 941331988 waiting for command.[m
+[36m20:03:06.042 [Thread-5] DEBUG RSLBench.PlatoonAbstractAgent - Agent 153196674 waiting for command.[m
+[35m20:03:06.049 [Thread-13] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:06.049 [Thread-13] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1761520173 waiting for command.[m
+[35m20:03:06.057 [Thread-77] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:06.057 [Thread-77] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1210140517 waiting for command.[m
+[36m20:03:06.072 [Thread-112] DEBUG RSLBench.PlatoonPoliceAgent - Agent 1529893810 waiting for command.[m
+[36m20:03:06.073 [Thread-112] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1529893810 waiting for command.[m
+[35m20:03:06.073 [Thread-9] DEBUG RSLBench.PlatoonFireAgent - Fire agent thinking[m
+[36m20:03:06.073 [Thread-9] DEBUG RSLBench.PlatoonAbstractAgent - Agent 1254639862 waiting for command.[m
+[36m20:03:06.079 [Thread-148] DEBUG RSLBench.PlatoonPoliceAgent - Agent 2090578638 waiting for command.[m
+[36m20:03:06.079 [Thread-148] DEBUG RSLBench.PlatoonAbstractAgent - Agent 2090578638 waiting for command.[m
+[36m20:03:06.086 [Thread-167] DEBUG RSLBench.CenterAgent - Cleanup blockades took 0 millis[m
+[47m
+20:03:06.086 [Thread-167] INFO  RSLBench.CenterAgent - TIME IS 23 | 13 burning buildings | 352 blockades[m
+Exception in thread "Thread-167" java.io.IOError: java.io.IOException: Wrong index checksum, store was not closed properly and could be corrupted.
+	at org.mapdb.StoreDirect.checkHeaders(StoreDirect.java:258)
+	at org.mapdb.StoreDirect.<init>(StoreDirect.java:209)
+	at org.mapdb.DBMaker.extendStoreDirect(DBMaker.java:856)
+	at org.mapdb.DBMaker.makeEngine(DBMaker.java:648)
+	at org.mapdb.DBMaker.make(DBMaker.java:608)
+	at RSLBench.Helpers.PathCache.PathDB.<init>(PathDB.java:45)
+	at RSLBench.Helpers.PathCache.PathDB.getInstance(PathDB.java:68)
+	at RSLBench.Helpers.Utility.ProblemDefinition.<init>(ProblemDefinition.java:78)
+	at RSLBench.CenterAgent.think(CenterAgent.java:275)
+	at rescuecore2.components.AbstractAgent.processSense(AbstractAgent.java:93)
+	at rescuecore2.standard.components.StandardAgent.processSense(StandardAgent.java:66)
+	at rescuecore2.components.AbstractAgent.processMessage(AbstractAgent.java:116)
+	at rescuecore2.components.AbstractComponent$MessageProcessor.work(AbstractComponent.java:195)
+	at rescuecore2.misc.WorkerThread.run(WorkerThread.java:48)
+Caused by: java.io.IOException: Wrong index checksum, store was not closed properly and could be corrupted.
+	... 14 more

@@ -1,0 +1,27 @@
+# solver: Random
+# max_time: 100
+# main_solver: BinaryMaxSum
+# random.seed: 1
+# run: 8a5d3592-c815-4001-aa9c-9b1e34fa3bde
+# experiment.start_time: 23
+# experiment.end_time: 300
+# kernel.agents.ignoreuntil: 3
+# agent.only_assigned: true
+# util.class: RSLBench.Helpers.Utility.ThirdUtilityFunction
+# util.fire_brigade_area: 200
+# util.trade_off: 10
+# util.hysteresis: 1
+# map.name: paris
+# map.scenario: example-police.xml
+# agent.search.class: RSLBench.Search.BreadthFirstSearch
+# problem.prune: no
+# problem.max_neighbors: 4
+# agent.interteam: true
+# util.blockade.fire_penalty: 100
+# util.blockade.police_penalty: 50
+# util.police.eta: 0.001
+# dcop.iterations: 100
+# dcop.anytime: yes
+# dcop.greedy_correction: no
+time	nOnceBurned	nBurning	iterations	NCCCs	MessageNum	MessageBytes	OtherNum	OtherBytes	final	best	final_greedy	best_greedy	utilities	score	utility	violations	solvable	cpu_time
+23	12	12	100	0	0	0	0	0	-3317.7745127887015	-1837.0919610286537	-159.73318914545143	-123.87612435220396	-2729.459672187688,-Infinity,-2524.6392526616282,-3274.958706242116,-3227.94245797117,-3277.9427866969595,-2775.1740552808506,-3330.201595300105,-2881.5864250501377,-2526.6998906848053,-3124.6492157685693,-3174.4609028989653,-2924.2688300623554,-2767.5607263533866,-3277.632532790597,-3270.322505915474,-Infinity,-Infinity,-Infinity,-2421.8454751573295,-3176.934451875229,-Infinity,-2326.820095768556,-Infinity,-Infinity,-Infinity,-2873.4466272934214,-3073.539736124133,-2715.621868973949,-Infinity,-Infinity,-2917.5272131183287,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-3133.135743688792,-Infinity,-Infinity,-2622.147834428356,-Infinity,-Infinity,-2873.2962358039317,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-2921.5182864910757,-Infinity,-Infinity,-Infinity,-2786.591103955106,-Infinity,-2473.614616198137,-3171.099277726481,-Infinity,-3030.6718232932653,-2723.8383522444683,-3327.957147891562,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-2573.5507968282814,-2668.5159500366362,-2426.9303028319096,-Infinity,-3370.6069117865345,-2473.196880357759,-Infinity,-Infinity,-Infinity,-3330.3160539884448,-Infinity,-3077.2459186154383,-Infinity,-Infinity,-1837.0919610286537,-1926.3636127194106,-Infinity,-Infinity,-Infinity,-3275.5215905140262,-2186.373058080905,-1981.0473896117314,-Infinity,-Infinity,-Infinity,-Infinity,-Infinity,-2930.8380009945545,-Infinity,-2978.991215147801,-3224.0537186624747,-3317.7745127887015	0.9977516614149626	-1837.0919610286537	9	false	54
